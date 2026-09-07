@@ -1,0 +1,26 @@
+{# A4 recommendation memo. ZERO numeric literals. #}
+# Part A — Recommendation memo
+
+*Commit `{{ provenance.git_sha }}` · generated `{{ provenance.generated_at_utc }}`.*
+
+## Corrected headline numbers
+
+Tokenizer `{{ headline_tokenizer }}`, ratio to `{{ pivot }}`, macro:
+
+| lang |{% for d in denominators %} per {{ d }} |{% endfor %}
+|---|{% for d in denominators %}---|{% endfor %}
+{% for row in headline %}
+| {{ row.lang }} |{% for d in denominators %} {{ row[d] }} |{% endfor %}
+{% endfor %}
+
+## Routing recommendation
+
+TODO(pratik): interpretation
+
+## Biggest caveat
+
+TODO(pratik): interpretation
+
+## The one metric to monitor in production
+
+TODO(pratik): interpretation

@@ -1,0 +1,43 @@
+{# Part B. ZERO numeric literals -- every value is derived from model_spec.md
+   at render time, so a live edit to the spec changes this document. #}
+# Part B — Capacity reconciliation
+
+*Model `{{ model_name }}` on `{{ gpu }}`. Commit `{{ provenance.git_sha }}`.
+Every value below is parsed from `bench/model_spec.md`; nothing is hardcoded.*
+
+## B1 — KV bytes per token
+
+{{ kv_table }}
+
+## B1 — Concurrency ceiling at max_model_len
+
+Both readings of the spec's memory figure are carried; the log selects between
+them.
+
+{{ concurrency_table }}
+
+**Checked against the log.** Predicted ceiling {{ predicted_ceiling }} sequences
+(floor {{ ceiling_floor }}). Preemption prediction matches every row of the
+long-prompt sweep: `{{ preemption_matches }}`.
+
+TODO(pratik): interpretation
+
+## B2 — The long-context throughput anomaly
+
+Throughput peaks at batch {{ knee_batch_size }} ({{ knee_peak }} tok/s) and
+falls to {{ next_reported }} tok/s at batch {{ next_batch_size }}.
+
+TODO(pratik): interpretation
+
+## B3 — Goodput of the long-prompt row at batch {{ knee_batch_size }}
+
+{{ goodput_table }}
+
+The harness counter reconstructs as requests × (prompt + generated) / wall
+clock to within {{ max_identity_error }} % on every row of the log.
+
+TODO(pratik): interpretation
+
+## B4 — The confirming counter
+
+TODO(pratik): interpretation

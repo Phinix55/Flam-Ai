@@ -1,0 +1,83 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "audit"
+version = "0.1.0"
+description = "Audit of the v0 tokenizer-fertility benchmark and serving capacity report."
+requires-python = "==3.11.*"
+dependencies = [
+    "regex==2024.11.6",
+    "numpy==2.2.6",
+    "tiktoken==0.8.0",
+    "transformers==4.46.3",
+    "tokenizers==0.20.3",
+    "sentencepiece==0.2.0",
+    "protobuf==5.29.5",
+    "huggingface-hub==0.26.5",
+    "jinja2==3.1.6",
+    "matplotlib==3.9.4",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==8.3.4",
+    "ruff==0.8.6",
+    "mypy==1.14.1",
+    "types-regex==2024.11.6.20241221",
+]
+
+[project.scripts]
+audit = "audit.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/audit"]
+
+# ---------------------------------------------------------------- ruff
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "A", "C4", "PTH", "RET", "SIM", "ARG", "ANN"]
+ignore = ["ANN401"]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests are not type-checked by mypy (see [tool.mypy].packages) and their
+# fixtures are pytest-injected, so annotation rules add noise without safety.
+# SIM300 fights `expected <= actual` set-containment assertions, which read
+# correctly in that order.
+"tests/*" = ["ANN001", "ANN002", "ANN003", "ANN201", "ANN202", "SIM300"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["audit"]
+
+# ---------------------------------------------------------------- mypy
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+mypy_path = "src"
+packages = ["audit"]
+warn_unreachable = true
+disallow_any_unimported = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = ["tiktoken.*", "transformers.*", "matplotlib.*", "huggingface_hub.*"]
+ignore_missing_imports = true
+
+# ---------------------------------------------------------------- pytest
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = "-q --strict-markers --strict-config"
+markers = [
+    "parity: legacy-parity gate; must pass before any ablation result is admissible",
+    "network: requires network; never run inside make check or make reproduce",
+]
+filterwarnings = ["error::DeprecationWarning:audit.*"]

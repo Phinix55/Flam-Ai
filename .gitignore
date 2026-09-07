@@ -1,0 +1,24 @@
+# Corpus + tokenizer caches. Populated only by `make corpus` (the sole network
+# stage). Never committed: the corpus is reconstructible from
+# results/sample_manifest.json plus the recorded checksums.
+.cache/
+
+# Environments and build artefacts
+.venv/
+*.egg-info/
+dist/
+build/
+__pycache__/
+*.py[cod]
+
+# Tool caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# OS / archive noise vendored alongside starter_kit
+.DS_Store
+__MACOSX/
+
+# results/ and deliverable/ are deliberately NOT ignored -- they are
+# generated artefacts that must be reviewable in the diff.

@@ -20,7 +20,15 @@ them.
 (floor {{ ceiling_floor }}). Preemption prediction matches every row of the
 long-prompt sweep: `{{ preemption_matches }}`.
 
-TODO(pratik): interpretation
+The spec's bare "GB" is ambiguous and the two readings differ by three
+sequences, so both are carried and the log decides. Under the decimal reading
+`preempted_seqs` equals `batch_size` minus {{ ceiling_floor }} on every
+saturated row; the binary reading predicts different values that the log does
+not show. Independently, the unsaturated rows invert their `kv_cache_util` to a
+KV capacity that matches the predicted {{ arg.kv_capacity_tokens }} tokens.
+Two unrelated signals agree, so the ceiling is {{ ceiling_floor }} concurrent
+sequences at this context length — a hard memory bound, not a tuning
+preference.
 
 ## B2 — The long-context throughput anomaly
 
@@ -33,8 +41,6 @@ answer to B2.
 
 {{ hypotheticals_table }}
 
-TODO(pratik): interpretation
-
 ## B3 — Goodput of the long-prompt row at batch {{ knee_batch_size }}
 
 {{ goodput_table }}
@@ -42,8 +48,46 @@ TODO(pratik): interpretation
 The harness counter reconstructs as requests × (prompt + generated) / wall
 clock to within {{ max_identity_error }} % on every row of the log.
 
-TODO(pratik): interpretation
+**The misread column is `reported_tok_s`.** It is not goodput: it counts prompt
+tokens alongside generated ones. That identity holds across every row of the
+log, so this is a property of the column rather than an inference about it.
+
+**One misreading collapses both conclusions because both are read off that
+numerator.** Prompt tokens are processed once in prefill, so counting them
+inflates the figure in direct proportion to prompt length — at prompt
+{{ arg.long_prompt_len }}, {{ arg.long_prompt_share }} % of the counted tokens are prompt. The comparison
+at equal batch size makes it explicit: short prompts report
+{{ arg.short_reported }} tok/s against long prompts' {{ arg.long_reported }},
+but output-only goodput is {{ arg.short_output }} tok/s for short against
+{{ arg.long_output }} for long. **The ordering reverses.** So conclusion one —
+that longer prompts give better throughput — is an artifact of the numerator,
+and conclusion two — that batch scales linearly to a target — extrapolates from
+a "best observed" value that is already past the turn-over point, on a metric
+that rises with prompt length whether or not the server is doing more useful
+work.
+
+**Honest goodput of that row: {{ arg.goodput_wall }} tok/s** (generated tokens
+over wall clock). Derived independently from the decode loop —
+`batch_size` ÷ `itl_ms_p50` — gives {{ arg.goodput_itl }} tok/s, the
+decode-phase rate; the two reconcile through the {{ arg.prefill_share }} % of
+the run spent outside decode. Both are far below the reported figure.
+
+**What the report should have said:** at equal batch, longer prompts *reduce*
+useful throughput; the server is bounded at {{ ceiling_floor }} concurrent
+{{ arg.context_length }}-token sequences, so the batch-{{ arg.max_batch }} target
+is unreachable on this hardware at this context length, and the sustainable operating point is the knee at batch
+{{ knee_batch_size }}.
 
 ## B4 — The confirming counter
 
-TODO(pratik): interpretation
+**Pull the engine's total KV-cache block count and multiply by block size —
+`num_gpu_blocks` × `block_size` in a vLLM-style stack — and expect it to show
+approximately {{ arg.kv_capacity_tokens }} tokens of KV capacity.** That is the
+single number B1 predicts from the model spec and the memory budget, and it
+confirms the B2 mechanism at its root rather than through its symptoms: if
+capacity is what it should be, then the turn-over at batch
+{{ knee_batch_size }} follows arithmetically, since {{ ceiling_floor }} ×
+{{ arg.context_length }} is all the residency that fits. It is also the counter that discriminates
+against the alternative explanation — if throughput were falling because of
+compute saturation rather than memory, capacity would be as predicted while
+`preempted_seqs` stayed at {{ f_zero }}, which is not what the log shows.

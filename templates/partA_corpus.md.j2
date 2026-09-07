@@ -19,6 +19,29 @@ carried through the ablation sweep.
 
 ## What this corpus cannot tell you
 
-TODO(pratik): interpretation — domain narrowness, translationese, absence of
-chat/code/transliterated text, and what a sample of this size supports about
-means versus tails.
+This corpus is professionally translated news and encyclopaedic prose, and its
+limits follow from that.
+
+**Domain.** It contains no assistant chat register, no code, no
+transliterated or Latin-script Indic, and no user-generated text. Real Indian
+traffic is heavily code-switched and frequently Latin-script; none of it is
+represented here, so no number in this submission forecasts production token
+cost. It measures how a tokenizer handles clean edited prose.
+
+**Translationese.** Every sentence is a translation of a shared English source,
+so Indic phrasing is pulled toward English structure. Word order, clause length
+and lexical choice are all more English-like than natural Indic text would be.
+If that biases the fertility ratios, it biases them *downward* — natural text
+would likely diverge further, not less.
+
+**Sample size.** {{ n_records }} parallel sentences give intervals tight enough
+to separate the tokenizers and denominators compared here, and that is all they
+give. They say nothing about tails, and capacity planning fails on tails rather
+than means: the ninety-ninth-percentile long request decides whether a server
+preempts, and one thousand sentences of uniform news prose cannot describe it.
+
+**Parallelism is an artefact of construction.** The per-sentence denominator is
+meaningful precisely because index *i* is the same proposition in every
+language — a property this corpus has by design and real traffic never has. The
+comparison is therefore valid as a controlled measurement and is not a
+simulation of production.

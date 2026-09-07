@@ -65,25 +65,83 @@ if the rewriter costs the same per token, on the same hardware and batch.
 
 ## Recommendation
 
-TODO(pratik): interpretation — which path, and why.
+**Path (a): a LoRA SFT pass on synthetic casualized pairs, with path (c) built
+first as the day-one control and the fallback.**
+
+Not (b). A rewriter regenerates the whole response, so it adds a second pass
+over the same output tokens: measured goodput falls from {{ partc.goodput }} to
+{{ partc.goodput_halved }} tok/s on the same hardware and batch. That is a
+permanent serving tax on every request, in every language, paid for a change of
+register.
+
+Not (c) alone. Prompt engineering consumes context on every request forever and
+does not persist across model updates. It is the right control and the right
+fallback, and it is not a durable answer.
+
+(a), because the arithmetic below says its cost is negligible and its risk is
+concentrated in one assumption that day one can test.
 
 ## Success metric
 
-TODO(pratik): interpretation — a metric with a numeric threshold, measurable
-within the reviewer capacity computed above.
+**On a held-out set of {{ partc.holdout_per_language }} items per reviewed
+language ({{ partc.holdout_total }} of the {{ partc.review_items }}-item
+budget), at least {{ partc.target_win_pct }} % of SFT responses rated
+{{ partc.target_rating }} or better for casual register on a
+{{ partc.rating_scale }}-point scale, against a prompt-engineered baseline.**
+
+The threshold is set against reviewer capacity, not against ambition: at
+{{ partc.items_per_hour }} items/hour the reviewer can score that volume inside
+the {{ partc.reviewer_hours }} available hours and still leave budget for the
+pilot below. The reviewer is used as an **evaluator scoring model output**, not
+as a labeller producing training data — {{ partc.review_items }} items is far
+too few to train on and ample to judge with.
 
 ## Kill criterion
 
-TODO(pratik): interpretation — the observation that would abandon the chosen
-path, and by when. Dates available from the envelope: day one
-{{ partc.day_one }}, GPU budget exhausted {{ partc.gpu_exhausted }}, decision
-deadline {{ partc.decision_deadline }}, review launch {{ partc.review_launch }}.
+**By {{ partc.decision_deadline }}: if a {{ partc.pilot_items }}-item pilot
+shows SFT winning fewer than {{ partc.kill_win_pct }} % of head-to-head
+comparisons against the prompt-engineered baseline in Hindi and Kannada,
+abandon (a) and ship (c).**
+
+That date is the GPU budget's exhaustion and one week before review launch on
+{{ partc.review_launch }} — the last point at which falling back to (c) still
+leaves time to validate it.
 
 ## Day-1 experiment
 
-TODO(pratik): interpretation — the first experiment, and what it would decide.
+**On {{ partc.day_one }}: generate {{ partc.day_one_pairs }} casualized Hindi
+pairs with our own model, and have the reviewer score
+{{ partc.day_one_reviewed }} of the synthetic *targets* — not model output, the
+training data itself — for whether they are acceptable casual Hindi.**
+
+With no external API budget the pairs must come off our own model on the same
+A100. The entire SFT path therefore rests on one assumption: that the model can
+already produce the register we want to train it to produce, just not
+reliably. If it cannot, SFT would be distilling our own formality back into
+itself, and no amount of GPU time fixes that. This is the cheapest possible
+test of the load-bearing assumption, and a negative result kills (a) on day one
+before any training run.
 
 ## The constraint that decides this
 
-TODO(pratik): interpretation — read the arithmetic above and say which term is
-actually binding.
+**Human evaluation, and language coverage within it. The GPU is not close to
+binding.**
+
+Training needs {{ partc.gpu_hours_low }} GPU-hours of the
+{{ partc.gpu_hours_available }} available — {{ partc.utilisation_pct }} % of
+the allocation. At {{ partc.sensitivity_max_pairs }} pairs it is still under
+{{ partc.sensitivity_max_hours }} hours. Any plan that spends its planning
+effort on training throughput is optimising a term that rounds to nothing.
+
+The binding terms are that one reviewer produces {{ partc.review_items }}
+scored items in total, and that {{ partc.uncovered_count }} of the
+{{ partc.target_languages }} target languages —
+{{ partc.uncovered | join(", ") }} — have **no native speaker at all**.
+
+Design around it rather than through it: ship to Hindi and Kannada first, where
+the claim is evidenced. For the other {{ partc.uncovered_count }}, calibrate an
+automatic proxy — a formality classifier or perplexity shift — against the
+human scores on Hindi and Kannada, and use it as a **regression gate, not as
+evidence of quality**. Those four languages ship on an assumption of transfer,
+and that assumption should be stated in the launch decision rather than
+absorbed into an aggregate number.

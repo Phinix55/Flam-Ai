@@ -10,7 +10,7 @@ be traced to one.
 
 | | |
 |---|---|
-| Tests | 154 passed, 1 skipped — `ruff` + `mypy --strict` clean |
+| Tests | 155 passed, 1 skipped — `ruff` + `mypy --strict` clean |
 | Parity gate | green — reimplementation reproduces the original byte-for-byte |
 | Reproducibility | `make reproduce` green from an empty tree, offline |
 | Corpus | FLORES-200 `devtest`, 1012 parallel sentences × 7 languages |
@@ -51,7 +51,8 @@ submission is reconstructible from source.
 │
 ├── results/                 # generated JSON — the single source of every number
 ├── src/audit/               # the pipeline
-├── tests/                   # 154 tests, incl. the parity gate + adversarial fixtures
+│   └── reporting/interpretation.py   # every asserting sentence, in one file
+├── tests/                   # 155 tests, incl. the parity gate + adversarial fixtures
 ├── templates/               # jinja2 sources; ZERO numeric literals by contract
 └── starter_kit/             # vendored VERBATIM, never modified
 ```
@@ -72,6 +73,41 @@ produces byte-identical PNGs, asserted by SHA-256 in `tests/test_figures.py`.
 
 Each figure is drawn only from a `results/*.json` artefact, so a figure can
 never disagree with the tables beside it.
+
+---
+
+## What the audit found
+
+Every figure below is rendered from a `results/*.json` key; the deliverables
+carry the full evidence blocks, commands and confidence intervals.
+
+**Part A — four confirmed defects, two candidates rejected.** The reported
+`tok/char` column counts Unicode codepoints rather than characters, which
+understates Indic per-character fertility; case folding is applied to every
+language but can only alter the caseless-script comparison's *baseline*; the
+headline figure averages per-line ratios rather than the corpus ratio; and word
+counting splits on a literal space, so consecutive spaces inflate the
+denominator. Rejected **with measurements**: the unconditional NFC call (zero
+effect on this corpus, non-zero on NFD — a null that could have failed) and the
+module-level `random.seed(1337)` (byte-identical across every cell).
+
+**Part A — the denominator that matters.** Tokens per *parallel sentence*. It
+is the only unit that holds meaning constant across languages: "word" varies
+with morphology, bytes measure UTF-8's design, and grapheme clustering is not
+uniform across Indic scripts. Under it, the tokenizer — not the script —
+dominates the cost.
+
+**Part B — one misread column.** The harness's `reported_tok_s` counts prompt
+tokens alongside generated ones, an identity that holds across every row of the
+log. Reading it as goodput produces both of the v0 report's serving
+conclusions, and correcting it reverses the first: at equal batch size, longer
+prompts *reduce* useful throughput. The capacity ceiling derived from the model
+spec alone is confirmed by the log two independent ways.
+
+**Part C — the binding constraint is not the GPU.** Training fits in a
+fraction of a percent of the allocation. Human evaluation capacity, and the
+fact that four of six target languages have no native reviewer, decide the
+plan.
 
 ---
 
@@ -173,10 +209,61 @@ me and the measurement that caught it, and what I would not be able to defend.
 
 ---
 
+## Re-deriving anything, live
+
+The repo is built for the "re-derive this number" question.
+
+```bash
+# what the ORIGINAL script prints, unmodified
+TIKTOKEN_CACHE_DIR=.cache/tokenizers/tiktoken .venv/bin/python \
+  starter_kit/starter_kit/fertility.py \
+  --corpus eng=starter_kit/starter_kit/corpus_sample/eng_sample.txt \
+  --corpus hin=starter_kit/starter_kit/corpus_sample/hin_sample.txt
+
+make parity                 # prove our reimplementation matches it, two ways
+python -m audit bench       # re-derive B1 from model_spec.md (nothing hardcoded)
+python -m audit adversarial # run the hostile fixtures
+```
+
+Editing `starter_kit/bench/model_spec.md` and re-running `make bench` changes
+every Part B number, because the spec is parsed rather than memorised —
+`tests/test_bench.py` asserts this against modified spec text. Adding a
+tokenizer is one entry in `config.TOKENIZERS`; adding an ablation flag is one
+field on `AblationFlags`.
+
+---
+
+## Authorship
+
+`CLAUDE.md` — this repo's working constitution — reserves for the human author
+every sentence that asserts a conclusion, ranks a cause or recommends an
+action. That reservation was overridden late in the project: the interpretive
+prose was model-authored on the author's instruction.
+
+**[`AI_USAGE.md`](AI_USAGE.md) states this plainly**, lists exactly which text
+is affected, and records four separate occasions where the model was wrong and
+the measurement that caught it. The evidence layer is unaffected — every figure
+re-derives with `make reproduce` regardless of who wrote the prose around it —
+but the distinction is the point of that document and it is not softened there.
+
+Authored argument is deliberately isolated in two places so it can be audited
+in full: `src/audit/reporting/interpretation.py` (per-finding claims,
+categories, directions) and the jinja templates (the A1/A3/A4/B/C arguments).
+Both route their figures through the same tracer as everything else, so an
+argument cannot cite a number the pipeline did not produce.
+
+---
+
 ## Status
 
-The evidence layer is complete and reproducible. **33
-`TODO(pratik): interpretation` markers remain across the six deliverables** —
-these are the interpretive sentences (claims, rankings, recommendations), which
-`CLAUDE.md` reserves for human authorship. Every number those sentences will
-cite already exists under a named results key.
+Complete and reproducible.
+
+```
+make reproduce : GREEN (from an empty tree, offline)
+make parity    : 17 passed
+make check     : 155 passed, 1 skipped
+```
+
+Zero stubs, zero unwritten interpretation markers, all six deliverables
+rendered, seven results artefacts, four figures. The submission tree matches
+the layout the assignment specifies.

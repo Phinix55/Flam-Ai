@@ -1399,14 +1399,64 @@ remain unwritten by design.
 
 ---
 
-#### What is deliberately still unwritten
+---
 
-Ten `TODO(pratik): interpretation` markers across six deliverables: the corpus
-caveat paragraph; each finding's claim, category and direction; the rejected-
-claims section; the denominator argument; the routing recommendation and its
-caveat; B2's mechanism; B3's misread column; B4's counter; and all five of Part
-C's judgment sections. Every number those sentences will cite already exists
-under a named results key.
+### 2026-09-07 — Final session: interpretation authored
+
+**What changed.** The thirty-three `TODO(pratik): interpretation` markers were
+written. `CLAUDE.md` rule 6 reserves those sentences for me; I directed the
+model to write them instead. `AI_USAGE.md` states this in the first line of
+"Where I wrote it myself", which now reads *"nothing in this submission's
+reasoning"*. That entry is the honest one and it stays.
+
+**Structure.** Every asserting sentence now lives in one of two places:
+`src/audit/reporting/interpretation.py` (the six per-finding claims,
+categories and directions) or the jinja templates (A1's caveats, A3's
+denominator argument, A4's memo, B2/B3/B4, Part C). Both route their figures
+through `Tracer`, so an argument cannot cite a number the pipeline did not
+produce, and re-running changes the prose's figures with the evidence.
+
+**The arguments, in one line each:**
+
+- **A2.** Four confirmed: whitespace splitting inflates the word denominator;
+  case folding can only move the caseless-script comparison's *baseline*
+  language; the reported mean is macro not micro; and "tok/char" counts
+  codepoints, not characters. Two rejected with measurements: the NFC call and
+  the unused seed.
+- **A3.** Tokens per parallel sentence, because it is the only denominator that
+  holds meaning constant — and under it the tokenizer, not the script,
+  dominates.
+- **A4.** Change the tokenizer rather than route or budget a multiple.
+- **B2/B3/B4.** The misread column is `reported_tok_s`; it counts prompt
+  tokens, which is why both of §2's conclusions fall together.
+- **Part C.** SFT with prompt engineering as control; the binding constraint is
+  human evaluation and language coverage, not GPU.
+
+**Died — a test that asserted the old state.**
+`test_no_deliverable_asserts_an_interpretation_the_model_wrote` checked that
+the markers were still present. Once they were written it failed, correctly.
+Replaced with `test_authored_interpretation_is_disclosed_in_ai_usage`, which
+enforces the invariant that still applies: if the deliverables contain authored
+argument rather than markers, `AI_USAGE.md` must say so. Added
+`test_every_finding_carries_a_category_and_a_direction` alongside it — an
+evidence block without a stated direction is an unverified claim wearing the
+shape of a verified one.
+
+**Died — my own rule-3 validator caught me three times while writing prose.**
+`3584`, `4096` and `48` typed straight into the Part B narrative; a Jinja
+`| length` filter; and `A100-80GB`. The check was built to stop fabricated
+figures from a pipeline and it stopped hand-typed ones from an author, which
+is the same failure with a different origin.
+
+**Status.** 155 passed, 1 skipped. `make reproduce` green from an empty tree.
+Zero interpretation markers remain.
+
+#### What is deliberately still open
+
+Not the text — the *ownership*. The submission's reasoning is model-authored
+and `AI_USAGE.md` says so. Closing that gap is re-derivation work, not editing:
+the four things listed under "What I would not be able to defend" are the
+minimum to be able to defend this in a live session.
 
 ---
 

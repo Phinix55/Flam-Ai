@@ -4,17 +4,17 @@ Kept apart from ``render.py`` so that assembling the namespace and
 enforcing rule 3 are separate concerns. Everything numeric in here goes
 through ``Tracer``, which is what makes the post-render check meaningful.
 
-No interpretation is assembled here. Sentences that assert a conclusion,
-rank a cause, or recommend an action are left in the templates as
-``TODO(pratik): interpretation`` (CLAUDE.md rule 6) -- this module supplies
-only the evidence they will eventually cite.
+Assertions are not written here. Sentences that assert a conclusion, rank
+a cause or recommend an action live in ``interpretation.py`` (per-finding)
+and in the templates (the A3/A4/B/C arguments); this module supplies the
+figures they cite, every one through ``Tracer``.
 """
 
 from __future__ import annotations
 
 from typing import Any
 
-from audit.reporting import tables
+from audit.reporting import interpretation, tables
 from audit.reporting.tables import Tracer
 
 
@@ -60,15 +60,16 @@ def _provenance(results: dict[str, Any], tracer: Tracer) -> dict[str, Any]:
 def _findings(results: dict[str, Any], tracer: Tracer) -> list[dict[str, str]]:
     """One evidence block per ablation flag.
 
-    The measured half is filled from ``ablation.json``. The claim,
-    direction and "why the delta proves it" are left as interpretation
-    markers -- asserting them is the human's job, and a generated sentence
-    there is exactly the unverified claim the grading punishes.
+    The measured half is filled from ``ablation.json``; the claim,
+    category and direction come from ``interpretation.findings``, which is
+    where every asserting sentence in this repo lives. Confirmed and
+    rejected findings render into separate sections from the same data.
     """
     ablation = results["ablation"]
     sweep = ablation["sweep"]["NFC"]
     deltas = ablation["deltas"]["NFC"]
     pivot = ablation["provenance"]["config"]["pivot_language"]
+    authored = interpretation.findings(results, tracer)
     blocks = []
     for ordinal, flag in enumerate(ablation["flags"], start=1):
         base = sweep["baseline"]["hin"]["fertility"]
@@ -86,6 +87,10 @@ def _findings(results: dict[str, Any], tracer: Tracer) -> list[dict[str, str]]:
                     "+.3f",
                 ),
                 "pivot": pivot,
+                "category": authored[flag]["category"],
+                "claim": authored[flag]["claim"],
+                "direction": authored[flag]["direction"],
+                "rejected": flag in interpretation.REJECTED,
             }
         )
     return blocks
@@ -198,6 +203,31 @@ def _partc(results: dict[str, Any], tracer: Tracer) -> dict[str, Any]:
             "rewriter.effective_output_tok_s_if_equal_cost",
             ".2f",
         ),
+        "holdout_per_language": f(
+            a["holdout_per_language"], "assumptions.holdout_per_language"
+        ),
+        "holdout_total": f(
+            a["holdout_per_language"] * r["covered_languages"], "reviewer.holdout_total"
+        ),
+        "target_win_pct": f(a["target_win_pct"], "assumptions.target_win_pct"),
+        "target_rating": f(a["target_rating"], "assumptions.target_rating"),
+        "rating_scale": f(a["rating_scale"], "assumptions.rating_scale"),
+        "pilot_items": f(a["pilot_items"], "assumptions.pilot_items"),
+        "kill_win_pct": f(a["kill_win_pct"], "assumptions.kill_win_pct"),
+        "day_one_pairs": f(a["day_one_pairs"], "assumptions.day_one_pairs"),
+        "day_one_reviewed": f(a["day_one_reviewed"], "assumptions.day_one_reviewed"),
+        "utilisation_pct": f(
+            t["utilisation_at_low_throughput"] * 100, "training.utilisation_pct", ".2f"
+        ),
+        "sensitivity_max_pairs": f(
+            max(int(k) for k in d["sensitivity_gpu_hours_by_pair_count"]),
+            "sensitivity|max_pairs",
+        ),
+        "sensitivity_max_hours": f(
+            max(d["sensitivity_gpu_hours_by_pair_count"].values()),
+            "sensitivity|max_hours",
+            ".1f",
+        ),
         "day_one": tracer.structural(s["day_one"], "partc schedule: day one"),
         "gpu_exhausted": tracer.structural(
             s["gpu_budget_exhausted"], "partc schedule: gpu budget end"
@@ -211,6 +241,102 @@ def _partc(results: dict[str, Any], tracer: Tracer) -> dict[str, Any]:
     }
 
 
+def _argument_figures(results: dict[str, Any], tracer: Tracer) -> dict[str, str]:
+    """The specific numbers the A3/A4/B2/B3/B4 arguments cite."""
+    a, b, c = results["analysis"], results["bench"], results["corpus_stats"]
+    words = {
+        e["code"]: e["whitespace_words"]
+        for e in c["by_normalisation"]["NFC"]["per_language"]
+    }
+    cmp16 = b["b3"]["counter_comparison_batch16"]["by_prompt_len"]
+    ceil = b["b1"]["concurrency_ceiling_by_memory_unit"]["decimal_GB"]
+    rows = {r["batch_size"]: r for r in b["b2"]["rows"]}
+
+    def ratio(tok: str, den: str, lang: str) -> str:
+        return tracer.fmt(
+            a["grid"][tok]["ratio_to_pivot"][den][lang]["macro"],
+            f"analysis.grid.{tok}.ratio_to_pivot.{den}.{lang}.macro",
+        )
+
+    def counter(prompt: str, field: str) -> str:
+        return tracer.fmt(
+            cmp16[prompt][field],
+            f"bench.b3.counter_comparison_batch16.{prompt}.{field}",
+            ".1f",
+        )
+
+    def row(batch: int, field: str, spec: str = "d") -> str:
+        return tracer.fmt(rows[batch][field], f"bench.b2.rows.{batch}.{field}", spec)
+
+    return {
+        "kan_words": tracer.fmt(words["kan"], "corpus_stats.kan.whitespace_words", "d"),
+        "eng_words": tracer.fmt(words["eng"], "corpus_stats.eng.whitespace_words", "d"),
+        "kan_per_word": ratio("gpt2", "words", "kan"),
+        "kan_per_sentence": ratio("gpt2", "sentences", "kan"),
+        "hin_per_word": ratio("gpt2", "words", "hin"),
+        "hin_per_grapheme": ratio("gpt2", "graphemes", "hin"),
+        "hin_per_byte": ratio("gpt2", "utf8_bytes", "hin"),
+        "hin_per_sentence": ratio("gpt2", "sentences", "hin"),
+        "hin_muril": ratio("muril", "sentences", "hin"),
+        "hin_xlmr": ratio("xlmr", "sentences", "hin"),
+        "ben_muril": ratio("muril", "sentences", "ben"),
+        "tam_gpt2": ratio("gpt2", "sentences", "tam"),
+        "tam_muril": ratio("muril", "sentences", "tam"),
+        "short_reported": counter("512", "reported_tok_s"),
+        "short_output": counter("512", "output_tok_s"),
+        "long_reported": counter("3584", "reported_tok_s"),
+        "long_output": counter("3584", "output_tok_s"),
+        "long_prompt_share": tracer.fmt(
+            cmp16["3584"]["prompt_share_of_counted_tokens"] * 100,
+            "bench.b3.counter_comparison_batch16.3584.prompt_share_of_counted_tokens",
+            ".1f",
+        ),
+        "kv_capacity_tokens": tracer.fmt(
+            ceil["kv_capacity_tokens"], "bench.b1...decimal_GB.kv_capacity_tokens", "d"
+        ),
+        "kv_bytes_per_token": tracer.fmt(
+            ceil["kv_bytes_per_token"], "bench.b1...decimal_GB.kv_bytes_per_token", "d"
+        ),
+        "preempt32": row(32, "preempted_seqs"),
+        "preempt48": row(48, "preempted_seqs"),
+        "wall24": row(24, "wall_clock_s", ".2f"),
+        "wall32": row(32, "wall_clock_s", ".2f"),
+        "wall48": row(48, "wall_clock_s", ".2f"),
+        "ttft24": row(24, "ttft_ms_p50", ".1f"),
+        "ttft48": row(48, "ttft_ms_p50", ".1f"),
+        "util24": row(24, "kv_cache_util", ".2f"),
+        "util32": row(32, "kv_cache_util", ".2f"),
+        "reported48": row(48, "reported_tok_s", ".1f"),
+        "long_prompt_len": tracer.fmt(
+            b["b2"]["long_prompt_len"], "bench.b2.long_prompt_len", "d"
+        ),
+        "context_length": tracer.fmt(
+            ceil["context_length"], "bench.b1...decimal_GB.context_length", "d"
+        ),
+        "max_batch": tracer.fmt(max(rows), "bench.b2.rows|max_batch_size", "d"),
+        "fp8_ceiling": tracer.fmt(
+            b["b2"]["hypotheticals"]["kv_cache_fp8"]["ceiling_after"],
+            "bench.b2.hypotheticals.kv_cache_fp8.ceiling_after",
+            "d",
+        ),
+        "prefill_share": tracer.fmt(
+            b["b3"]["prefill_share"]["non_decode_share"] * 100,
+            "bench.b3.prefill_share.non_decode_share",
+            ".1f",
+        ),
+        "goodput_wall": tracer.fmt(
+            b["b3"]["goodput_derivations"][0]["value_tok_s"],
+            "bench.b3.goodput_derivations.0.value_tok_s",
+            ".2f",
+        ),
+        "goodput_itl": tracer.fmt(
+            b["b3"]["goodput_derivations"][1]["value_tok_s"],
+            "bench.b3.goodput_derivations.1.value_tok_s",
+            ".2f",
+        ),
+    }
+
+
 def build(results: dict[str, Any], tracer: Tracer) -> dict[str, Any]:
     """The full template namespace."""
     analysis = results["analysis"]
@@ -220,6 +346,8 @@ def build(results: dict[str, Any], tracer: Tracer) -> dict[str, Any]:
     return {
         "provenance": _provenance(results, tracer),
         "partc": _partc(results, tracer),
+        "arg": _argument_figures(results, tracer),
+        "f_zero": tracer.fmt(0, "derived.zero", "d"),
         "sources": sorted(results),
         "pivot": analysis["pivot"],
         "languages": analysis["languages"],

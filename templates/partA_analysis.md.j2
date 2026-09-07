@@ -18,6 +18,40 @@ sentence indices, {{ provenance.bootstrap_iterations }} resamples, seed
 {% endfor %}
 ## Which denominator should drive the routing decision
 
-TODO(pratik): interpretation — what each denominator holds constant, which one
-holds *meaning* constant, and which are diagnostics rather than decision
-metrics. Say it with the numbers above.
+**Tokens per parallel sentence.** A routing-and-cost decision is a question
+about cost per unit of *meaning served*, and a denominator is only admissible
+if it holds meaning constant across languages. Of the four, exactly one does.
+
+**Per word does not.** "Word" is a unit of orthography, not of meaning, and its
+size varies with morphology. The same {{ n_records }} sentences are
+{{ arg.eng_words }} whitespace words in English and {{ arg.kan_words }} in
+Kannada — an agglutinative language packs more meaning into one word. So
+tokens/word conflates tokenizer behaviour with word formation, and it does so
+by a measurable amount: Kannada reads {{ arg.kan_per_word }}× English per word
+but {{ arg.kan_per_sentence }}× per sentence. The gap is agglutination being
+counted as tokenizer cost.
+
+**Per byte and per grapheme are diagnostics, not decision metrics.** The
+per-byte ratio for Hindi is {{ arg.hin_per_byte }}×, but Indic codepoints cost
+three UTF-8 bytes to Latin's one — that ratio measures UTF-8's design as much
+as the tokenizer's, and it is useful mainly for spotting byte-fallback. The
+per-grapheme ratio ({{ arg.hin_per_grapheme }}× for Hindi) is the right unit
+*within* a script, but grapheme clustering is not uniform *across* Indic
+scripts: the Devanagari conjunct `क्ष` is one cluster while the structurally
+identical Kannada conjunct `ಕ್ಕ` is two. A cross-script per-grapheme
+comparison does not hold "one perceived character" constant.
+
+**Per parallel sentence does, by construction.** Index *i* is the same
+proposition in every language, so the unit is the same object regardless of how
+each language spells it. It also has a property none of the others has: because
+every line's denominator is exactly one, micro and macro averaging are
+algebraically identical — the weighting choice cannot move the number. It is
+the only denominator whose value is not a methodological choice.
+
+**And under it, the tokenizer dominates the language.** Holding the denominator
+fixed at the parallel sentence and varying only the tokenizer, Hindi reads
+{{ arg.hin_per_sentence }}× English under `gpt2`, {{ arg.hin_xlmr }}× under
+XLM-R and {{ arg.hin_muril }}× under MuRIL; Bengali reads {{ arg.ben_muril }}×
+under MuRIL. The cost premium is a property of the vocabulary, not of the
+script — which is what the single number should be measuring, and what a
+single-tokenizer measurement cannot see.

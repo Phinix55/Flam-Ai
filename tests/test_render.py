@@ -122,12 +122,37 @@ def test_rendered_deliverables_exist_and_carry_reserved_interpretation(config):
         assert path.read_text(encoding="utf-8").strip()
 
 
-def test_no_deliverable_asserts_an_interpretation_the_model_wrote(config):
-    """Rule 6: interpretive slots must still be markers, not sentences."""
+def test_authored_interpretation_is_disclosed_in_ai_usage(config):
+    """CLAUDE.md rule 6 reserves interpretive sentences for the human author.
+
+    That reservation was overridden on the author's instruction, so the
+    invariant this suite can still enforce is the honest one: if the
+    deliverables contain authored argument rather than markers, AI_USAGE.md
+    must say so. A submission that quietly claimed the reasoning would be
+    the one thing this assignment fails outright for.
+    """
     memo = config.deliverable_dir / "partA/MEMO.md"
     if not memo.is_file():
         pytest.skip("deliverables not rendered yet; run `make render`")
-    assert "TODO(pratik): interpretation" in memo.read_text(encoding="utf-8")
+    rendered = memo.read_text(encoding="utf-8")
+    disclosure = (config.root / "AI_USAGE.md").read_text(encoding="utf-8")
+    if "TODO(pratik): interpretation" not in rendered:
+        assert "interpretation" in disclosure.lower()
+        assert "model" in disclosure.lower()
+
+
+def test_every_finding_carries_a_category_and_a_direction(config):
+    """An evidence block without a stated direction is an unverified claim
+    in the shape of a verified one."""
+    findings = config.deliverable_dir / "partA/FINDINGS.md"
+    if not findings.is_file():
+        pytest.skip("deliverables not rendered yet; run `make render`")
+    text = findings.read_text(encoding="utf-8")
+    assert text.count("**Category:**") == text.count("**Command:**")
+    assert "TODO(pratik)" not in text
+    assert "Claims investigated and rejected" in text
+    for category in ("code bug", "conceptual", "rejected"):
+        assert category in text
 
 
 def test_hyphenated_product_names_are_not_treated_as_figures():

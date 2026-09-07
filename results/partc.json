@@ -1,18 +1,26 @@
 {
   "assumptions": {
+    "day_one_pairs": 200,
+    "day_one_reviewed": 100,
     "epochs": 3,
     "gpu_count": 1,
     "gpu_days": 14,
+    "holdout_per_language": 400,
+    "kill_win_pct": 55,
     "lora_tokens_per_second_high": 6000,
     "lora_tokens_per_second_low": 3000,
+    "pilot_items": 200,
     "project_weeks": 2,
+    "rating_scale": 5,
     "review_launch_weeks": 3,
     "reviewer_count": 1,
     "reviewer_hours_per_week": 10,
     "reviewer_items_per_hour": 80,
     "sentences_per_response": 4,
     "sft_pairs": 15000,
-    "start_date": "2026-09-07"
+    "start_date": "2026-09-07",
+    "target_rating": 4,
+    "target_win_pct": 60
   },
   "measured_inputs": {
     "goodput_source": "bench.b3.goodput_derivations.0.value_tok_s",
@@ -101,8 +109,8 @@
       ]
     },
     "config_hash": "db3980b4cec96ce55d630ce534cfc6b56fae57ffdead12da57f63ec4aa573f28",
-    "generated_at_utc": "2026-09-07T04:50:19+00:00",
-    "git_sha": "7b41b1a184acceb2e20bb19a2480a64ef02b24dc-dirty",
+    "generated_at_utc": "2026-09-07T05:06:14+00:00",
+    "git_sha": "fd3e481e89b59415a68867936ab60e0d233b0818-dirty",
     "input_checksums": {},
     "package_versions": {
       "huggingface-hub": "0.26.5",

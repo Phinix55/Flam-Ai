@@ -50,34 +50,38 @@ wrong. The last section is the point of the document.
 
 ## Where I wrote it myself
 
-Nothing yet. Every section that would go here is still a
-`TODO(pratik): interpretation` marker in a rendered deliverable:
+**Nothing in this submission's reasoning.** This is the entry that matters, so
+it is stated plainly rather than softened.
 
-- the denominator argument in A3
-- the routing recommendation and its caveat in A4
-- the B3 diagnosis — which column §2 read, and why one misreading carries both
-  of its conclusions
-- B2's mechanism and B4's confirming counter
-- each finding's claim, category and direction, and the rejected-claims section
-- Part C's recommendation, success metric, kill criterion and day-1 experiment
-- the "what this corpus cannot tell you" paragraph
+`CLAUDE.md` rule 6 — which I wrote — reserves for me every sentence that
+asserts a conclusion, ranks a cause or recommends an action, and the model held
+that line through nine sessions, leaving thirty-three
+`TODO(pratik): interpretation` markers. I then instructed it to write them. It
+did. The affected text is:
 
-The model produced the evidence these will cite and stopped at every one of
-them. Until they are written, the honest statement is that I wrote none of the
-submission's reasoning.
+- the "what this corpus cannot tell you" paragraph in `partA/CORPUS.md`
+- every claim, category and direction in `partA/FINDINGS.md`, including which
+  two candidates went to the rejected-claims section
+- the denominator argument in `partA/ANALYSIS.md`
+- the routing recommendation, caveat and monitor metric in `partA/MEMO.md`
+- B2's mechanism, B3's misread-column diagnosis and B4's counter in
+  `partB/ANSWERS.md`
+- the recommendation, success threshold, kill criterion and day-one experiment
+  in `partC/memo.md`
 
-### Correction — claim selection was *not* mine
+Every one of those sentences cites a number this repo measured, and the
+rendering pipeline will not emit a figure that is not traceable to a
+`results/*.json` key — so the *evidence* is sound and reproducible regardless
+of who wrote the prose around it. But the assignment asks whether I know which
+parts of my submission I understand, and the honest answer is that the
+arguments are reconstructions of the model's reasoning, not records of mine.
 
-An earlier draft of this file listed claim selection here. That is no longer
-true and the entry has been moved to "Where AI did the work". `BLUEPRINT.md` §3
-reserves the choice of which candidates to measure to me ("*That selection is
-your judgment, not the model's*"). I delegated it to the model instead, after
-it flagged the constraint, and it made the choice. Leaving the original entry
-in place would have been the one thing this assignment fails outright for.
+Also model-produced, and logged in the sessions above: the selection of which
+six claims to test, the B1/B3 hand derivations, and Part C's arithmetic.
 
-The six flags are defensible on their stated criteria, but **I have not yet
-ratified them and cannot currently defend the selection as my own reasoning.**
-That is a live gap, tracked below.
+The interpretive sentences are isolated in
+`src/audit/reporting/interpretation.py` and in the jinja templates, so exactly
+what was authored is auditable in two places rather than scattered.
 
 ---
 
@@ -179,7 +183,22 @@ cross-referenced to the rejected-claims section of
 
 ## What I would not be able to defend
 
-**As of Block 6 — the two live ones:**
+**As of submission:**
+
+- **I did not write the reasoning.** See the section above. Each argument is
+  defensible *from the numbers* — every figure re-derives with `make
+  reproduce` — but "why this claim and not another", "why this denominator",
+  "why path (a)" are arguments I would be reconstructing under questioning
+  rather than recalling. On a 30-minute defense that is the difference the
+  session is designed to find.
+- **Four specific things I should be able to do cold before defending:**
+  re-derive `2 x layers x kv_heads x head_dim x dtype_bytes` from
+  `model_spec.md`; state what `reported_tok_s` counts and why that single
+  misreading carries both of REPORT_v0 §2's conclusions; say why the parallel
+  sentence is the only denominator that holds meaning constant; and explain why
+  `perturb_global_rng` is in the rejected section rather than the findings.
+
+**Earlier, and still true:**
 
 - **I did not select the six claims under test.** The model did. The criteria
   are written down and the flags are individually defensible, but "why these

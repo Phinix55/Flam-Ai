@@ -6,10 +6,10 @@ into a ``deliverable/**.md``. Part C's memo must contain arithmetic and a
 numeric success threshold, so the arithmetic is computed here and rendered
 like every other figure in the submission.
 
-**The judgment is not here.** Which of the three paths to take, the
-success metric, the kill criterion and the day-1 experiment are all
-reserved as ``TODO(pratik): interpretation`` in the template. This module
-supplies only the envelope those decisions will be argued against.
+**The judgment is not here.** This module sizes the envelope; the memo's
+argument lives in ``templates/partC_memo.md.j2`` and its thresholds are
+declared as fields on ``PartCAssumptions`` below, so a threshold the memo
+states is one the envelope sized rather than one the prose invented.
 
 Where an input can be *measured* from this repo it is, rather than
 assumed: response length in tokens comes from the A3 grid, and the
@@ -55,6 +55,17 @@ class PartCAssumptions:
     epochs: int = 3
     lora_tokens_per_second_low: int = 3_000
     lora_tokens_per_second_high: int = 6_000
+
+    # Evaluation design. Thresholds are choices, not measurements; they are
+    # declared here so the memo cannot state one the envelope did not size.
+    holdout_per_language: int = 400
+    rating_scale: int = 5
+    target_rating: int = 4
+    target_win_pct: int = 60
+    pilot_items: int = 200
+    kill_win_pct: int = 55
+    day_one_pairs: int = 200
+    day_one_reviewed: int = 100
 
 
 def reviewer_envelope(assumptions: PartCAssumptions) -> dict[str, Any]:

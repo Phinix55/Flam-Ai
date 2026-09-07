@@ -15,12 +15,32 @@ Tokenizer `{{ headline_tokenizer }}`, ratio to `{{ pivot }}`, macro:
 
 ## Routing recommendation
 
-TODO(pratik): interpretation
+**Change the tokenizer; do not route Indic traffic to a separate model, and do
+not budget a fixed multiple for serving cost.** Measured on the evaluation
+corpus, per parallel sentence and relative to English: Hindi is
+{{ arg.hin_per_sentence }}× under the tokenizer the v0 report used, and
+{{ arg.hin_muril }}× under an Indic-aware one. Tamil moves
+{{ arg.tam_gpt2 }}× → {{ arg.tam_muril }}×; Bengali reaches
+{{ arg.ben_muril }}×. The premium is a property of the vocabulary and largely
+disappears when the vocabulary changes, so provisioning against it would be
+buying capacity to compensate for a tokenizer choice.
 
 ## Biggest caveat
 
-TODO(pratik): interpretation
+The corpus is professionally translated news and encyclopaedic prose. It
+contains no assistant chat register, no code-switching and no Latin-script
+Indic — all of which are common in real traffic and none of which is
+represented here. Because every sentence is a translation of a shared English
+source, Indic phrasing is pulled toward English structure, which if anything
+understates true divergence. These numbers are sound for the text they were
+measured on and are not a forecast of production token cost.
 
 ## The one metric to monitor in production
 
-TODO(pratik): interpretation
+**Median tokens per served request, segmented by language, expressed as a ratio
+to English.** If that production ratio drifts away from the per-sentence ratios
+above, the corpus has stopped representing traffic and every conclusion here
+expires. It is the single number that catches this analysis being wrong,
+because it fails in exactly the way the caveat predicts: real Indic traffic
+being shorter, code-switched or Latin-script would move it without anything in
+the tokenizer changing.

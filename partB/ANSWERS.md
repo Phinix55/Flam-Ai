@@ -1,6 +1,6 @@
 # Part B — Capacity reconciliation
 
-*Model `FLM-4B-Instruct (dense)` on `1× NVIDIA L4 (24 GB)`. Commit `4260f931772d61db634ce4200543f4e26e29b6b9-dirty`.
+*Model `FLM-4B-Instruct (dense)` on `1× NVIDIA L4 (24 GB)`. Commit `f04b85aee0d89cf60f3640561628d24c896959bf-dirty`.
 Every value below is parsed from `bench/model_spec.md`; nothing is hardcoded.*
 
 ## B1 — KV bytes per token
@@ -44,6 +44,16 @@ TODO(pratik): interpretation
 
 Throughput peaks at batch 24 (1607.4 tok/s) and
 falls to 1384.0 tok/s at batch 32.
+
+Configuration changes whose effect is arithmetically predictable from the
+spec. None is recommended here; the choice and its justification are the
+answer to B2.
+
+| change | what it alters | ceiling before | ceiling after | x |
+|---|---|---|---|---|
+| `cap_concurrency_at_ceiling` | admit at most 25 concurrent sequences | 25 | 25 | 1.00 |
+| `halve_max_model_len` | max_model_len 4096 -> 2048 | 25 | 51 | 2.00 |
+| `kv_cache_fp8` | KV cache precision fp16 -> fp8 | 25 | 51 | 2.00 |
 
 TODO(pratik): interpretation
 

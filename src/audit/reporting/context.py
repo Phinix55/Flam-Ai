@@ -245,6 +245,9 @@ def build(results: dict[str, Any], tracer: Tracer) -> dict[str, Any]:
         "normalisation": analysis["corpus"]["normalisation"],
         "corpus_table": tables.corpus_table(results["corpus_stats"], tracer),
         "ablation_table": tables.ablation_table(results["ablation"], tracer),
+        "reported_numbers_table": tables.reported_numbers_table(
+            results["ablation"], tracer
+        ),
         "analysis_tables": {
             denominator: tables.analysis_table(analysis, tracer, denominator)
             for denominator in analysis["denominators"]
@@ -254,6 +257,7 @@ def build(results: dict[str, Any], tracer: Tracer) -> dict[str, Any]:
         "kv_table": tables.kv_table(bench, tracer),
         "concurrency_table": tables.concurrency_table(bench, tracer),
         "goodput_table": tables.goodput_table(bench, tracer),
+        "hypotheticals_table": tables.hypotheticals_table(bench, tracer),
         "knee_batch_size": tracer.fmt(
             knee["knee_batch_size"], "bench.b2.knee.knee_batch_size", "d"
         ),

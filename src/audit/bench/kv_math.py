@@ -12,7 +12,7 @@ explicit MHA-vs-GQA pair so that ratio can never silently drop out.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 
 from audit.bench.spec import ModelSpec, ServingSpec, dtype_bytes
 
@@ -152,3 +152,43 @@ def concurrency_ceiling(
         max_concurrent_sequences=int(exact),
         kv_capacity_tokens=budget // per_token,
     )
+
+
+def hypotheticals(
+    spec: ModelSpec, serving: ServingSpec, context_length: int
+) -> dict[str, dict[str, float | int | str]]:
+    """Predicted quantitative effect of stated configuration changes.
+
+    B2 asks for *a* config change with a predicted effect. Several are
+    arithmetically available from the spec, so all of them are computed and
+    **none is recommended** -- picking one is a decision, and CLAUDE.md rule
+    6 puts decisions with the human. Each entry states what it changes and
+    what the change predicts, so the argument can be made against numbers
+    rather than intuition.
+    """
+    base = concurrency_ceiling(spec, serving, context_length)
+    fp8 = concurrency_ceiling(replace(spec, kv_dtype="fp8"), serving, context_length)
+    half_ctx = concurrency_ceiling(spec, serving, context_length // 2)
+    return {
+        "kv_cache_fp8": {
+            "changes": "KV cache precision fp16 -> fp8",
+            "kv_bytes_per_token": fp8.kv_bytes_per_token,
+            "ceiling_before": base.max_concurrent_sequences,
+            "ceiling_after": fp8.max_concurrent_sequences,
+            "ceiling_multiplier": fp8.exact_sequences / base.exact_sequences,
+        },
+        "halve_max_model_len": {
+            "changes": f"max_model_len {context_length} -> {context_length // 2}",
+            "ceiling_before": base.max_concurrent_sequences,
+            "ceiling_after": half_ctx.max_concurrent_sequences,
+            "ceiling_multiplier": half_ctx.exact_sequences / base.exact_sequences,
+        },
+        "cap_concurrency_at_ceiling": {
+            "changes": "admit at most "
+            f"{base.max_concurrent_sequences} concurrent sequences",
+            "predicted_preempted_seqs": 0,
+            "ceiling_before": base.max_concurrent_sequences,
+            "ceiling_after": base.max_concurrent_sequences,
+            "ceiling_multiplier": 1.0,
+        },
+    }

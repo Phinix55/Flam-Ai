@@ -221,6 +221,7 @@ def _bench_payload(config: AuditConfig) -> dict[str, object]:
     from audit.bench.kv_math import (
         MEMORY_UNITS,
         concurrency_ceiling,
+        hypotheticals,
         kv_bytes_per_token,
     )
     from audit.bench.log_analysis import (
@@ -256,6 +257,7 @@ def _bench_payload(config: AuditConfig) -> dict[str, object]:
         "b2": {
             "long_prompt_len": LONG_PROMPT_LEN,
             "knee": find_knee(long_sweep),
+            "hypotheticals": hypotheticals(model, serving, serving.max_model_len),
             "rows": [asdict(r) for r in long_sweep],
         },
         "b3": {

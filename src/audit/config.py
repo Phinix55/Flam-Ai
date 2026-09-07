@@ -190,11 +190,19 @@ class AuditConfig:
 
     @property
     def deliverable_dir(self) -> Path:
-        return self.root / "deliverable"
+        """Root of the submission tree.
+
+        The assignment PDF specifies ``partA/``, ``partB/`` and
+        ``partC/memo.md`` at the top level of the submitted repo, so that
+        is where they are written. BLUEPRINT.md sketched them under a
+        ``deliverable/`` directory; where the two disagree the graded
+        specification wins.
+        """
+        return self.root
 
     @property
     def figures_dir(self) -> Path:
-        return self.deliverable_dir / "figures"
+        return self.root / "figures"
 
     # -------------------------------------------------------------- lookup
 

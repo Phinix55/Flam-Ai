@@ -319,8 +319,8 @@
       ]
     },
     "config_hash": "db3980b4cec96ce55d630ce534cfc6b56fae57ffdead12da57f63ec4aa573f28",
-    "generated_at_utc": "2026-09-07T03:27:57+00:00",
-    "git_sha": "4260f931772d61db634ce4200543f4e26e29b6b9-dirty",
+    "generated_at_utc": "2026-09-07T04:41:00+00:00",
+    "git_sha": "f04b85aee0d89cf60f3640561628d24c896959bf-dirty",
     "input_checksums": {
       "tests/fixtures/adversarial/combining_marks.txt": "e0503280138d779c410a25a6b422e6a08d4b06cfb1236f4d0532a8fcdfe58b9a",
       "tests/fixtures/adversarial/crlf_line_endings.txt": "f8e0f1568dd9254c3262d199d5dcfc9ff6d4855e18ec53a7176f9eab948ed93e",

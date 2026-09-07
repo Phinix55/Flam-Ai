@@ -185,6 +185,28 @@
     }
   },
   "b2": {
+    "hypotheticals": {
+      "cap_concurrency_at_ceiling": {
+        "ceiling_after": 25,
+        "ceiling_before": 25,
+        "ceiling_multiplier": 1.0,
+        "changes": "admit at most 25 concurrent sequences",
+        "predicted_preempted_seqs": 0
+      },
+      "halve_max_model_len": {
+        "ceiling_after": 51,
+        "ceiling_before": 25,
+        "ceiling_multiplier": 2.0,
+        "changes": "max_model_len 4096 -> 2048"
+      },
+      "kv_cache_fp8": {
+        "ceiling_after": 51,
+        "ceiling_before": 25,
+        "ceiling_multiplier": 2.0,
+        "changes": "KV cache precision fp16 -> fp8",
+        "kv_bytes_per_token": 57344
+      }
+    },
     "knee": {
       "after_knee": {
         "itl_ms_p50": 101.79,
@@ -506,8 +528,8 @@
       ]
     },
     "config_hash": "db3980b4cec96ce55d630ce534cfc6b56fae57ffdead12da57f63ec4aa573f28",
-    "generated_at_utc": "2026-09-07T03:30:24+00:00",
-    "git_sha": "4260f931772d61db634ce4200543f4e26e29b6b9-dirty",
+    "generated_at_utc": "2026-09-07T04:41:25+00:00",
+    "git_sha": "f04b85aee0d89cf60f3640561628d24c896959bf-dirty",
     "input_checksums": {
       "starter_kit/starter_kit/bench/bench_log.csv": "e6081ebfb5898b871929773c24ae1192dcd2e1cc6bf00aea647683ad39e98b89",
       "starter_kit/starter_kit/bench/model_spec.md": "1544a15f1e1fe2d46b78d41efa02963c631cfa2f7d4ac3b044cb2767919b67f2"

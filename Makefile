@@ -94,6 +94,6 @@ tree:  ## Print the source tree (starter_kit excluded; it is read-only)
 	  | sort
 
 clean:  ## Remove generated artefacts. Never touches .cache/ or starter_kit/
-	rm -rf results/*.json deliverable/partA/*.md deliverable/partB/*.md \
-	       deliverable/figures .mypy_cache .ruff_cache .pytest_cache
+	rm -rf results/*.json partA partB partC figures \
+	       .mypy_cache .ruff_cache .pytest_cache
 	find src tests -name '__pycache__' -type d -exec rm -rf {} +

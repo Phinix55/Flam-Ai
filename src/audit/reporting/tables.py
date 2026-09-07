@@ -60,6 +60,16 @@ class Tracer:
         """Format ``value`` and record it against its results key."""
         return self._record(format(value, spec), key, "results")
 
+    def text(self, value: str, key: str) -> str:
+        """Register a results-derived *string* and the numerals inside it.
+
+        Some results values are prose that embeds figures -- a
+        hypothetical's description carries the context length it changes.
+        The string came from a results key, so its numerals are traced to
+        that key rather than declared structural.
+        """
+        return self._record(value, key, "results")
+
     def structural(self, text: str, reason: str) -> str:
         """Declare a non-data numeral. Reported, never silently allowed."""
         return self._record(text, reason, "structural")
@@ -245,3 +255,67 @@ def goodput_table(bench: dict[str, Any], tracer: Tracer) -> str:
         for index, derivation in enumerate(bench["b3"]["goodput_derivations"])
     ]
     return markdown_table(["derivation", "columns used", "counts", "tok/s"], rows)
+
+
+def reported_numbers_table(ablation: dict[str, Any], tracer: Tracer) -> str:
+    """What ``REPORT_v0.md`` would have printed under each single change.
+
+    A2 asks for the effect of each claimed flaw **on the reported
+    numbers**. Those are the ten-line ``corpus_sample`` figures the deck
+    carries, not the FLORES ones -- so this table runs the same flag grid
+    over the same input the original run used. The baseline row must
+    reproduce the published deck values exactly, which is what makes every
+    other row in the table a statement about the report rather than about
+    a different corpus.
+    """
+    arms = ablation["legacy_sample"]
+    rows = []
+    for arm in ["baseline", *sorted(a for a in arms if a != "baseline")]:
+        results = arms[arm]
+        by_lang = {r["lang"]: r for r in results}
+        eng, hin = by_lang["eng"], by_lang["hin"]
+        key = f"ablation.legacy_sample.{arm}"
+        rows.append(
+            [
+                f"`{arm}`",
+                tracer.fmt(eng["fertility"], f"{key}.eng.fertility", ".2f"),
+                tracer.fmt(hin["fertility"], f"{key}.hin.fertility", ".2f"),
+                tracer.fmt(eng["tokens_per_char"], f"{key}.eng.tokens_per_char", ".3f"),
+                tracer.fmt(hin["tokens_per_char"], f"{key}.hin.tokens_per_char", ".3f"),
+                tracer.fmt(
+                    hin["fertility"] / eng["fertility"], f"{key}.hin_eng_ratio", ".2f"
+                ),
+            ]
+        )
+    return markdown_table(
+        [
+            "flag",
+            "eng tok/word",
+            "hin tok/word",
+            "eng tok/char",
+            "hin tok/char",
+            "hin:eng",
+        ],
+        rows,
+    )
+
+
+def hypotheticals_table(bench: dict[str, Any], tracer: Tracer) -> str:
+    """Predicted effect of each stated config change. Ranks nothing."""
+    rows = []
+    for name, entry in sorted(bench["b2"]["hypotheticals"].items()):
+        key = f"bench.b2.hypotheticals.{name}"
+        rows.append(
+            [
+                f"`{name}`",
+                tracer.text(str(entry["changes"]), f"{key}.changes"),
+                tracer.fmt(entry["ceiling_before"], f"{key}.ceiling_before", "d"),
+                tracer.fmt(entry["ceiling_after"], f"{key}.ceiling_after", "d"),
+                tracer.fmt(
+                    entry["ceiling_multiplier"], f"{key}.ceiling_multiplier", ".2f"
+                ),
+            ]
+        )
+    return markdown_table(
+        ["change", "what it alters", "ceiling before", "ceiling after", "x"], rows
+    )

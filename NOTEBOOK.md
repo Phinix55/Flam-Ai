@@ -1349,6 +1349,56 @@ not by reading the list.
 **Suite:** 154 passed, 1 skipped. `make reproduce` green from an empty
 `results/` and `deliverable/`.
 
+### 2026-09-07 — Conformance pass against the assignment PDF
+
+**Ran:** a requirement-by-requirement check of the built repo against every
+explicit instruction in `AI ASSIGNMENT 2026.pdf`, executed rather than read off.
+
+**Came back — three genuine gaps, all now closed:**
+
+1. **A2 was measuring the wrong numbers.** The PDF says *"measure its effect on
+   the reported numbers"*. The reported numbers are the ten-line
+   `corpus_sample` figures the deck carries; `FINDINGS.md` was showing FLORES
+   deltas instead. `ablation.json` already held the `legacy_sample` arms — they
+   were computed in Phase 4 and never rendered. Added
+   `reported_numbers_table`. The `baseline` row now reproduces the published
+   deck values exactly — eng 1.27, hin 7.45, tok/char 0.226 / 1.579, ratio
+   5.89× — which is what makes every other row a statement about the report
+   rather than about a different corpus.
+
+2. **B2 had no predicted quantitative effect.** The PDF asks for *"one config
+   or deployment change with a predicted quantitative effect"*. The knee was
+   located but nothing projected forward. Added `kv_math.hypotheticals`:
+   fp8 KV cache and halving `max_model_len` each take the ceiling 25 → 51
+   (×2.00); capping admission at the ceiling predicts zero preemption. Three
+   are computed and **none is recommended** — choosing one is the answer to B2
+   and belongs to the human.
+
+3. **The submission tree did not match the PDF.** The PDF specifies
+   `NOTEBOOK.md`, `AI_USAGE.md`, `partA/`, `partB/`, `partC/memo.md` at the top
+   level of the submitted repo; BLUEPRINT §0 sketched them under
+   `deliverable/`. Where the graded specification and my own plan disagree, the
+   specification wins. `config.deliverable_dir` now resolves to the repo root
+   and figures live in `figures/`. This was one property change, which is the
+   payoff of never hardcoding a path.
+
+**Died:** a fourth leak found while wiring the above. The hypothetical
+descriptions are results-derived *strings* that embed figures
+(`"max_model_len 4096 -> 2048"`), and the validator rejected them — correctly,
+since nothing had registered those numerals. Added `Tracer.text`, which
+registers the numerals inside a results-derived string against that string's
+key. Declaring them structural would have been the wrong fix: they *are* data.
+
+**Now believe:** 27 of 27 explicit PDF requirements are satisfied at the
+evidence level. Eleven of them are satisfied *structurally* — the section
+exists, the numbers behind it exist, and the sentence is a
+`TODO(pratik): interpretation` marker. Those are the graded reasoning and they
+remain unwritten by design.
+
+**Suite:** 154 passed, 1 skipped. `make reproduce` green from an empty tree.
+
+---
+
 #### What is deliberately still unwritten
 
 Ten `TODO(pratik): interpretation` markers across six deliverables: the corpus

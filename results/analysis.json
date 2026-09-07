@@ -1,0 +1,2366 @@
+{
+  "corpus": {
+    "n_records": 1012,
+    "normalisation": "NFC",
+    "split": "devtest"
+  },
+  "denominators": [
+    "words",
+    "graphemes",
+    "codepoints",
+    "utf8_bytes",
+    "sentences"
+  ],
+  "grid": {
+    "cl100k": {
+      "absolute": {
+        "codepoints": {
+          "ben": {
+            "macro": 1.2295270645267453,
+            "macro_ci_high": 1.232713157396935,
+            "macro_ci_low": 1.2263525680087555,
+            "micro": 1.2262196010460844,
+            "n": 1012,
+            "total_denominator": 130391,
+            "total_tokens": 159888
+          },
+          "eng": {
+            "macro": 0.20811881755382355,
+            "macro_ci_high": 0.20993800475757884,
+            "macro_ci_low": 0.20632682936630617,
+            "micro": 0.20597729718260765,
+            "n": 1012,
+            "total_denominator": 131966,
+            "total_tokens": 27182
+          },
+          "hin": {
+            "macro": 0.9899422553665831,
+            "macro_ci_high": 0.9924959376886343,
+            "macro_ci_low": 0.9874269238015786,
+            "micro": 0.9877135082811869,
+            "n": 1012,
+            "total_denominator": 131201,
+            "total_tokens": 129589
+          },
+          "kan": {
+            "macro": 1.742415569414056,
+            "macro_ci_high": 1.7456515539552342,
+            "macro_ci_low": 1.7391544269624253,
+            "micro": 1.7432652558876975,
+            "n": 1012,
+            "total_denominator": 138127,
+            "total_tokens": 240792
+          },
+          "mar": {
+            "macro": 1.0332404785046223,
+            "macro_ci_high": 1.035628016738686,
+            "macro_ci_low": 1.0309131863202277,
+            "micro": 1.0312040344610212,
+            "n": 1012,
+            "total_denominator": 133252,
+            "total_tokens": 137410
+          },
+          "tam": {
+            "macro": 1.347693835684806,
+            "macro_ci_high": 1.3508231771406156,
+            "macro_ci_low": 1.3445536603053427,
+            "micro": 1.3479961850633553,
+            "n": 1012,
+            "total_denominator": 154131,
+            "total_tokens": 207768
+          },
+          "tel": {
+            "macro": 1.6983624833709077,
+            "macro_ci_high": 1.7040392764499035,
+            "macro_ci_low": 1.6925007558113465,
+            "micro": 1.7001962264150943,
+            "n": 1012,
+            "total_denominator": 132500,
+            "total_tokens": 225276
+          }
+        },
+        "graphemes": {
+          "ben": {
+            "macro": 1.9642679794468059,
+            "macro_ci_high": 1.9727355339703767,
+            "macro_ci_low": 1.9555361298818994,
+            "micro": 1.9571811538320296,
+            "n": 1012,
+            "total_denominator": 81693,
+            "total_tokens": 159888
+          },
+          "eng": {
+            "macro": 0.20811881755382355,
+            "macro_ci_high": 0.20993800475757884,
+            "macro_ci_low": 0.20632682936630617,
+            "micro": 0.20597729718260765,
+            "n": 1012,
+            "total_denominator": 131966,
+            "total_tokens": 27182
+          },
+          "hin": {
+            "macro": 1.5130014029634773,
+            "macro_ci_high": 1.519922401808513,
+            "macro_ci_low": 1.5062515753663435,
+            "micro": 1.5072344088022518,
+            "n": 1012,
+            "total_denominator": 85978,
+            "total_tokens": 129589
+          },
+          "kan": {
+            "macro": 2.662307297397531,
+            "macro_ci_high": 2.6723674059477984,
+            "macro_ci_low": 2.652187181210438,
+            "micro": 2.6615379513877375,
+            "n": 1012,
+            "total_denominator": 90471,
+            "total_tokens": 240792
+          },
+          "mar": {
+            "macro": 1.710404187570347,
+            "macro_ci_high": 1.7179912579213017,
+            "macro_ci_low": 1.7028726037143882,
+            "micro": 1.7071898023332381,
+            "n": 1012,
+            "total_denominator": 80489,
+            "total_tokens": 137410
+          },
+          "tam": {
+            "macro": 2.0843739123435756,
+            "macro_ci_high": 2.091441836971262,
+            "macro_ci_low": 2.0771927593731037,
+            "micro": 2.083430267538406,
+            "n": 1012,
+            "total_denominator": 99724,
+            "total_tokens": 207768
+          },
+          "tel": {
+            "macro": 2.955809134068425,
+            "macro_ci_high": 2.976224679712046,
+            "macro_ci_low": 2.935497659819636,
+            "micro": 2.9408631628417012,
+            "n": 1012,
+            "total_denominator": 76602,
+            "total_tokens": 225276
+          }
+        },
+        "sentences": {
+          "ben": {
+            "macro": 157.9920948616601,
+            "macro_ci_high": 161.4032114624506,
+            "macro_ci_low": 154.65311264822134,
+            "micro": 157.9920948616601,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 159888
+          },
+          "eng": {
+            "macro": 26.859683794466402,
+            "macro_ci_high": 27.442687747035574,
+            "macro_ci_low": 26.292465415019763,
+            "micro": 26.859683794466402,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 27182
+          },
+          "hin": {
+            "macro": 128.05237154150197,
+            "macro_ci_high": 130.87749505928852,
+            "macro_ci_low": 125.31422924901186,
+            "micro": 128.05237154150197,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 129589
+          },
+          "kan": {
+            "macro": 237.93675889328063,
+            "macro_ci_high": 243.23920454545453,
+            "macro_ci_low": 232.713290513834,
+            "micro": 237.93675889328063,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 240792
+          },
+          "mar": {
+            "macro": 135.7806324110672,
+            "macro_ci_high": 138.67887845849802,
+            "macro_ci_low": 132.8902915019763,
+            "micro": 135.7806324110672,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 137410
+          },
+          "tam": {
+            "macro": 205.30434782608697,
+            "macro_ci_high": 209.7223814229249,
+            "macro_ci_low": 200.907040513834,
+            "micro": 205.30434782608697,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 207768
+          },
+          "tel": {
+            "macro": 222.60474308300394,
+            "macro_ci_high": 227.4746294466403,
+            "macro_ci_low": 217.7943181818182,
+            "micro": 222.60474308300394,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 225276
+          }
+        },
+        "utf8_bytes": {
+          "ben": {
+            "macro": 0.4595061248218053,
+            "macro_ci_high": 0.4606293915953994,
+            "macro_ci_low": 0.45839336072761483,
+            "micro": 0.4584878229226706,
+            "n": 1012,
+            "total_denominator": 348729,
+            "total_tokens": 159888
+          },
+          "eng": {
+            "macro": 0.20792392911262825,
+            "macro_ci_high": 0.20973254439499772,
+            "macro_ci_low": 0.20614261870745348,
+            "micro": 0.20577458817829458,
+            "n": 1012,
+            "total_denominator": 132096,
+            "total_tokens": 27182
+          },
+          "hin": {
+            "macro": 0.3852814492369174,
+            "macro_ci_high": 0.38631588633536046,
+            "macro_ci_low": 0.3842785873858827,
+            "micro": 0.38401292004978366,
+            "n": 1012,
+            "total_denominator": 337460,
+            "total_tokens": 129589
+          },
+          "kan": {
+            "macro": 0.6414298485233322,
+            "macro_ci_high": 0.6417061035397414,
+            "macro_ci_low": 0.6411497840231261,
+            "micro": 0.6413577632703941,
+            "n": 1012,
+            "total_denominator": 375441,
+            "total_tokens": 240792
+          },
+          "mar": {
+            "macro": 0.3874991576901323,
+            "macro_ci_high": 0.3884265101525314,
+            "macro_ci_low": 0.3865920887804245,
+            "micro": 0.3862956549118388,
+            "n": 1012,
+            "total_denominator": 355712,
+            "total_tokens": 137410
+          },
+          "tam": {
+            "macro": 0.49301384475112303,
+            "macro_ci_high": 0.493884044944567,
+            "macro_ci_low": 0.49213445161825,
+            "micro": 0.4927674410331211,
+            "n": 1012,
+            "total_denominator": 421635,
+            "total_tokens": 207768
+          },
+          "tel": {
+            "macro": 0.6365525977155785,
+            "macro_ci_high": 0.637167927091197,
+            "macro_ci_low": 0.6359064013878173,
+            "micro": 0.6369198407672125,
+            "n": 1012,
+            "total_denominator": 353696,
+            "total_tokens": 225276
+          }
+        },
+        "words": {
+          "ben": {
+            "macro": 8.277775439612604,
+            "macro_ci_high": 8.33860396575054,
+            "macro_ci_low": 8.216950278486218,
+            "micro": 8.19686250384497,
+            "n": 1012,
+            "total_denominator": 19506,
+            "total_tokens": 159888
+          },
+          "eng": {
+            "macro": 1.2504113853135252,
+            "macro_ci_high": 1.2607829131647934,
+            "macro_ci_low": 1.2402507002367098,
+            "micro": 1.2411305419843843,
+            "n": 1012,
+            "total_denominator": 21901,
+            "total_tokens": 27182
+          },
+          "hin": {
+            "macro": 5.085570147366633,
+            "macro_ci_high": 5.1191818747846085,
+            "macro_ci_low": 5.052196896096649,
+            "micro": 5.053581874195687,
+            "n": 1012,
+            "total_denominator": 25643,
+            "total_tokens": 129589
+          },
+          "kan": {
+            "macro": 15.09625795570233,
+            "macro_ci_high": 15.22384430247948,
+            "macro_ci_low": 14.968814747907183,
+            "micro": 14.956024844720497,
+            "n": 1012,
+            "total_denominator": 16100,
+            "total_tokens": 240792
+          },
+          "mar": {
+            "macro": 7.262739036124089,
+            "macro_ci_high": 7.317641282761909,
+            "macro_ci_low": 7.207268097236358,
+            "micro": 7.214638244250762,
+            "n": 1012,
+            "total_denominator": 19046,
+            "total_tokens": 137410
+          },
+          "tam": {
+            "macro": 12.481988562794923,
+            "macro_ci_high": 12.579196168149643,
+            "macro_ci_low": 12.384720646775902,
+            "micro": 12.385573770491803,
+            "n": 1012,
+            "total_denominator": 16775,
+            "total_tokens": 207768
+          },
+          "tel": {
+            "macro": 13.384117956927536,
+            "macro_ci_high": 13.501155961297039,
+            "macro_ci_low": 13.26824591622536,
+            "micro": 13.300035423308538,
+            "n": 1012,
+            "total_denominator": 16938,
+            "total_tokens": 225276
+          }
+        }
+      },
+      "ratio_to_pivot": {
+        "codepoints": {
+          "ben": {
+            "macro": 5.907813041503399,
+            "macro_ci_high": 5.96335988177204,
+            "macro_ci_low": 5.852721016062491,
+            "micro": 5.9531784221781905
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 4.75662060260632,
+            "macro_ci_high": 4.800330078256217,
+            "macro_ci_low": 4.7136128258433905,
+            "micro": 4.795254243022408
+          },
+          "kan": {
+            "macro": 8.372215400288988,
+            "macro_ci_high": 8.454625518403365,
+            "macro_ci_low": 8.290059529969966,
+            "micro": 8.463385430007943
+          },
+          "mar": {
+            "macro": 4.964666293269739,
+            "macro_ci_high": 5.010404525052629,
+            "macro_ci_low": 4.918825971039907,
+            "micro": 5.006396571690203
+          },
+          "tam": {
+            "macro": 6.475598177643241,
+            "macro_ci_high": 6.539134283033557,
+            "macro_ci_low": 6.4126566714698265,
+            "micro": 6.5443920446645105
+          },
+          "tel": {
+            "macro": 8.1605426329682,
+            "macro_ci_high": 8.246301285640046,
+            "macro_ci_low": 8.075129212072047,
+            "micro": 8.254289427381883
+          }
+        },
+        "graphemes": {
+          "ben": {
+            "macro": 9.4382045916574,
+            "macro_ci_high": 9.541360962999894,
+            "macro_ci_low": 9.336861069126169,
+            "micro": 9.501926574446237
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 7.269892366038385,
+            "macro_ci_high": 7.349303122669664,
+            "macro_ci_low": 7.192250148808396,
+            "micro": 7.317478330954232
+          },
+          "kan": {
+            "macro": 12.792246893815868,
+            "macro_ci_high": 12.927462599539846,
+            "macro_ci_low": 12.655178171647496,
+            "micro": 12.92151119464477
+          },
+          "mar": {
+            "macro": 8.218402389913653,
+            "macro_ci_high": 8.306996175266535,
+            "macro_ci_low": 8.130931103830868,
+            "micro": 8.288242566945335
+          },
+          "tam": {
+            "macro": 10.015307298219279,
+            "macro_ci_high": 10.120431624667358,
+            "macro_ci_low": 9.909632550361495,
+            "micro": 10.114853899123437
+          },
+          "tel": {
+            "macro": 14.202507821302587,
+            "macro_ci_high": 14.387313111353851,
+            "macro_ci_low": 14.022823268479558,
+            "micro": 14.277608275607678
+          }
+        },
+        "sentences": {
+          "ben": {
+            "macro": 5.882127878743287,
+            "macro_ci_high": 5.9479840722411055,
+            "macro_ci_low": 5.81811650998409,
+            "micro": 5.882127878743287
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 4.7674564049738795,
+            "macro_ci_high": 4.822381399695742,
+            "macro_ci_low": 4.713572916498905,
+            "micro": 4.7674564049738795
+          },
+          "kan": {
+            "macro": 8.85850930763005,
+            "macro_ci_high": 8.96419996722923,
+            "macro_ci_low": 8.754076096537531,
+            "micro": 8.85850930763005
+          },
+          "mar": {
+            "macro": 5.055183577367376,
+            "macro_ci_high": 5.109067836152957,
+            "macro_ci_low": 5.001210849637147,
+            "micro": 5.055183577367376
+          },
+          "tam": {
+            "macro": 7.6435876683099115,
+            "macro_ci_high": 7.734966888882862,
+            "macro_ci_low": 7.556264583247416,
+            "micro": 7.6435876683099115
+          },
+          "tel": {
+            "macro": 8.287690383341918,
+            "macro_ci_high": 8.394012053513125,
+            "macro_ci_low": 8.184679046248627,
+            "micro": 8.287690383341918
+          }
+        },
+        "utf8_bytes": {
+          "ben": {
+            "macro": 2.2099723046927418,
+            "macro_ci_high": 2.2290990099332433,
+            "macro_ci_low": 2.191103378523562,
+            "micro": 2.228107109734129
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 1.8529923461970463,
+            "macro_ci_high": 1.8682558130569047,
+            "macro_ci_low": 1.8378400764253944,
+            "micro": 1.8661824253879855
+          },
+          "kan": {
+            "macro": 3.0849255843750547,
+            "macro_ci_high": 3.111895229916829,
+            "macro_ci_low": 3.058111828361201,
+            "micro": 3.1167977005726573
+          },
+          "mar": {
+            "macro": 1.8636583068812236,
+            "macro_ci_high": 1.8792314603028737,
+            "macro_ci_low": 1.84833579015297,
+            "micro": 1.8772758013109505
+          },
+          "tam": {
+            "macro": 2.3711260500664513,
+            "macro_ci_high": 2.3918785954932,
+            "macro_ci_low": 2.350242336327166,
+            "micro": 2.394695309054196
+          },
+          "tel": {
+            "macro": 3.0614686843993346,
+            "macro_ci_high": 3.0886310012767315,
+            "macro_ci_low": 3.0344078738166433,
+            "micro": 3.095230788241693
+          }
+        },
+        "words": {
+          "ben": {
+            "macro": 6.620041641365137,
+            "macro_ci_high": 6.689316679265803,
+            "macro_ci_low": 6.552012332549446,
+            "micro": 6.604351618597185
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 4.067117595935429,
+            "macro_ci_high": 4.10690080193177,
+            "macro_ci_low": 4.028821873930602,
+            "micro": 4.0717569210050675
+          },
+          "kan": {
+            "macro": 12.073033029779339,
+            "macro_ci_high": 12.229851047285464,
+            "macro_ci_low": 11.91946215573644,
+            "micro": 12.050323748223956
+          },
+          "mar": {
+            "macro": 5.808279676134784,
+            "macro_ci_high": 5.873751372310303,
+            "macro_ci_low": 5.743073765360684,
+            "micro": 5.812956816545358
+          },
+          "tam": {
+            "macro": 9.982305591103698,
+            "macro_ci_high": 10.104827070844822,
+            "macro_ci_low": 9.859662874575351,
+            "micro": 9.97926757220002
+          },
+          "tel": {
+            "macro": 10.703771665971862,
+            "macro_ci_high": 10.840460920628049,
+            "macro_ci_low": 10.569133884600616,
+            "micro": 10.716064888745503
+          }
+        }
+      }
+    },
+    "gpt2": {
+      "absolute": {
+        "codepoints": {
+          "ben": {
+            "macro": 1.992938311549727,
+            "macro_ci_high": 1.9969341980443978,
+            "macro_ci_low": 1.9889045735630693,
+            "micro": 1.9922310588921015,
+            "n": 1012,
+            "total_denominator": 130391,
+            "total_tokens": 259769
+          },
+          "eng": {
+            "macro": 0.20700197182994035,
+            "macro_ci_high": 0.20877842043410422,
+            "macro_ci_low": 0.20523480995585142,
+            "micro": 0.2049315732840277,
+            "n": 1012,
+            "total_denominator": 131966,
+            "total_tokens": 27044
+          },
+          "hin": {
+            "macro": 1.5290563537442483,
+            "macro_ci_high": 1.5323552516173629,
+            "macro_ci_low": 1.5255541042583747,
+            "micro": 1.5297444379234915,
+            "n": 1012,
+            "total_denominator": 131201,
+            "total_tokens": 200704
+          },
+          "kan": {
+            "macro": 2.6585092857187114,
+            "macro_ci_high": 2.6639811383549516,
+            "macro_ci_low": 2.6529505415619017,
+            "micro": 2.6603415697148276,
+            "n": 1012,
+            "total_denominator": 138127,
+            "total_tokens": 367465
+          },
+          "mar": {
+            "macro": 1.5951774838960089,
+            "macro_ci_high": 1.5984428971035296,
+            "macro_ci_low": 1.5918172231511478,
+            "micro": 1.5959835499654789,
+            "n": 1012,
+            "total_denominator": 133252,
+            "total_tokens": 212668
+          },
+          "tam": {
+            "macro": 2.723768359391768,
+            "macro_ci_high": 2.729393862388871,
+            "macro_ci_low": 2.7178048492276488,
+            "micro": 2.7260641921482374,
+            "n": 1012,
+            "total_denominator": 154131,
+            "total_tokens": 420171
+          },
+          "tel": {
+            "macro": 2.6438810075809926,
+            "macro_ci_high": 2.653434632388525,
+            "macro_ci_low": 2.6339905910195895,
+            "micro": 2.647411320754717,
+            "n": 1012,
+            "total_denominator": 132500,
+            "total_tokens": 350782
+          }
+        },
+        "graphemes": {
+          "ben": {
+            "macro": 3.188500165769552,
+            "macro_ci_high": 3.2051052692202595,
+            "macro_ci_low": 3.171844910871353,
+            "micro": 3.179819568384072,
+            "n": 1012,
+            "total_denominator": 81693,
+            "total_tokens": 259769
+          },
+          "eng": {
+            "macro": 0.20700197182994035,
+            "macro_ci_high": 0.20877842043410422,
+            "macro_ci_low": 0.20523480995585142,
+            "micro": 0.2049315732840277,
+            "n": 1012,
+            "total_denominator": 131966,
+            "total_tokens": 27044
+          },
+          "hin": {
+            "macro": 2.3401292885087033,
+            "macro_ci_high": 2.3525546588891135,
+            "macro_ci_low": 2.327709711369411,
+            "micro": 2.3343646048989277,
+            "n": 1012,
+            "total_denominator": 85978,
+            "total_tokens": 200704
+          },
+          "kan": {
+            "macro": 4.06203625463749,
+            "macro_ci_high": 4.077880384993242,
+            "macro_ci_low": 4.046383719931671,
+            "micro": 4.061688275801085,
+            "n": 1012,
+            "total_denominator": 90471,
+            "total_tokens": 367465
+          },
+          "mar": {
+            "macro": 2.644426112054083,
+            "macro_ci_high": 2.658396288799868,
+            "macro_ci_low": 2.6303557477299795,
+            "micro": 2.6421995552187254,
+            "n": 1012,
+            "total_denominator": 80489,
+            "total_tokens": 212668
+          },
+          "tam": {
+            "macro": 4.214527612426119,
+            "macro_ci_high": 4.230195053588832,
+            "macro_ci_low": 4.198330253754415,
+            "micro": 4.213338815129758,
+            "n": 1012,
+            "total_denominator": 99724,
+            "total_tokens": 420171
+          },
+          "tel": {
+            "macro": 4.601938855391208,
+            "macro_ci_high": 4.634391766728841,
+            "macro_ci_low": 4.5693185809287415,
+            "micro": 4.579279914362549,
+            "n": 1012,
+            "total_denominator": 76602,
+            "total_tokens": 350782
+          }
+        },
+        "sentences": {
+          "ben": {
+            "macro": 256.6887351778656,
+            "macro_ci_high": 262.3498517786561,
+            "macro_ci_low": 251.16403162055337,
+            "micro": 256.6887351778656,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 259769
+          },
+          "eng": {
+            "macro": 26.723320158102766,
+            "macro_ci_high": 27.295454545454547,
+            "macro_ci_low": 26.16301877470356,
+            "micro": 26.723320158102766,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 27044
+          },
+          "hin": {
+            "macro": 198.32411067193675,
+            "macro_ci_high": 202.71645256916997,
+            "macro_ci_low": 194.01079545454547,
+            "micro": 198.32411067193675,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 200704
+          },
+          "kan": {
+            "macro": 363.10770750988144,
+            "macro_ci_high": 371.18502964426875,
+            "macro_ci_low": 355.1126235177866,
+            "micro": 363.10770750988144,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 367465
+          },
+          "mar": {
+            "macro": 210.14624505928853,
+            "macro_ci_high": 214.7312252964427,
+            "macro_ci_low": 205.5818428853755,
+            "micro": 210.14624505928853,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 212668
+          },
+          "tam": {
+            "macro": 415.1887351778656,
+            "macro_ci_high": 424.2668231225296,
+            "macro_ci_low": 406.2292490118577,
+            "micro": 415.1887351778656,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 420171
+          },
+          "tel": {
+            "macro": 346.62252964426875,
+            "macro_ci_high": 354.240266798419,
+            "macro_ci_low": 339.1126482213439,
+            "micro": 346.62252964426875,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 350782
+          }
+        },
+        "utf8_bytes": {
+          "ben": {
+            "macro": 0.7445596501039733,
+            "macro_ci_high": 0.7452607297782038,
+            "macro_ci_low": 0.7438401584782262,
+            "micro": 0.7449022019963926,
+            "n": 1012,
+            "total_denominator": 348729,
+            "total_tokens": 259769
+          },
+          "eng": {
+            "macro": 0.20680162204514005,
+            "macro_ci_high": 0.20855794875402653,
+            "macro_ci_low": 0.20504391773947728,
+            "micro": 0.2047298934108527,
+            "n": 1012,
+            "total_denominator": 132096,
+            "total_tokens": 27044
+          },
+          "hin": {
+            "macro": 0.5947548674944307,
+            "macro_ci_high": 0.595413992946062,
+            "macro_ci_low": 0.594081026679624,
+            "micro": 0.5947490072897529,
+            "n": 1012,
+            "total_denominator": 337460,
+            "total_tokens": 200704
+          },
+          "kan": {
+            "macro": 0.9785811883781897,
+            "macro_ci_high": 0.9791996521021914,
+            "macro_ci_low": 0.9779660384770779,
+            "micro": 0.9787556500222405,
+            "n": 1012,
+            "total_denominator": 375441,
+            "total_tokens": 367465
+          },
+          "mar": {
+            "macro": 0.5979503886204071,
+            "macro_ci_high": 0.5986094943213327,
+            "macro_ci_low": 0.5972897809221548,
+            "micro": 0.5978656890967974,
+            "n": 1012,
+            "total_denominator": 355712,
+            "total_tokens": 212668
+          },
+          "tam": {
+            "macro": 0.9961231642984066,
+            "macro_ci_high": 0.996664586938053,
+            "macro_ci_low": 0.995532794221507,
+            "micro": 0.9965278024831904,
+            "n": 1012,
+            "total_denominator": 421635,
+            "total_tokens": 420171
+          },
+          "tel": {
+            "macro": 0.9906899355695775,
+            "macro_ci_high": 0.9919124020147293,
+            "macro_ci_low": 0.9894274689993169,
+            "micro": 0.9917612865285443,
+            "n": 1012,
+            "total_denominator": 353696,
+            "total_tokens": 350782
+          }
+        },
+        "words": {
+          "ben": {
+            "macro": 13.437567139671689,
+            "macro_ci_high": 13.542059316739383,
+            "macro_ci_low": 13.33070230078012,
+            "micro": 13.317389521172972,
+            "n": 1012,
+            "total_denominator": 19506,
+            "total_tokens": 259769
+          },
+          "eng": {
+            "macro": 1.2444278318059756,
+            "macro_ci_high": 1.2549312054389437,
+            "macro_ci_low": 1.2342944616984148,
+            "micro": 1.2348294598420164,
+            "n": 1012,
+            "total_denominator": 21901,
+            "total_tokens": 27044
+          },
+          "hin": {
+            "macro": 7.867157186288368,
+            "macro_ci_high": 7.9251906445601525,
+            "macro_ci_low": 7.808982314565769,
+            "micro": 7.826853332293413,
+            "n": 1012,
+            "total_denominator": 25643,
+            "total_tokens": 200704
+          },
+          "kan": {
+            "macro": 23.024193095637557,
+            "macro_ci_high": 23.215079282173914,
+            "macro_ci_low": 22.832331663042968,
+            "micro": 22.82391304347826,
+            "n": 1012,
+            "total_denominator": 16100,
+            "total_tokens": 367465
+          },
+          "mar": {
+            "macro": 11.235664520284399,
+            "macro_ci_high": 11.328769084235455,
+            "macro_ci_low": 11.140313405136736,
+            "micro": 11.166019111624488,
+            "n": 1012,
+            "total_denominator": 19046,
+            "total_tokens": 212668
+          },
+          "tam": {
+            "macro": 25.25081365125878,
+            "macro_ci_high": 25.459230470038722,
+            "macro_ci_low": 25.047254284448982,
+            "micro": 25.047451564828613,
+            "n": 1012,
+            "total_denominator": 16775,
+            "total_tokens": 420171
+          },
+          "tel": {
+            "macro": 20.82650361313782,
+            "macro_ci_high": 21.00696920554277,
+            "macro_ci_low": 20.646617565639158,
+            "micro": 20.709765025386705,
+            "n": 1012,
+            "total_denominator": 16938,
+            "total_tokens": 350782
+          }
+        }
+      },
+      "ratio_to_pivot": {
+        "codepoints": {
+          "ben": {
+            "macro": 9.627629601456157,
+            "macro_ci_high": 9.719604718199912,
+            "macro_ci_low": 9.537582634721252,
+            "micro": 9.721445197372988
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 7.386675306650817,
+            "macro_ci_high": 7.457933446329037,
+            "macro_ci_low": 7.314981138035336,
+            "micro": 7.464659610080294
+          },
+          "kan": {
+            "macro": 12.84291768922266,
+            "macro_ci_high": 12.967027872884225,
+            "macro_ci_low": 12.719598398146214,
+            "micro": 12.981609066298882
+          },
+          "mar": {
+            "macro": 7.7060980134358585,
+            "macro_ci_high": 7.7800091809118115,
+            "macro_ci_low": 7.632522169567026,
+            "micro": 7.787885118870892
+          },
+          "tam": {
+            "macro": 13.158175911625822,
+            "macro_ci_high": 13.286154908507575,
+            "macro_ci_low": 13.03042579955174,
+            "micro": 13.302314272335243
+          },
+          "tel": {
+            "macro": 12.772250352054796,
+            "macro_ci_high": 12.906258425217754,
+            "macro_ci_low": 12.637673086140637,
+            "micro": 12.91851362057081
+          }
+        },
+        "graphemes": {
+          "ben": {
+            "macro": 15.403235715981591,
+            "macro_ci_high": 15.57748119714894,
+            "macro_ci_low": 15.233554499278304,
+            "micro": 15.516494200612795
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 11.3048647209564,
+            "macro_ci_high": 11.434382473066709,
+            "macro_ci_low": 11.17587340478513,
+            "micro": 11.390946585197897
+          },
+          "kan": {
+            "macro": 19.623176623528014,
+            "macro_ci_high": 19.826202525101102,
+            "macro_ci_low": 19.41877954948969,
+            "micro": 19.81972914525832
+          },
+          "mar": {
+            "macro": 12.774883681912824,
+            "macro_ci_high": 12.920465546611638,
+            "macro_ci_low": 12.630767026518646,
+            "micro": 12.89308188522387
+          },
+          "tam": {
+            "macro": 20.359842832263002,
+            "macro_ci_high": 20.57373326201327,
+            "macro_ci_low": 20.145892012184206,
+            "micro": 20.559734879360064
+          },
+          "tel": {
+            "macro": 22.231376902882204,
+            "macro_ci_high": 22.513963102327132,
+            "macro_ci_low": 21.953893805248704,
+            "micro": 22.34540945047952
+          }
+        },
+        "sentences": {
+          "ben": {
+            "macro": 9.605420795740276,
+            "macro_ci_high": 9.714898634476874,
+            "macro_ci_low": 9.496946648368402,
+            "micro": 9.605420795740276
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 7.421387368732436,
+            "macro_ci_high": 7.5094628805074874,
+            "macro_ci_low": 7.332161127731916,
+            "micro": 7.421387368732436
+          },
+          "kan": {
+            "macro": 13.587671942020412,
+            "macro_ci_high": 13.74908467992648,
+            "macro_ci_low": 13.4294326965368,
+            "micro": 13.587671942020412
+          },
+          "mar": {
+            "macro": 7.863777547700044,
+            "macro_ci_high": 7.950687017421647,
+            "macro_ci_low": 7.775454565999315,
+            "micro": 7.863777547700044
+          },
+          "tam": {
+            "macro": 15.536570034018638,
+            "macro_ci_high": 15.723245849275544,
+            "macro_ci_low": 15.358147916988692,
+            "micro": 15.536570034018638
+          },
+          "tel": {
+            "macro": 12.97078834491939,
+            "macro_ci_high": 13.133168459599037,
+            "macro_ci_low": 12.810600845083764,
+            "micro": 12.97078834491939
+          }
+        },
+        "utf8_bytes": {
+          "ben": {
+            "macro": 3.600356915679573,
+            "macro_ci_high": 3.6317310408546017,
+            "macro_ci_low": 3.5692380748179,
+            "micro": 3.6384632922243556
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 2.8759680974098423,
+            "macro_ci_high": 2.901296210762869,
+            "macro_ci_low": 2.8509908013008127,
+            "micro": 2.905042333491614
+          },
+          "kan": {
+            "macro": 4.731980236424779,
+            "macro_ci_high": 4.773494548904173,
+            "macro_ci_low": 4.69109133611396,
+            "micro": 4.780716844599094
+          },
+          "mar": {
+            "macro": 2.8914202060266634,
+            "macro_ci_high": 2.9164900324292997,
+            "macro_ci_low": 2.866448204396452,
+            "micro": 2.920265717605774
+          },
+          "tam": {
+            "macro": 4.816805373417119,
+            "macro_ci_high": 4.858943892357847,
+            "macro_ci_low": 4.774955452466296,
+            "micro": 4.867524648602999
+          },
+          "tel": {
+            "macro": 4.7905327132943505,
+            "macro_ci_high": 4.833734601209585,
+            "macro_ci_low": 4.747828833959,
+            "micro": 4.844242675095201
+          }
+        },
+        "words": {
+          "ben": {
+            "macro": 10.7981891727465,
+            "macro_ci_high": 10.914274371100051,
+            "macro_ci_low": 10.681653099395378,
+            "micro": 10.78480061763087
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 6.3219071329119645,
+            "macro_ci_high": 6.387143151912285,
+            "macro_ci_low": 6.257858486692387,
+            "micro": 6.338408328300474
+          },
+          "kan": {
+            "macro": 18.501830726675166,
+            "macro_ci_high": 18.73973839204681,
+            "macro_ci_low": 18.270781539552264,
+            "micro": 18.483453615042794
+          },
+          "mar": {
+            "macro": 9.028779518679395,
+            "macro_ci_high": 9.134936686198012,
+            "macro_ci_low": 8.920402968538454,
+            "micro": 9.042559701363995
+          },
+          "tam": {
+            "macro": 20.291103273231638,
+            "macro_ci_high": 20.54381394222629,
+            "macro_ci_low": 20.038916760902268,
+            "micro": 20.284138319823672
+          },
+          "tel": {
+            "macro": 16.73580667423145,
+            "macro_ci_high": 16.94753454200409,
+            "macro_ci_low": 16.528574680327804,
+            "micro": 16.771356449526483
+          }
+        }
+      }
+    },
+    "muril": {
+      "absolute": {
+        "codepoints": {
+          "ben": {
+            "macro": 0.2130537151206502,
+            "macro_ci_high": 0.21516415338498807,
+            "macro_ci_low": 0.21105647629055385,
+            "micro": 0.2117707510487687,
+            "n": 1012,
+            "total_denominator": 130391,
+            "total_tokens": 27613
+          },
+          "eng": {
+            "macro": 0.21096959428415524,
+            "macro_ci_high": 0.21277967330772204,
+            "macro_ci_low": 0.2091676694639509,
+            "micro": 0.20900080323719747,
+            "n": 1012,
+            "total_denominator": 131966,
+            "total_tokens": 27581
+          },
+          "hin": {
+            "macro": 0.24520158768471564,
+            "macro_ci_high": 0.24699522247677094,
+            "macro_ci_low": 0.2433985285637352,
+            "micro": 0.24332131614850497,
+            "n": 1012,
+            "total_denominator": 131201,
+            "total_tokens": 31924
+          },
+          "kan": {
+            "macro": 0.2141568815800588,
+            "macro_ci_high": 0.21630173831111146,
+            "macro_ci_low": 0.2119949796720395,
+            "micro": 0.21271728192170974,
+            "n": 1012,
+            "total_denominator": 138127,
+            "total_tokens": 29382
+          },
+          "mar": {
+            "macro": 0.2218950626483916,
+            "macro_ci_high": 0.22396902254375647,
+            "macro_ci_low": 0.21985840240173524,
+            "micro": 0.22012427580824304,
+            "n": 1012,
+            "total_denominator": 133252,
+            "total_tokens": 29332
+          },
+          "tam": {
+            "macro": 0.19005351532417086,
+            "macro_ci_high": 0.19189022906626926,
+            "macro_ci_low": 0.1882150387106282,
+            "micro": 0.18947518669184005,
+            "n": 1012,
+            "total_denominator": 154131,
+            "total_tokens": 29204
+          },
+          "tel": {
+            "macro": 0.2518816268729383,
+            "macro_ci_high": 0.2544557857051162,
+            "macro_ci_low": 0.2493389098552171,
+            "micro": 0.25049056603773584,
+            "n": 1012,
+            "total_denominator": 132500,
+            "total_tokens": 33190
+          }
+        },
+        "graphemes": {
+          "ben": {
+            "macro": 0.33899580466585877,
+            "macro_ci_high": 0.3420224723613334,
+            "macro_ci_low": 0.33613919480347737,
+            "micro": 0.3380093765683718,
+            "n": 1012,
+            "total_denominator": 81693,
+            "total_tokens": 27613
+          },
+          "eng": {
+            "macro": 0.21096959428415524,
+            "macro_ci_high": 0.21277967330772204,
+            "macro_ci_low": 0.2091676694639509,
+            "micro": 0.20900080323719747,
+            "n": 1012,
+            "total_denominator": 131966,
+            "total_tokens": 27581
+          },
+          "hin": {
+            "macro": 0.3735504054741072,
+            "macro_ci_high": 0.37603508294689125,
+            "macro_ci_low": 0.3711227996310472,
+            "micro": 0.37130428714322267,
+            "n": 1012,
+            "total_denominator": 85978,
+            "total_tokens": 31924
+          },
+          "kan": {
+            "macro": 0.3267479524830547,
+            "macro_ci_high": 0.3300471260811576,
+            "macro_ci_low": 0.3234223166500334,
+            "micro": 0.32476705242563914,
+            "n": 1012,
+            "total_denominator": 90471,
+            "total_tokens": 29382
+          },
+          "mar": {
+            "macro": 0.3658875595242914,
+            "macro_ci_high": 0.36893031832632384,
+            "macro_ci_low": 0.36288899858218276,
+            "micro": 0.3644224676663892,
+            "n": 1012,
+            "total_denominator": 80489,
+            "total_tokens": 29332
+          },
+          "tam": {
+            "macro": 0.2934436607340932,
+            "macro_ci_high": 0.296213989309518,
+            "macro_ci_low": 0.2907208834516405,
+            "micro": 0.2928482612009145,
+            "n": 1012,
+            "total_denominator": 99724,
+            "total_tokens": 29204
+          },
+          "tel": {
+            "macro": 0.43635605741856653,
+            "macro_ci_high": 0.44096694861010044,
+            "macro_ci_low": 0.4317724458923587,
+            "micro": 0.4332785044776899,
+            "n": 1012,
+            "total_denominator": 76602,
+            "total_tokens": 33190
+          }
+        },
+        "sentences": {
+          "ben": {
+            "macro": 27.285573122529645,
+            "macro_ci_high": 27.92885375494071,
+            "macro_ci_low": 26.65118577075099,
+            "micro": 27.285573122529645,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 27613
+          },
+          "eng": {
+            "macro": 27.25395256916996,
+            "macro_ci_high": 27.83698122529644,
+            "macro_ci_low": 26.67685276679842,
+            "micro": 27.25395256916996,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 27581
+          },
+          "hin": {
+            "macro": 31.545454545454547,
+            "macro_ci_high": 32.2411314229249,
+            "macro_ci_low": 30.858695652173914,
+            "micro": 31.545454545454547,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 31924
+          },
+          "kan": {
+            "macro": 29.033596837944664,
+            "macro_ci_high": 29.718379446640316,
+            "macro_ci_low": 28.354743083003953,
+            "micro": 29.033596837944664,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 29382
+          },
+          "mar": {
+            "macro": 28.984189723320156,
+            "macro_ci_high": 29.639328063241106,
+            "macro_ci_low": 28.328038537549407,
+            "micro": 28.984189723320156,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 29332
+          },
+          "tam": {
+            "macro": 28.857707509881422,
+            "macro_ci_high": 29.522751976284585,
+            "macro_ci_low": 28.194664031620555,
+            "micro": 28.857707509881422,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 29204
+          },
+          "tel": {
+            "macro": 32.79644268774704,
+            "macro_ci_high": 33.54844367588933,
+            "macro_ci_low": 32.04345355731225,
+            "micro": 32.79644268774704,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 33190
+          }
+        },
+        "utf8_bytes": {
+          "ben": {
+            "macro": 0.07984158047300531,
+            "macro_ci_high": 0.08072525698527173,
+            "macro_ci_low": 0.07899739476717954,
+            "micro": 0.07918182886998214,
+            "n": 1012,
+            "total_denominator": 348729,
+            "total_tokens": 27613
+          },
+          "eng": {
+            "macro": 0.2107744538028485,
+            "macro_ci_high": 0.21258059983714162,
+            "macro_ci_low": 0.20898197371374233,
+            "micro": 0.20879511870155038,
+            "n": 1012,
+            "total_denominator": 132096,
+            "total_tokens": 27581
+          },
+          "hin": {
+            "macro": 0.095625324522309,
+            "macro_ci_high": 0.09642535721592668,
+            "macro_ci_low": 0.09482257255700653,
+            "micro": 0.09460084158122443,
+            "n": 1012,
+            "total_denominator": 337460,
+            "total_tokens": 31924
+          },
+          "kan": {
+            "macro": 0.07904702907534118,
+            "macro_ci_high": 0.07990631632504216,
+            "macro_ci_low": 0.07818006195469143,
+            "micro": 0.07825996627965512,
+            "n": 1012,
+            "total_denominator": 375441,
+            "total_tokens": 29382
+          },
+          "mar": {
+            "macro": 0.08341477696106987,
+            "macro_ci_high": 0.08428948211705325,
+            "macro_ci_low": 0.08256667090386353,
+            "micro": 0.08245996761424973,
+            "n": 1012,
+            "total_denominator": 355712,
+            "total_tokens": 29332
+          },
+          "tam": {
+            "macro": 0.06972782715465349,
+            "macro_ci_high": 0.07048448765049363,
+            "macro_ci_low": 0.06897645838462484,
+            "micro": 0.06926369964542792,
+            "n": 1012,
+            "total_denominator": 421635,
+            "total_tokens": 29204
+          },
+          "tel": {
+            "macro": 0.09485696487878459,
+            "macro_ci_high": 0.09595980618424159,
+            "macro_ci_low": 0.09376869553723835,
+            "micro": 0.0938376458879942,
+            "n": 1012,
+            "total_denominator": 353696,
+            "total_tokens": 33190
+          }
+        },
+        "words": {
+          "ben": {
+            "macro": 1.4265976899995565,
+            "macro_ci_high": 1.4413917431923056,
+            "macro_ci_low": 1.4124640677244482,
+            "micro": 1.415615707987286,
+            "n": 1012,
+            "total_denominator": 19506,
+            "total_tokens": 27613
+          },
+          "eng": {
+            "macro": 1.2689251399925585,
+            "macro_ci_high": 1.279801710991552,
+            "macro_ci_low": 1.2583863305553948,
+            "micro": 1.259348888178622,
+            "n": 1012,
+            "total_denominator": 21901,
+            "total_tokens": 27581
+          },
+          "hin": {
+            "macro": 1.2543269412549622,
+            "macro_ci_high": 1.2641269376839528,
+            "macro_ci_low": 1.244619446261763,
+            "micro": 1.24494013960925,
+            "n": 1012,
+            "total_denominator": 25643,
+            "total_tokens": 31924
+          },
+          "kan": {
+            "macro": 1.8425342559481561,
+            "macro_ci_high": 1.8633820875197455,
+            "macro_ci_low": 1.821595775520188,
+            "micro": 1.8249689440993788,
+            "n": 1012,
+            "total_denominator": 16100,
+            "total_tokens": 29382
+          },
+          "mar": {
+            "macro": 1.5515199459893434,
+            "macro_ci_high": 1.5668510478711541,
+            "macro_ci_low": 1.5361185406176932,
+            "micro": 1.54006090517694,
+            "n": 1012,
+            "total_denominator": 19046,
+            "total_tokens": 29332
+          },
+          "tam": {
+            "macro": 1.7509430726763928,
+            "macro_ci_high": 1.770386500695477,
+            "macro_ci_low": 1.7324099586381536,
+            "micro": 1.7409239940387482,
+            "n": 1012,
+            "total_denominator": 16775,
+            "total_tokens": 29204
+          },
+          "tel": {
+            "macro": 1.978375815823848,
+            "macro_ci_high": 2.0025191019475495,
+            "macro_ci_low": 1.9551149514744686,
+            "micro": 1.9594993505726768,
+            "n": 1012,
+            "total_denominator": 16938,
+            "total_tokens": 33190
+          }
+        }
+      },
+      "ratio_to_pivot": {
+        "codepoints": {
+          "ben": {
+            "macro": 1.009878773496089,
+            "macro_ci_high": 1.0185807038901282,
+            "macro_ci_low": 1.001368798848363,
+            "micro": 1.0132532878757772
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 1.1622603177330535,
+            "macro_ci_high": 1.1709641625441216,
+            "macro_ci_low": 1.1536982498230326,
+            "micro": 1.164212349329379
+          },
+          "kan": {
+            "macro": 1.0151078040734658,
+            "macro_ci_high": 1.0249226778486127,
+            "macro_ci_low": 1.00540215911192,
+            "micro": 1.017782126321756
+          },
+          "mar": {
+            "macro": 1.051786933568829,
+            "macro_ci_high": 1.0612268785135337,
+            "macro_ci_low": 1.0424771441542546,
+            "micro": 1.053222152253747
+          },
+          "tam": {
+            "macro": 0.9008573769554087,
+            "macro_ci_high": 0.9090610075076923,
+            "macro_ci_low": 0.8926223416743625,
+            "micro": 0.906576356440135
+          },
+          "tel": {
+            "macro": 1.1939238340368545,
+            "macro_ci_high": 1.2064880396019948,
+            "macro_ci_low": 1.1817449264322153,
+            "micro": 1.1985148485455874
+          }
+        },
+        "graphemes": {
+          "ben": {
+            "macro": 1.6068467392948809,
+            "macro_ci_high": 1.6206182048571767,
+            "macro_ci_low": 1.5934186136427815,
+            "micro": 1.6172635288141022
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 1.770636222445267,
+            "macro_ci_high": 1.7846341737870706,
+            "macro_ci_low": 1.7567011072197734,
+            "micro": 1.7765687087902005
+          },
+          "kan": {
+            "macro": 1.5487916805819775,
+            "macro_ci_high": 1.5644011676344807,
+            "macro_ci_low": 1.5334669154731104,
+            "micro": 1.5539033697256044
+          },
+          "mar": {
+            "macro": 1.7343141828839892,
+            "macro_ci_high": 1.7497323704846908,
+            "macro_ci_low": 1.7191470111983256,
+            "micro": 1.7436414694196263
+          },
+          "tam": {
+            "macro": 1.3909286868080788,
+            "macro_ci_high": 1.4041539213881373,
+            "macro_ci_low": 1.3779130795709613,
+            "micro": 1.4011824675551967
+          },
+          "tel": {
+            "macro": 2.068336240106894,
+            "macro_ci_high": 2.0929327670893976,
+            "macro_ci_low": 2.0447452266960515,
+            "micro": 2.07309492483604
+          }
+        },
+        "sentences": {
+          "ben": {
+            "macro": 1.0011602189913347,
+            "macro_ci_high": 1.011853779758418,
+            "macro_ci_low": 0.9907522080069682,
+            "micro": 1.0011602189913347
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 1.1574634712301948,
+            "macro_ci_high": 1.168264691865019,
+            "macro_ci_low": 1.1469216085955023,
+            "micro": 1.1574634712301948
+          },
+          "kan": {
+            "macro": 1.0652985751060513,
+            "macro_ci_high": 1.077289254298201,
+            "macro_ci_low": 1.053226143268533,
+            "micro": 1.0652985751060513
+          },
+          "mar": {
+            "macro": 1.0634857329320908,
+            "macro_ci_high": 1.073805307675705,
+            "macro_ci_low": 1.053421277925835,
+            "micro": 1.0634857329320908
+          },
+          "tam": {
+            "macro": 1.0588448569667523,
+            "macro_ci_high": 1.0709349071229677,
+            "macro_ci_low": 1.0471454767048152,
+            "micro": 1.0588448569667523
+          },
+          "tel": {
+            "macro": 1.2033646350748706,
+            "macro_ci_high": 1.2184429306758622,
+            "macro_ci_low": 1.189239524798954,
+            "micro": 1.2033646350748706
+          }
+        },
+        "utf8_bytes": {
+          "ben": {
+            "macro": 0.378801031303758,
+            "macro_ci_high": 0.38231508103428835,
+            "macro_ci_low": 0.3754188115665351,
+            "micro": 0.3792321839820587
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 0.4536855524804433,
+            "macro_ci_high": 0.4572233750135994,
+            "macro_ci_low": 0.4502399916509135,
+            "micro": 0.4530797566989385
+          },
+          "kan": {
+            "macro": 0.3750313553144309,
+            "macro_ci_high": 0.3787276074009436,
+            "macro_ci_low": 0.3713654262141393,
+            "micro": 0.374817030045224
+          },
+          "mar": {
+            "macro": 0.39575373322562757,
+            "macro_ci_high": 0.3993831392429288,
+            "macro_ci_low": 0.39212323153395945,
+            "micro": 0.3949324492212731
+          },
+          "tam": {
+            "macro": 0.3308172593813224,
+            "macro_ci_high": 0.33392797897250315,
+            "macro_ci_low": 0.3277758383697591,
+            "micro": 0.33173045460144474
+          },
+          "tel": {
+            "macro": 0.45004014085839206,
+            "macro_ci_high": 0.45489503788405555,
+            "macro_ci_low": 0.44533382857648707,
+            "micro": 0.44942451945979056
+          }
+        },
+        "words": {
+          "ben": {
+            "macro": 1.1242567784636395,
+            "macro_ci_high": 1.1343316918255186,
+            "macro_ci_low": 1.1144165998619195,
+            "micro": 1.124085407368462
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 0.9884956186322529,
+            "macro_ci_high": 0.9959384774089132,
+            "macro_ci_low": 0.9809503167455341,
+            "micro": 0.9885585728429784
+          },
+          "kan": {
+            "macro": 1.4520433064782383,
+            "macro_ci_high": 1.4687065717385115,
+            "macro_ci_low": 1.4355372322169644,
+            "micro": 1.4491369002110328
+          },
+          "mar": {
+            "macro": 1.2227040800834335,
+            "macro_ci_high": 1.2344314799333622,
+            "macro_ci_low": 1.2110190862733794,
+            "micro": 1.2229025011522485
+          },
+          "tam": {
+            "macro": 1.3798631751331376,
+            "macro_ci_high": 1.3954195977934365,
+            "macro_ci_low": 1.3648464425449698,
+            "micro": 1.3824000722759373
+          },
+          "tel": {
+            "macro": 1.5590957681202928,
+            "macro_ci_high": 1.578049776487985,
+            "macro_ci_low": 1.5407524561219197,
+            "micro": 1.5559622666651751
+          }
+        }
+      }
+    },
+    "xlmr": {
+      "absolute": {
+        "codepoints": {
+          "ben": {
+            "macro": 0.32511431644518113,
+            "macro_ci_high": 0.32790731947671276,
+            "macro_ci_low": 0.32245917652150424,
+            "micro": 0.3230130913943447,
+            "n": 1012,
+            "total_denominator": 130391,
+            "total_tokens": 42118
+          },
+          "eng": {
+            "macro": 0.23432935259196244,
+            "macro_ci_high": 0.23610536310657604,
+            "macro_ci_low": 0.23262953490499014,
+            "micro": 0.23234014821999607,
+            "n": 1012,
+            "total_denominator": 131966,
+            "total_tokens": 30661
+          },
+          "hin": {
+            "macro": 0.2934790186906767,
+            "macro_ci_high": 0.2957080922848173,
+            "macro_ci_low": 0.29131385417961103,
+            "micro": 0.29131637716175945,
+            "n": 1012,
+            "total_denominator": 131201,
+            "total_tokens": 38221
+          },
+          "kan": {
+            "macro": 0.30184735757387804,
+            "macro_ci_high": 0.30444847297033706,
+            "macro_ci_low": 0.2992329634188058,
+            "micro": 0.30015131002628015,
+            "n": 1012,
+            "total_denominator": 138127,
+            "total_tokens": 41459
+          },
+          "mar": {
+            "macro": 0.28185119240782763,
+            "macro_ci_high": 0.28410861948602717,
+            "macro_ci_low": 0.27959056690091433,
+            "micro": 0.2801458889922853,
+            "n": 1012,
+            "total_denominator": 133252,
+            "total_tokens": 37330
+          },
+          "tam": {
+            "macro": 0.26894929324221584,
+            "macro_ci_high": 0.27108602700728807,
+            "macro_ci_low": 0.2668106513639724,
+            "micro": 0.2683042347094355,
+            "n": 1012,
+            "total_denominator": 154131,
+            "total_tokens": 41354
+          },
+          "tel": {
+            "macro": 0.30606434332733673,
+            "macro_ci_high": 0.3089535315382838,
+            "macro_ci_low": 0.3032577622750629,
+            "micro": 0.30469433962264153,
+            "n": 1012,
+            "total_denominator": 132500,
+            "total_tokens": 40372
+          }
+        },
+        "graphemes": {
+          "ben": {
+            "macro": 0.5187283930305725,
+            "macro_ci_high": 0.5232421339636426,
+            "macro_ci_low": 0.5142973594327048,
+            "micro": 0.515564369040187,
+            "n": 1012,
+            "total_denominator": 81693,
+            "total_tokens": 42118
+          },
+          "eng": {
+            "macro": 0.23432935259196244,
+            "macro_ci_high": 0.23610536310657604,
+            "macro_ci_low": 0.23262953490499014,
+            "micro": 0.23234014821999607,
+            "n": 1012,
+            "total_denominator": 131966,
+            "total_tokens": 30661
+          },
+          "hin": {
+            "macro": 0.44783379063691753,
+            "macro_ci_high": 0.4513927129043385,
+            "macro_ci_low": 0.4443880925537414,
+            "micro": 0.44454395310428246,
+            "n": 1012,
+            "total_denominator": 85978,
+            "total_tokens": 38221
+          },
+          "kan": {
+            "macro": 0.4607349661061977,
+            "macro_ci_high": 0.46483142292588125,
+            "macro_ci_low": 0.4566953346369195,
+            "micro": 0.4582573421317328,
+            "n": 1012,
+            "total_denominator": 90471,
+            "total_tokens": 41459
+          },
+          "mar": {
+            "macro": 0.4653807559274996,
+            "macro_ci_high": 0.4689105323362215,
+            "macro_ci_low": 0.46182599684328834,
+            "micro": 0.46379008311694764,
+            "n": 1012,
+            "total_denominator": 80489,
+            "total_tokens": 37330
+          },
+          "tam": {
+            "macro": 0.41558034915171055,
+            "macro_ci_high": 0.41892632903298954,
+            "macro_ci_low": 0.4123064403914655,
+            "micro": 0.4146845293008704,
+            "n": 1012,
+            "total_denominator": 99724,
+            "total_tokens": 41354
+          },
+          "tel": {
+            "macro": 0.5302138508425489,
+            "macro_ci_high": 0.5353592724078282,
+            "macro_ci_low": 0.5251958180551521,
+            "micro": 0.5270358476279993,
+            "n": 1012,
+            "total_denominator": 76602,
+            "total_tokens": 40372
+          }
+        },
+        "sentences": {
+          "ben": {
+            "macro": 41.61857707509881,
+            "macro_ci_high": 42.569169960474305,
+            "macro_ci_low": 40.685746047430825,
+            "micro": 41.61857707509881,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 42118
+          },
+          "eng": {
+            "macro": 30.297430830039527,
+            "macro_ci_high": 30.931867588932807,
+            "macro_ci_low": 29.66304347826087,
+            "micro": 30.297430830039527,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 30661
+          },
+          "hin": {
+            "macro": 37.76778656126482,
+            "macro_ci_high": 38.620578063241105,
+            "macro_ci_low": 36.93675889328063,
+            "micro": 37.76778656126482,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 38221
+          },
+          "kan": {
+            "macro": 40.96739130434783,
+            "macro_ci_high": 41.92692687747036,
+            "macro_ci_low": 40.03557312252964,
+            "micro": 40.96739130434783,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 41459
+          },
+          "mar": {
+            "macro": 36.887351778656125,
+            "macro_ci_high": 37.71837944664031,
+            "macro_ci_low": 36.074061264822134,
+            "micro": 36.887351778656125,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 37330
+          },
+          "tam": {
+            "macro": 40.86363636363637,
+            "macro_ci_high": 41.79844367588933,
+            "macro_ci_low": 39.933794466403164,
+            "micro": 40.86363636363637,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 41354
+          },
+          "tel": {
+            "macro": 39.89328063241107,
+            "macro_ci_high": 40.81326581027668,
+            "macro_ci_low": 38.996022727272724,
+            "micro": 39.89328063241107,
+            "n": 1012,
+            "total_denominator": 1012,
+            "total_tokens": 40372
+          }
+        },
+        "utf8_bytes": {
+          "ben": {
+            "macro": 0.12164506732317712,
+            "macro_ci_high": 0.12275717999443458,
+            "macro_ci_low": 0.12060075951837367,
+            "micro": 0.12077573129851546,
+            "n": 1012,
+            "total_denominator": 348729,
+            "total_tokens": 42118
+          },
+          "eng": {
+            "macro": 0.2341186643466544,
+            "macro_ci_high": 0.23588304104697275,
+            "macro_ci_low": 0.2324107850197671,
+            "micro": 0.23211149467054262,
+            "n": 1012,
+            "total_denominator": 132096,
+            "total_tokens": 30661
+          },
+          "hin": {
+            "macro": 0.114353235934241,
+            "macro_ci_high": 0.11528965077061329,
+            "macro_ci_low": 0.11344753385225494,
+            "micro": 0.11326083091329343,
+            "n": 1012,
+            "total_denominator": 337460,
+            "total_tokens": 38221
+          },
+          "kan": {
+            "macro": 0.11129757884537844,
+            "macro_ci_high": 0.11231266550951165,
+            "macro_ci_low": 0.11028819639498619,
+            "micro": 0.11042747062787495,
+            "n": 1012,
+            "total_denominator": 375441,
+            "total_tokens": 41459
+          },
+          "mar": {
+            "macro": 0.10586208008134444,
+            "macro_ci_high": 0.10680027123240637,
+            "macro_ci_low": 0.1049414638137479,
+            "micro": 0.10494444944224542,
+            "n": 1012,
+            "total_denominator": 355712,
+            "total_tokens": 37330
+          },
+          "tam": {
+            "macro": 0.09854598532809883,
+            "macro_ci_high": 0.09939175800439605,
+            "macro_ci_low": 0.09770632075365256,
+            "micro": 0.09808009297140892,
+            "n": 1012,
+            "total_denominator": 421635,
+            "total_tokens": 41354
+          },
+          "tel": {
+            "macro": 0.11514482113165089,
+            "macro_ci_high": 0.11633522086346951,
+            "macro_ci_low": 0.11397174340966874,
+            "micro": 0.11414321903555595,
+            "n": 1012,
+            "total_denominator": 353696,
+            "total_tokens": 40372
+          }
+        },
+        "words": {
+          "ben": {
+            "macro": 2.188498777773916,
+            "macro_ci_high": 2.212274429724,
+            "macro_ci_low": 2.1651468601327672,
+            "micro": 2.159233056495437,
+            "n": 1012,
+            "total_denominator": 19506,
+            "total_tokens": 42118
+          },
+          "eng": {
+            "macro": 1.4126251064325934,
+            "macro_ci_high": 1.424706700841634,
+            "macro_ci_low": 1.4007787629789705,
+            "micro": 1.3999817359937903,
+            "n": 1012,
+            "total_denominator": 21901,
+            "total_tokens": 30661
+          },
+          "hin": {
+            "macro": 1.50559770653861,
+            "macro_ci_high": 1.5198547178312138,
+            "macro_ci_low": 1.4915257074649984,
+            "micro": 1.4905042311741996,
+            "n": 1012,
+            "total_denominator": 25643,
+            "total_tokens": 38221
+          },
+          "kan": {
+            "macro": 2.6033275401237344,
+            "macro_ci_high": 2.631342333787144,
+            "macro_ci_low": 2.575913714204874,
+            "micro": 2.5750931677018634,
+            "n": 1012,
+            "total_denominator": 16100,
+            "total_tokens": 41459
+          },
+          "mar": {
+            "macro": 1.976004966356655,
+            "macro_ci_high": 1.9955487610191291,
+            "macro_ci_low": 1.956637766276142,
+            "micro": 1.9599915992859394,
+            "n": 1012,
+            "total_denominator": 19046,
+            "total_tokens": 37330
+          },
+          "tam": {
+            "macro": 2.4851974978278006,
+            "macro_ci_high": 2.510965809752532,
+            "macro_ci_low": 2.4601299753673804,
+            "micro": 2.46521609538003,
+            "n": 1012,
+            "total_denominator": 16775,
+            "total_tokens": 41354
+          },
+          "tel": {
+            "macro": 2.4070556146624837,
+            "macro_ci_high": 2.4362930112975962,
+            "macro_ci_low": 2.379690772359763,
+            "micro": 2.3835163537607746,
+            "n": 1012,
+            "total_denominator": 16938,
+            "total_tokens": 40372
+          }
+        }
+      },
+      "ratio_to_pivot": {
+        "codepoints": {
+          "ben": {
+            "macro": 1.3874246348100594,
+            "macro_ci_high": 1.3993326674864994,
+            "macro_ci_low": 1.375652131627115,
+            "micro": 1.390259470302537
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 1.2524210707896741,
+            "macro_ci_high": 1.262204742174142,
+            "macro_ci_low": 1.242540846693433,
+            "micro": 1.2538357205743043
+          },
+          "kan": {
+            "macro": 1.28813293868261,
+            "macro_ci_high": 1.2999991382856728,
+            "macro_ci_low": 1.2762366736055464,
+            "micro": 1.2918615759084207
+          },
+          "mar": {
+            "macro": 1.2027993475431775,
+            "macro_ci_high": 1.2126690227217132,
+            "macro_ci_low": 1.1928142040443261,
+            "micro": 1.2057575547684656
+          },
+          "tam": {
+            "macro": 1.1477405210543004,
+            "macro_ci_high": 1.1576482423643601,
+            "macro_ci_low": 1.1380028372108832,
+            "micro": 1.154790666894927
+          },
+          "tel": {
+            "macro": 1.3061289161682035,
+            "macro_ci_high": 1.3189935125645806,
+            "macro_ci_low": 1.2935584926383614,
+            "micro": 1.3114149317583088
+          }
+        },
+        "graphemes": {
+          "ben": {
+            "macro": 2.213672283445574,
+            "macro_ci_high": 2.2342976471256826,
+            "macro_ci_low": 2.1930105055541294,
+            "micro": 2.2190068009770494
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 1.9111297226887758,
+            "macro_ci_high": 1.9276391977446365,
+            "macro_ci_low": 1.8948663313224414,
+            "micro": 1.91333248476435
+          },
+          "kan": {
+            "macro": 1.9661854608051395,
+            "macro_ci_high": 1.9855497687490924,
+            "macro_ci_low": 1.946845185275733,
+            "micro": 1.97235538344334
+          },
+          "mar": {
+            "macro": 1.9860113587129942,
+            "macro_ci_high": 2.0031181976345596,
+            "macro_ci_low": 1.968575035881594,
+            "micro": 1.9961684911976487
+          },
+          "tam": {
+            "macro": 1.773488231648727,
+            "macro_ci_high": 1.7894806177280136,
+            "macro_ci_low": 1.757690649433566,
+            "micro": 1.784816496321668
+          },
+          "tel": {
+            "macro": 2.2626864495538035,
+            "macro_ci_high": 2.287495886943371,
+            "macro_ci_low": 2.2387911651761248,
+            "micro": 2.268380439909871
+          }
+        },
+        "sentences": {
+          "ben": {
+            "macro": 1.3736668732265744,
+            "macro_ci_high": 1.387625161948704,
+            "macro_ci_low": 1.360376775116429,
+            "micro": 1.3736668732265744
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 1.2465673004794362,
+            "macro_ci_high": 1.2582845506298146,
+            "macro_ci_low": 1.2347143809871564,
+            "micro": 1.2465673004794362
+          },
+          "kan": {
+            "macro": 1.3521737712403379,
+            "macro_ci_high": 1.366890935043701,
+            "macro_ci_low": 1.3375581138599948,
+            "micro": 1.3521737712403379
+          },
+          "mar": {
+            "macro": 1.2175075829229314,
+            "macro_ci_high": 1.2290175767011784,
+            "macro_ci_low": 1.2057720001693337,
+            "micro": 1.2175075829229314
+          },
+          "tam": {
+            "macro": 1.3487492254003457,
+            "macro_ci_high": 1.3632809522923104,
+            "macro_ci_low": 1.334548357846424,
+            "micro": 1.3487492254003457
+          },
+          "tel": {
+            "macro": 1.3167215681158475,
+            "macro_ci_high": 1.3316266489574904,
+            "macro_ci_low": 1.3018962442476112,
+            "micro": 1.3167215681158475
+          }
+        },
+        "utf8_bytes": {
+          "ben": {
+            "macro": 0.5195872258311705,
+            "macro_ci_high": 0.524130171108068,
+            "macro_ci_low": 0.5151746896756241,
+            "micro": 0.5203349858650631
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 0.4884413476958875,
+            "macro_ci_high": 0.4923244933883475,
+            "macro_ci_low": 0.48449278716742,
+            "micro": 0.48795873325470174
+          },
+          "kan": {
+            "macro": 0.475389602772475,
+            "macro_ci_high": 0.4797706173034397,
+            "macro_ci_low": 0.47096770645017205,
+            "micro": 0.4757518397984335
+          },
+          "mar": {
+            "macro": 0.45217274913458744,
+            "macro_ci_high": 0.45603128251053276,
+            "macro_ci_low": 0.4483705208628593,
+            "micro": 0.45212948023622357
+          },
+          "tam": {
+            "macro": 0.420923233963884,
+            "macro_ci_high": 0.4245537586290773,
+            "macro_ci_low": 0.41736945266228365,
+            "micro": 0.4225559492890393
+          },
+          "tel": {
+            "macro": 0.49182247580721916,
+            "macro_ci_high": 0.49681693442709657,
+            "macro_ci_low": 0.48693899079981895,
+            "micro": 0.49176030337304066
+          }
+        },
+        "words": {
+          "ben": {
+            "macro": 1.549242447842863,
+            "macro_ci_high": 1.5656454008674565,
+            "macro_ci_low": 1.5331269812960016,
+            "micro": 1.5423294468643087
+          },
+          "eng": {
+            "macro": 1.0,
+            "macro_ci_high": 1.0,
+            "macro_ci_low": 1.0,
+            "micro": 1.0
+          },
+          "hin": {
+            "macro": 1.0658154804715365,
+            "macro_ci_high": 1.0756920479595498,
+            "macro_ci_low": 1.0557832736164017,
+            "micro": 1.0646597686620183
+          },
+          "kan": {
+            "macro": 1.842900517815452,
+            "macro_ci_high": 1.8640651017851462,
+            "macro_ci_low": 1.8228735143438117,
+            "micro": 1.8393762586294806
+          },
+          "mar": {
+            "macro": 1.3988176745256966,
+            "macro_ci_high": 1.4128739531859842,
+            "macro_ci_low": 1.385146341818892,
+            "micro": 1.4000122636561547
+          },
+          "tam": {
+            "macro": 1.7592760361621023,
+            "macro_ci_high": 1.779192462879439,
+            "macro_ci_low": 1.7397536834624459,
+            "micro": 1.7608916116538285
+          },
+          "tel": {
+            "macro": 1.7039592484245158,
+            "macro_ci_high": 1.7244346647735418,
+            "macro_ci_low": 1.6842039816360062,
+            "micro": 1.702533892035965
+          }
+        }
+      }
+    }
+  },
+  "headline_tokenizer": "gpt2",
+  "languages": [
+    "eng",
+    "hin",
+    "kan",
+    "tam",
+    "tel",
+    "ben",
+    "mar"
+  ],
+  "pivot": "eng",
+  "provenance": {
+    "config": {
+      "bootstrap_confidence": 0.95,
+      "bootstrap_iterations": 10000,
+      "flores_split": "devtest",
+      "languages": [
+        {
+          "code": "eng",
+          "flores_code": "eng_Latn",
+          "name": "English",
+          "script": "Latin"
+        },
+        {
+          "code": "hin",
+          "flores_code": "hin_Deva",
+          "name": "Hindi",
+          "script": "Devanagari"
+        },
+        {
+          "code": "kan",
+          "flores_code": "kan_Knda",
+          "name": "Kannada",
+          "script": "Kannada"
+        },
+        {
+          "code": "tam",
+          "flores_code": "tam_Taml",
+          "name": "Tamil",
+          "script": "Tamil"
+        },
+        {
+          "code": "tel",
+          "flores_code": "tel_Telu",
+          "name": "Telugu",
+          "script": "Telugu"
+        },
+        {
+          "code": "ben",
+          "flores_code": "ben_Beng",
+          "name": "Bengali",
+          "script": "Bengali"
+        },
+        {
+          "code": "mar",
+          "flores_code": "mar_Deva",
+          "name": "Marathi",
+          "script": "Devanagari"
+        }
+      ],
+      "normalisation_forms": [
+        "NFC",
+        "NFD"
+      ],
+      "pivot_language": "eng",
+      "seed": 1337,
+      "tokenizers": [
+        {
+          "family": "western-centric",
+          "key": "gpt2",
+          "kind": "tiktoken",
+          "ref": "gpt2"
+        },
+        {
+          "family": "western-centric",
+          "key": "cl100k",
+          "kind": "tiktoken",
+          "ref": "cl100k_base"
+        },
+        {
+          "family": "multilingual",
+          "key": "xlmr",
+          "kind": "hf",
+          "ref": "xlm-roberta-base"
+        },
+        {
+          "family": "indic-aware",
+          "key": "muril",
+          "kind": "hf",
+          "ref": "google/muril-base-cased"
+        }
+      ]
+    },
+    "config_hash": "db3980b4cec96ce55d630ce534cfc6b56fae57ffdead12da57f63ec4aa573f28",
+    "generated_at_utc": "2026-09-07T03:27:55+00:00",
+    "git_sha": "4260f931772d61db634ce4200543f4e26e29b6b9-dirty",
+    "input_checksums": {
+      ".cache/flores200/flores200_dataset/devtest/ben_Beng.devtest": "6699aa77b4c93d520971868cd5ff06a1e3b5ddfde852da13337f5194bc23086f",
+      ".cache/flores200/flores200_dataset/devtest/eng_Latn.devtest": "612e9fbe87997617c0fa8fa8929654a4f49b728d96738112c2b86ef6a1d78d88",
+      ".cache/flores200/flores200_dataset/devtest/hin_Deva.devtest": "5f5fd39acadca29fb044a0398e81869e48f37de979df086f2fad4a7d1fd2d015",
+      ".cache/flores200/flores200_dataset/devtest/kan_Knda.devtest": "58e8ed5ef79cfd9994e7d4010d22b5ce72c3559f0c8e988fbde11fa58a720cd8",
+      ".cache/flores200/flores200_dataset/devtest/mar_Deva.devtest": "63d0d1bfdcfa7f8a1538c87cab65b0e5e010515529ed286b1f8b2a51cc62b99f",
+      ".cache/flores200/flores200_dataset/devtest/tam_Taml.devtest": "a18b26bf278e458f085c70173d6789d6108cb2e3346c81a1bd0f8aceb4ea30e4",
+      ".cache/flores200/flores200_dataset/devtest/tel_Telu.devtest": "2dc641b4fb69347efe4b0c0f2063372c643f20c664b41a1f4421b69ba2a06420"
+    },
+    "package_versions": {
+      "huggingface-hub": "0.26.5",
+      "jinja2": "3.1.6",
+      "matplotlib": "3.9.4",
+      "numpy": "2.2.6",
+      "regex": "2024.11.6",
+      "sentencepiece": "0.2.0",
+      "tiktoken": "0.8.0",
+      "tokenizers": "0.20.3",
+      "transformers": "4.46.3"
+    },
+    "platform": "Linux-6.19.14-200.fc43.x86_64-x86_64-with-glibc2.42",
+    "python_implementation": "CPython",
+    "python_version": "3.11.16"
+  },
+  "tokenizers": {
+    "cl100k": {
+      "counts_special_tokens": false,
+      "family": "western-centric",
+      "ref": "cl100k_base",
+      "vocab_size": 100277
+    },
+    "gpt2": {
+      "counts_special_tokens": false,
+      "family": "western-centric",
+      "ref": "gpt2",
+      "vocab_size": 50257
+    },
+    "muril": {
+      "counts_special_tokens": false,
+      "family": "indic-aware",
+      "ref": "google/muril-base-cased",
+      "vocab_size": 197285
+    },
+    "xlmr": {
+      "counts_special_tokens": false,
+      "family": "multilingual",
+      "ref": "xlm-roberta-base",
+      "vocab_size": 250002
+    }
+  }
+}

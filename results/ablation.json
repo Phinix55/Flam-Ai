@@ -1,0 +1,2167 @@
+{
+  "deltas": {
+    "NFC": {
+      "all_on": {
+        "ben": {
+          "fertility_abs": -0.06740164015912242,
+          "fertility_rel_pct": -0.5035688592127007,
+          "tokens_per_char_abs": 1.186772645961767,
+          "tokens_per_char_rel_pct": 59.54564504278653
+        },
+        "eng": {
+          "fertility_abs": -0.05253562633632192,
+          "fertility_rel_pct": -4.0808646203291685,
+          "tokens_per_char_abs": -0.009123355677174927,
+          "tokens_per_char_rel_pct": -4.262156317282716
+        },
+        "hin": {
+          "fertility_abs": -0.038872881908632806,
+          "fertility_rel_pct": -0.49424509195803323,
+          "tokens_per_char_abs": 0.8054882933339209,
+          "tokens_per_char_rel_pct": 52.67175250812851
+        },
+        "kan": {
+          "fertility_abs": 0.24794970339995714,
+          "fertility_rel_pct": 1.098589914894649,
+          "tokens_per_char_abs": 1.40519141534201,
+          "tokens_per_char_rel_pct": 52.828813680264965
+        },
+        "mar": {
+          "fertility_abs": -0.030372594720516233,
+          "fertility_rel_pct": -0.2715221124762788,
+          "tokens_per_char_abs": 1.0500951619516503,
+          "tokens_per_char_rel_pct": 65.78449521712635
+        },
+        "tam": {
+          "fertility_abs": -0.07955375961952527,
+          "fertility_rel_pct": -0.3166066094717656,
+          "tokens_per_char_abs": 1.489397872068058,
+          "tokens_per_char_rel_pct": 54.678052982822024
+        },
+        "tel": {
+          "fertility_abs": 0.14214557091566604,
+          "fertility_rel_pct": 0.69118084106554,
+          "tokens_per_char_abs": 1.935764056308896,
+          "tokens_per_char_rel_pct": 73.18121966077214
+        }
+      },
+      "grapheme_denominator": {
+        "ben": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.1956215654008389,
+          "tokens_per_char_rel_pct": 59.989634561523864
+        },
+        "eng": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.5936426073503984e-06,
+          "tokens_per_char_rel_pct": 0.0007445017104180981
+        },
+        "hin": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.8113460577235176,
+          "tokens_per_char_rel_pct": 53.05479807034609
+        },
+        "kan": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.4057489279754911,
+          "tokens_per_char_rel_pct": 52.849773622602356
+        },
+        "mar": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.0527400008267682,
+          "tokens_per_char_rel_pct": 65.950184381913
+        },
+        "tam": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.490844187431506,
+          "tokens_per_char_rel_pct": 54.73114941162427
+        },
+        "tel": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.9600392078638542,
+          "tokens_per_char_rel_pct": 74.0989374954701
+        }
+      },
+      "micro_aggregate": {
+        "ben": {
+          "fertility_abs": -0.12108238976056285,
+          "fertility_rel_pct": -0.9046266639584414,
+          "tokens_per_char_abs": -0.0007084941565504987,
+          "tokens_per_char_rel_pct": -0.03554829284648304
+        },
+        "eng": {
+          "fertility_abs": -0.009158611588137022,
+          "fertility_rel_pct": -0.7114230210580903,
+          "tokens_per_char_abs": -0.0019261391880017464,
+          "tokens_per_char_rel_pct": -0.8998340740618304
+        },
+        "hin": {
+          "fertility_abs": -0.04039174721652117,
+          "fertility_rel_pct": -0.5135565421750143,
+          "tokens_per_char_abs": 0.000667866335389844,
+          "tokens_per_char_rel_pct": 0.043672503520273326
+        },
+        "kan": {
+          "fertility_abs": -0.27279418314696,
+          "fertility_rel_pct": -1.20866826754682,
+          "tokens_per_char_abs": 0.0018152783928209182,
+          "tokens_per_char_rel_pct": 0.06824622108071036
+        },
+        "mar": {
+          "fertility_abs": -0.07667414406581052,
+          "fertility_rel_pct": -0.685444419899913,
+          "tokens_per_char_abs": 0.0007838119089174089,
+          "tokens_per_char_rel_pct": 0.049102855285488946
+        },
+        "tam": {
+          "fertility_abs": -0.22662013926295188,
+          "fertility_rel_pct": -0.9018987194723697,
+          "tokens_per_char_abs": 0.0022724727988343574,
+          "tokens_per_char_rel_pct": 0.08342592025068304
+        },
+        "tel": {
+          "fertility_abs": -0.1401594934955881,
+          "fertility_rel_pct": -0.681523567519921,
+          "tokens_per_char_abs": 0.003444001954127085,
+          "tokens_per_char_rel_pct": 0.13019988809880273
+        }
+      },
+      "perturb_global_rng": {
+        "ben": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "eng": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "hin": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "kan": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "mar": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "tam": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "tel": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        }
+      },
+      "preserve_case": {
+        "ben": {
+          "fertility_abs": -0.0007217657867517602,
+          "fertility_rel_pct": -0.005392432187040025,
+          "tokens_per_char_abs": -0.00010861087257807434,
+          "tokens_per_char_rel_pct": -0.005449488988752512
+        },
+        "eng": {
+          "fertility_abs": -0.042937254372363176,
+          "fertility_rel_pct": -3.3352818740662267,
+          "tokens_per_char_abs": -0.007052957131262333,
+          "tokens_per_char_rel_pct": -3.2949286267267777
+        },
+        "hin": {
+          "fertility_abs": -0.0003574138462827392,
+          "fertility_rel_pct": -0.004544300053139531,
+          "tokens_per_char_abs": -7.097080823847968e-05,
+          "tokens_per_char_rel_pct": -0.0046408580705335845
+        },
+        "kan": {
+          "fertility_abs": -0.0012446448074747707,
+          "fertility_rel_pct": -0.005514643552172974,
+          "tokens_per_char_abs": -0.00016936891671370802,
+          "tokens_per_char_rel_pct": -0.00636750185533908
+        },
+        "mar": {
+          "fertility_abs": -0.0007804918299090247,
+          "fertility_rel_pct": -0.006977368656759034,
+          "tokens_per_char_abs": -0.00011690353425919398,
+          "tokens_per_char_rel_pct": -0.00732356482439751
+        },
+        "tam": {
+          "fertility_abs": -0.0014507137635995093,
+          "fertility_rel_pct": -0.005773524321213043,
+          "tokens_per_char_abs": -0.0001725836699320027,
+          "tokens_per_char_rel_pct": -0.006335808064106532
+        },
+        "tel": {
+          "fertility_abs": -0.005826031328506787,
+          "fertility_rel_pct": -0.028328995464097874,
+          "tokens_per_char_abs": -0.0007215207155324421,
+          "tokens_per_char_rel_pct": -0.02727696374002276
+        }
+      },
+      "skip_nfc_normalisation": {
+        "ben": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "eng": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "hin": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "kan": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "mar": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "tam": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "tel": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        }
+      },
+      "split_on_unicode_whitespace": {
+        "ben": {
+          "fertility_abs": 0.053497744126328683,
+          "fertility_rel_pct": 0.3996905404163544,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "eng": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "hin": {
+          "fertility_abs": 0.0017808395326346371,
+          "fertility_rel_pct": 0.022642293428057892,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "kan": {
+          "fertility_abs": 0.44945179135350344,
+          "fertility_rel_pct": 1.9913845366284808,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "mar": {
+          "fertility_abs": 0.039498703908595445,
+          "fertility_rel_pct": 0.35310685912825424,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "tam": {
+          "fertility_abs": 0.12526371999202368,
+          "fertility_rel_pct": 0.49852228060836307,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "tel": {
+          "fertility_abs": 0.2642347623726522,
+          "fertility_rel_pct": 1.2848378188571088,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        }
+      }
+    },
+    "NFD": {
+      "all_on": {
+        "ben": {
+          "fertility_abs": 0.09536878945228011,
+          "fertility_rel_pct": 0.7125160811458543,
+          "tokens_per_char_abs": 1.2256376649964456,
+          "tokens_per_char_rel_pct": 61.49567535052475
+        },
+        "eng": {
+          "fertility_abs": -0.05089186577744331,
+          "fertility_rel_pct": -3.9531805176199466,
+          "tokens_per_char_abs": -0.008850558138414927,
+          "tokens_per_char_rel_pct": -4.1347135435592275
+        },
+        "hin": {
+          "fertility_abs": -0.03875589091693943,
+          "fertility_rel_pct": -0.49275762252925087,
+          "tokens_per_char_abs": 0.8055231945054369,
+          "tokens_per_char_rel_pct": 52.674034733560646
+        },
+        "kan": {
+          "fertility_abs": 1.122421753089398,
+          "fertility_rel_pct": 4.973110277181311,
+          "tokens_per_char_abs": 1.5609825430267756,
+          "tokens_per_char_rel_pct": 58.685852349615
+        },
+        "mar": {
+          "fertility_abs": -0.018611595035544326,
+          "fertility_rel_pct": -0.16638221551715113,
+          "tokens_per_char_abs": 1.0528851181094823,
+          "tokens_per_char_rel_pct": 65.95927543150214
+        },
+        "tam": {
+          "fertility_abs": 0.22429124783204202,
+          "fertility_rel_pct": 0.892630239600461,
+          "tokens_per_char_abs": 1.540508938611719,
+          "tokens_per_char_rel_pct": 56.554417691603575
+        },
+        "tel": {
+          "fertility_abs": 0.2677211996793929,
+          "fertility_rel_pct": 1.3017905712676994,
+          "tokens_per_char_abs": 1.963543648039015,
+          "tokens_per_char_rel_pct": 74.23142223988441
+        }
+      },
+      "grapheme_denominator": {
+        "ben": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.1956215654008389,
+          "tokens_per_char_rel_pct": 59.989634561523864
+        },
+        "eng": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.5936426073503984e-06,
+          "tokens_per_char_rel_pct": 0.0007445017104180981
+        },
+        "hin": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.8113460577235176,
+          "tokens_per_char_rel_pct": 53.05479807034609
+        },
+        "kan": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.4057489279754911,
+          "tokens_per_char_rel_pct": 52.849773622602356
+        },
+        "mar": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.0527400008267682,
+          "tokens_per_char_rel_pct": 65.950184381913
+        },
+        "tam": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.490844187431506,
+          "tokens_per_char_rel_pct": 54.73114941162427
+        },
+        "tel": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 1.9600392078638542,
+          "tokens_per_char_rel_pct": 74.0989374954701
+        }
+      },
+      "micro_aggregate": {
+        "ben": {
+          "fertility_abs": -0.12108238976056285,
+          "fertility_rel_pct": -0.9046266639584414,
+          "tokens_per_char_abs": -0.0007084941565504987,
+          "tokens_per_char_rel_pct": -0.03554829284648304
+        },
+        "eng": {
+          "fertility_abs": -0.009158611588137022,
+          "fertility_rel_pct": -0.7114230210580903,
+          "tokens_per_char_abs": -0.0019261391880017464,
+          "tokens_per_char_rel_pct": -0.8998340740618304
+        },
+        "hin": {
+          "fertility_abs": -0.04039174721652117,
+          "fertility_rel_pct": -0.5135565421750143,
+          "tokens_per_char_abs": 0.000667866335389844,
+          "tokens_per_char_rel_pct": 0.043672503520273326
+        },
+        "kan": {
+          "fertility_abs": -0.27279418314696,
+          "fertility_rel_pct": -1.20866826754682,
+          "tokens_per_char_abs": 0.0018152783928209182,
+          "tokens_per_char_rel_pct": 0.06824622108071036
+        },
+        "mar": {
+          "fertility_abs": -0.07667414406581052,
+          "fertility_rel_pct": -0.685444419899913,
+          "tokens_per_char_abs": 0.0007838119089174089,
+          "tokens_per_char_rel_pct": 0.049102855285488946
+        },
+        "tam": {
+          "fertility_abs": -0.22662013926295188,
+          "fertility_rel_pct": -0.9018987194723697,
+          "tokens_per_char_abs": 0.0022724727988343574,
+          "tokens_per_char_rel_pct": 0.08342592025068304
+        },
+        "tel": {
+          "fertility_abs": -0.1401594934955881,
+          "fertility_rel_pct": -0.681523567519921,
+          "tokens_per_char_abs": 0.003444001954127085,
+          "tokens_per_char_rel_pct": 0.13019988809880273
+        }
+      },
+      "perturb_global_rng": {
+        "ben": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "eng": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "hin": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "kan": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "mar": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "tam": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "tel": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        }
+      },
+      "preserve_case": {
+        "ben": {
+          "fertility_abs": -0.0007217657867517602,
+          "fertility_rel_pct": -0.005392432187040025,
+          "tokens_per_char_abs": -0.00010861087257807434,
+          "tokens_per_char_rel_pct": -0.005449488988752512
+        },
+        "eng": {
+          "fertility_abs": -0.042937254372363176,
+          "fertility_rel_pct": -3.3352818740662267,
+          "tokens_per_char_abs": -0.007052957131262333,
+          "tokens_per_char_rel_pct": -3.2949286267267777
+        },
+        "hin": {
+          "fertility_abs": -0.0003574138462827392,
+          "fertility_rel_pct": -0.004544300053139531,
+          "tokens_per_char_abs": -7.097080823847968e-05,
+          "tokens_per_char_rel_pct": -0.0046408580705335845
+        },
+        "kan": {
+          "fertility_abs": -0.0012446448074747707,
+          "fertility_rel_pct": -0.005514643552172974,
+          "tokens_per_char_abs": -0.00016936891671370802,
+          "tokens_per_char_rel_pct": -0.00636750185533908
+        },
+        "mar": {
+          "fertility_abs": -0.0007804918299090247,
+          "fertility_rel_pct": -0.006977368656759034,
+          "tokens_per_char_abs": -0.00011690353425919398,
+          "tokens_per_char_rel_pct": -0.00732356482439751
+        },
+        "tam": {
+          "fertility_abs": -0.0014507137635995093,
+          "fertility_rel_pct": -0.005773524321213043,
+          "tokens_per_char_abs": -0.0001725836699320027,
+          "tokens_per_char_rel_pct": -0.006335808064106532
+        },
+        "tel": {
+          "fertility_abs": -0.005826031328506787,
+          "fertility_rel_pct": -0.028328995464097874,
+          "tokens_per_char_abs": -0.0007215207155324421,
+          "tokens_per_char_rel_pct": -0.02727696374002276
+        }
+      },
+      "skip_nfc_normalisation": {
+        "ben": {
+          "fertility_abs": 0.16391450366536375,
+          "fertility_rel_pct": 1.2246325078190499,
+          "tokens_per_char_abs": 0.0005850001085490053,
+          "tokens_per_char_rel_pct": 0.029352048964206477
+        },
+        "eng": {
+          "fertility_abs": 0.0014100406891606188,
+          "fertility_rel_pct": 0.10952920071387473,
+          "tokens_per_char_abs": 0.0001891068225495507,
+          "tokens_per_char_rel_pct": 0.08834499792519435
+        },
+        "hin": {
+          "fertility_abs": 0.00010587238848103198,
+          "fertility_rel_pct": 0.0013461031395514728,
+          "tokens_per_char_abs": -8.781485566267122e-06,
+          "tokens_per_char_rel_pct": -0.0005742308587573438
+        },
+        "kan": {
+          "fertility_abs": 0.8681153190644153,
+          "fertility_rel_pct": 3.8463556173380034,
+          "tokens_per_char_abs": 0.011060915021855688,
+          "tokens_per_char_rel_pct": 0.41584015703699456
+        },
+        "mar": {
+          "fertility_abs": 0.01186546700104607,
+          "fertility_rel_pct": 0.10607380420696723,
+          "tokens_per_char_abs": 0.0003193533425824846,
+          "tokens_per_char_rel_pct": 0.02000628057236785
+        },
+        "tam": {
+          "fertility_abs": 0.3076234670350395,
+          "fertility_rel_pct": 1.2242742939833233,
+          "tokens_per_char_abs": 0.0028899365597965243,
+          "tokens_per_char_rel_pct": 0.10609395064741184
+        },
+        "tel": {
+          "fertility_abs": 0.12575985519659838,
+          "fertility_rel_pct": 0.6115055286431406,
+          "tokens_per_char_abs": 0.0018252311765327711,
+          "tokens_per_char_rel_pct": 0.06900254358283203
+        }
+      },
+      "split_on_unicode_whitespace": {
+        "ben": {
+          "fertility_abs": 0.053497744126328683,
+          "fertility_rel_pct": 0.3996905404163544,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "eng": {
+          "fertility_abs": 0.0,
+          "fertility_rel_pct": 0.0,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "hin": {
+          "fertility_abs": 0.0017808395326346371,
+          "fertility_rel_pct": 0.022642293428057892,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "kan": {
+          "fertility_abs": 0.44945179135350344,
+          "fertility_rel_pct": 1.9913845366284808,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "mar": {
+          "fertility_abs": 0.039498703908595445,
+          "fertility_rel_pct": 0.35310685912825424,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "tam": {
+          "fertility_abs": 0.12526371999202368,
+          "fertility_rel_pct": 0.49852228060836307,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        },
+        "tel": {
+          "fertility_abs": 0.2642347623726522,
+          "fertility_rel_pct": 1.2848378188571088,
+          "tokens_per_char_abs": 0.0,
+          "tokens_per_char_rel_pct": 0.0
+        }
+      }
+    }
+  },
+  "flags": [
+    "split_on_unicode_whitespace",
+    "preserve_case",
+    "micro_aggregate",
+    "grapheme_denominator",
+    "skip_nfc_normalisation",
+    "perturb_global_rng"
+  ],
+  "headline_ratios": {
+    "NFC": {
+      "all_on": {
+        "ben": 10.78480061763087,
+        "eng": 1.0,
+        "hin": 6.337903034269201,
+        "kan": 18.478473924710684,
+        "mar": 9.034183338859206,
+        "tam": 20.284138319823672,
+        "tel": 16.769730864065185
+      },
+      "baseline": {
+        "ben": 10.397043779605735,
+        "eng": 1.0,
+        "hin": 6.1094574854399895,
+        "kan": 17.531789943718213,
+        "mar": 8.68910338431236,
+        "tam": 19.51816589887486,
+        "tel": 15.974964953185774
+      },
+      "grapheme_denominator": {
+        "ben": 10.397043779605735,
+        "eng": 1.0,
+        "hin": 6.1094574854399895,
+        "kan": 17.531789943718213,
+        "mar": 8.68910338431236,
+        "tam": 19.51816589887486,
+        "tel": 15.974964953185774
+      },
+      "micro_aggregate": {
+        "ben": 10.3768123814456,
+        "eng": 1.0,
+        "hin": 6.1216326709176325,
+        "kan": 17.443989317732793,
+        "mar": 8.69137686589616,
+        "tam": 19.48072215263059,
+        "tel": 15.979775604490536
+      },
+      "perturb_global_rng": {
+        "ben": 10.397043779605735,
+        "eng": 1.0,
+        "hin": 6.1094574854399895,
+        "kan": 17.531789943718213,
+        "mar": 8.68910338431236,
+        "tam": 19.51816589887486,
+        "tel": 15.974964953185774
+      },
+      "preserve_case": {
+        "ben": 10.755199340183287,
+        "eng": 1.0,
+        "hin": 6.319968621230817,
+        "kan": 18.13569983740658,
+        "mar": 8.98828164192957,
+        "tam": 20.190447343355455,
+        "tel": 16.521477241864684
+      },
+      "skip_nfc_normalisation": {
+        "ben": 10.397043779605735,
+        "eng": 1.0,
+        "hin": 6.1094574854399895,
+        "kan": 17.531789943718213,
+        "mar": 8.68910338431236,
+        "tam": 19.51816589887486,
+        "tel": 15.974964953185774
+      },
+      "split_on_unicode_whitespace": {
+        "ben": 10.438599780075767,
+        "eng": 1.0,
+        "hin": 6.110840806730706,
+        "kan": 17.880915297651605,
+        "mar": 8.719785204359113,
+        "tam": 19.615468304646853,
+        "tel": 16.180217344453474
+      }
+    },
+    "NFD": {
+      "all_on": {
+        "ben": 10.902104249709327,
+        "eng": 1.0,
+        "hin": 6.329572078230625,
+        "kan": 19.161139629989815,
+        "mar": 9.031685076447893,
+        "tam": 20.50290791098627,
+        "tel": 16.848996799606102
+      },
+      "baseline": {
+        "ben": 10.397043779605735,
+        "eng": 1.0,
+        "hin": 6.1094574854399895,
+        "kan": 17.531789943718213,
+        "mar": 8.68910338431236,
+        "tam": 19.51816589887486,
+        "tel": 15.974964953185774
+      },
+      "grapheme_denominator": {
+        "ben": 10.397043779605735,
+        "eng": 1.0,
+        "hin": 6.1094574854399895,
+        "kan": 17.531789943718213,
+        "mar": 8.68910338431236,
+        "tam": 19.51816589887486,
+        "tel": 15.974964953185774
+      },
+      "micro_aggregate": {
+        "ben": 10.3768123814456,
+        "eng": 1.0,
+        "hin": 6.1216326709176325,
+        "kan": 17.443989317732793,
+        "mar": 8.69137686589616,
+        "tam": 19.48072215263059,
+        "tel": 15.979775604490536
+      },
+      "perturb_global_rng": {
+        "ben": 10.397043779605735,
+        "eng": 1.0,
+        "hin": 6.1094574854399895,
+        "kan": 17.531789943718213,
+        "mar": 8.68910338431236,
+        "tam": 19.51816589887486,
+        "tel": 15.974964953185774
+      },
+      "preserve_case": {
+        "ben": 10.755199340183287,
+        "eng": 1.0,
+        "hin": 6.319968621230817,
+        "kan": 18.13569983740658,
+        "mar": 8.98828164192957,
+        "tam": 20.190447343355455,
+        "tel": 16.521477241864684
+      },
+      "skip_nfc_normalisation": {
+        "ben": 10.512854711844872,
+        "eng": 1.0,
+        "hin": 6.102855316390245,
+        "kan": 18.186205725267254,
+        "mar": 8.688803469831472,
+        "tam": 19.735505645041947,
+        "tel": 16.05506775968206
+      },
+      "split_on_unicode_whitespace": {
+        "ben": 10.438599780075767,
+        "eng": 1.0,
+        "hin": 6.110840806730706,
+        "kan": 17.880915297651605,
+        "mar": 8.719785204359113,
+        "tam": 19.615468304646853,
+        "tel": 16.180217344453474
+      }
+    }
+  },
+  "legacy_sample": {
+    "all_on": [
+      {
+        "fertility": 1.2307692307692308,
+        "lang": "eng",
+        "n_lines": 10,
+        "tokens_per_char": 0.21428571428571427
+      },
+      {
+        "fertility": 7.524590163934426,
+        "lang": "hin",
+        "n_lines": 10,
+        "tokens_per_char": 2.4414893617021276
+      }
+    ],
+    "baseline": [
+      {
+        "fertility": 1.2652056277056274,
+        "lang": "eng",
+        "n_lines": 10,
+        "tokens_per_char": 0.2256359380861302
+      },
+      {
+        "fertility": 7.44845238095238,
+        "lang": "hin",
+        "n_lines": 10,
+        "tokens_per_char": 1.579108219996378
+      }
+    ],
+    "grapheme_denominator": [
+      {
+        "fertility": 1.2652056277056274,
+        "lang": "eng",
+        "n_lines": 10,
+        "tokens_per_char": 0.2256359380861302
+      },
+      {
+        "fertility": 7.44845238095238,
+        "lang": "hin",
+        "n_lines": 10,
+        "tokens_per_char": 2.4497322122322123
+      }
+    ],
+    "micro_aggregate": [
+      {
+        "fertility": 1.2531645569620253,
+        "lang": "eng",
+        "n_lines": 10,
+        "tokens_per_char": 0.22098214285714285
+      },
+      {
+        "fertility": 7.403225806451613,
+        "lang": "hin",
+        "n_lines": 10,
+        "tokens_per_char": 1.5827586206896551
+      }
+    ],
+    "perturb_global_rng": [
+      {
+        "fertility": 1.2652056277056274,
+        "lang": "eng",
+        "n_lines": 10,
+        "tokens_per_char": 0.2256359380861302
+      },
+      {
+        "fertility": 7.44845238095238,
+        "lang": "hin",
+        "n_lines": 10,
+        "tokens_per_char": 1.579108219996378
+      }
+    ],
+    "preserve_case": [
+      {
+        "fertility": 1.2293290043290042,
+        "lang": "eng",
+        "n_lines": 10,
+        "tokens_per_char": 0.2195624371190122
+      },
+      {
+        "fertility": 7.44845238095238,
+        "lang": "hin",
+        "n_lines": 10,
+        "tokens_per_char": 1.579108219996378
+      }
+    ],
+    "skip_nfc_normalisation": [
+      {
+        "fertility": 1.2652056277056274,
+        "lang": "eng",
+        "n_lines": 10,
+        "tokens_per_char": 0.2256359380861302
+      },
+      {
+        "fertility": 7.44845238095238,
+        "lang": "hin",
+        "n_lines": 10,
+        "tokens_per_char": 1.579108219996378
+      }
+    ],
+    "split_on_unicode_whitespace": [
+      {
+        "fertility": 1.2830627705627704,
+        "lang": "eng",
+        "n_lines": 10,
+        "tokens_per_char": 0.2256359380861302
+      },
+      {
+        "fertility": 7.598452380952381,
+        "lang": "hin",
+        "n_lines": 10,
+        "tokens_per_char": 1.579108219996378
+      }
+    ]
+  },
+  "provenance": {
+    "config": {
+      "bootstrap_confidence": 0.95,
+      "bootstrap_iterations": 10000,
+      "flores_split": "devtest",
+      "languages": [
+        {
+          "code": "eng",
+          "flores_code": "eng_Latn",
+          "name": "English",
+          "script": "Latin"
+        },
+        {
+          "code": "hin",
+          "flores_code": "hin_Deva",
+          "name": "Hindi",
+          "script": "Devanagari"
+        },
+        {
+          "code": "kan",
+          "flores_code": "kan_Knda",
+          "name": "Kannada",
+          "script": "Kannada"
+        },
+        {
+          "code": "tam",
+          "flores_code": "tam_Taml",
+          "name": "Tamil",
+          "script": "Tamil"
+        },
+        {
+          "code": "tel",
+          "flores_code": "tel_Telu",
+          "name": "Telugu",
+          "script": "Telugu"
+        },
+        {
+          "code": "ben",
+          "flores_code": "ben_Beng",
+          "name": "Bengali",
+          "script": "Bengali"
+        },
+        {
+          "code": "mar",
+          "flores_code": "mar_Deva",
+          "name": "Marathi",
+          "script": "Devanagari"
+        }
+      ],
+      "normalisation_forms": [
+        "NFC",
+        "NFD"
+      ],
+      "pivot_language": "eng",
+      "seed": 1337,
+      "tokenizers": [
+        {
+          "family": "western-centric",
+          "key": "gpt2",
+          "kind": "tiktoken",
+          "ref": "gpt2"
+        },
+        {
+          "family": "western-centric",
+          "key": "cl100k",
+          "kind": "tiktoken",
+          "ref": "cl100k_base"
+        },
+        {
+          "family": "multilingual",
+          "key": "xlmr",
+          "kind": "hf",
+          "ref": "xlm-roberta-base"
+        },
+        {
+          "family": "indic-aware",
+          "key": "muril",
+          "kind": "hf",
+          "ref": "google/muril-base-cased"
+        }
+      ]
+    },
+    "config_hash": "db3980b4cec96ce55d630ce534cfc6b56fae57ffdead12da57f63ec4aa573f28",
+    "generated_at_utc": "2026-09-07T03:27:17+00:00",
+    "git_sha": "4260f931772d61db634ce4200543f4e26e29b6b9-dirty",
+    "input_checksums": {
+      ".cache/flores200/flores200_dataset/devtest/ben_Beng.devtest": "6699aa77b4c93d520971868cd5ff06a1e3b5ddfde852da13337f5194bc23086f",
+      ".cache/flores200/flores200_dataset/devtest/eng_Latn.devtest": "612e9fbe87997617c0fa8fa8929654a4f49b728d96738112c2b86ef6a1d78d88",
+      ".cache/flores200/flores200_dataset/devtest/hin_Deva.devtest": "5f5fd39acadca29fb044a0398e81869e48f37de979df086f2fad4a7d1fd2d015",
+      ".cache/flores200/flores200_dataset/devtest/kan_Knda.devtest": "58e8ed5ef79cfd9994e7d4010d22b5ce72c3559f0c8e988fbde11fa58a720cd8",
+      ".cache/flores200/flores200_dataset/devtest/mar_Deva.devtest": "63d0d1bfdcfa7f8a1538c87cab65b0e5e010515529ed286b1f8b2a51cc62b99f",
+      ".cache/flores200/flores200_dataset/devtest/tam_Taml.devtest": "a18b26bf278e458f085c70173d6789d6108cb2e3346c81a1bd0f8aceb4ea30e4",
+      ".cache/flores200/flores200_dataset/devtest/tel_Telu.devtest": "2dc641b4fb69347efe4b0c0f2063372c643f20c664b41a1f4421b69ba2a06420",
+      "starter_kit/starter_kit/corpus_sample/eng_sample.txt": "a9a232fdaab367df3eae3476d84bb91ed092d76f32fd0b4bb54ce4f8802473ed",
+      "starter_kit/starter_kit/corpus_sample/hin_sample.txt": "8c3c668744b3ae971a7be645201746e6da98810a55014055d2d6e1658ae8f4da",
+      "starter_kit/starter_kit/fertility.py": "93528e332d552adad2bda677e82b6615a0d024be3a529fd146c6b4756e81d9d4"
+    },
+    "package_versions": {
+      "huggingface-hub": "0.26.5",
+      "jinja2": "3.1.6",
+      "matplotlib": "3.9.4",
+      "numpy": "2.2.6",
+      "regex": "2024.11.6",
+      "sentencepiece": "0.2.0",
+      "tiktoken": "0.8.0",
+      "tokenizers": "0.20.3",
+      "transformers": "4.46.3"
+    },
+    "platform": "Linux-6.19.14-200.fc43.x86_64-x86_64-with-glibc2.42",
+    "python_implementation": "CPython",
+    "python_version": "3.11.16"
+  },
+  "sweep": {
+    "NFC": {
+      "all_on": {
+        "ben": {
+          "fertility": 13.317389521172972,
+          "fertility_ci_high": 13.542059316739383,
+          "fertility_ci_low": 13.33070230078012,
+          "n_lines": 1012,
+          "tokens_per_char": 3.179819568384072,
+          "total_chars": 81693,
+          "total_tokens": 259769,
+          "total_words": 19506
+        },
+        "eng": {
+          "fertility": 1.2348294598420164,
+          "fertility_ci_high": 1.2549312054389437,
+          "fertility_ci_low": 1.2342944616984148,
+          "n_lines": 1012,
+          "tokens_per_char": 0.2049315732840277,
+          "total_chars": 131966,
+          "total_tokens": 27044,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.826229380337714,
+          "fertility_ci_high": 7.92461208751123,
+          "fertility_ci_low": 7.808435275481934,
+          "n_lines": 1012,
+          "tokens_per_char": 2.334748769733704,
+          "total_chars": 85957,
+          "total_tokens": 200688,
+          "total_words": 25643
+        },
+        "kan": {
+          "fertility": 22.81776397515528,
+          "fertility_ci_high": 23.208690207962512,
+          "fertility_ci_low": 22.825516307493746,
+          "n_lines": 1012,
+          "tokens_per_char": 4.065087251441281,
+          "total_chars": 90371,
+          "total_tokens": 367366,
+          "total_words": 16100
+        },
+        "mar": {
+          "fertility": 11.155675732437258,
+          "fertility_ci_high": 11.31795396256054,
+          "fertility_ci_low": 11.129342255695613,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6463606018333996,
+          "total_chars": 80288,
+          "total_tokens": 212471,
+          "total_words": 19046
+        },
+        "tam": {
+          "fertility": 25.047451564828613,
+          "fertility_ci_high": 25.459230470038722,
+          "fertility_ci_low": 25.047254284448982,
+          "n_lines": 1012,
+          "tokens_per_char": 4.213338815129758,
+          "total_chars": 99724,
+          "total_tokens": 420171,
+          "total_words": 16775
+        },
+        "tel": {
+          "fertility": 20.707757704569605,
+          "fertility_ci_high": 21.004918673085974,
+          "fertility_ci_low": 20.644163665700262,
+          "n_lines": 1012,
+          "tokens_per_char": 4.580929120900649,
+          "total_chars": 76567,
+          "total_tokens": 350748,
+          "total_words": 16938
+        }
+      },
+      "baseline": {
+        "ben": {
+          "fertility": 13.384791161332094,
+          "fertility_ci_high": 13.488845537538223,
+          "fertility_ci_low": 13.278708845783427,
+          "n_lines": 1012,
+          "tokens_per_char": 1.993046922422305,
+          "total_chars": 130391,
+          "total_tokens": 259783,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.2873650861783383,
+          "fertility_ci_high": 1.2991209657691694,
+          "fertility_ci_low": 1.2759210841353732,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21405492896120262,
+          "total_chars": 131967,
+          "total_tokens": 27994,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.865102262246347,
+          "fertility_ci_high": 7.923336798541714,
+          "fertility_ci_low": 7.807045770896436,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5292604763997832,
+          "total_chars": 131180,
+          "total_tokens": 200696,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 22.569814271755323,
+          "fertility_ci_high": 22.775394007457695,
+          "fertility_ci_low": 22.364652283793152,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6598958360992713,
+          "total_chars": 138027,
+          "total_tokens": 367388,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.186048327157774,
+          "fertility_ci_high": 11.280102274163074,
+          "fertility_ci_low": 11.089239910737616,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5962654398817493,
+          "total_chars": 133051,
+          "total_tokens": 212489,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 25.127005324448138,
+          "fertility_ci_high": 25.340100672896337,
+          "fertility_ci_low": 24.917986495164783,
+          "n_lines": 1012,
+          "tokens_per_char": 2.7239409430616996,
+          "total_chars": 154131,
+          "total_tokens": 420194,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.56561213365394,
+          "fertility_ci_high": 20.74508054056328,
+          "fertility_ci_low": 20.38828484659942,
+          "n_lines": 1012,
+          "tokens_per_char": 2.645165064591753,
+          "total_chars": 132465,
+          "total_tokens": 350848,
+          "total_words": 17177
+        }
+      },
+      "grapheme_denominator": {
+        "ben": {
+          "fertility": 13.384791161332094,
+          "fertility_ci_high": 13.488845537538223,
+          "fertility_ci_low": 13.278708845783427,
+          "n_lines": 1012,
+          "tokens_per_char": 3.188668487823144,
+          "total_chars": 81693,
+          "total_tokens": 259783,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.2873650861783383,
+          "fertility_ci_high": 1.2991209657691694,
+          "fertility_ci_low": 1.2759210841353732,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21405652260380997,
+          "total_chars": 131966,
+          "total_tokens": 27994,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.865102262246347,
+          "fertility_ci_high": 7.923336798541714,
+          "fertility_ci_low": 7.807045770896436,
+          "n_lines": 1012,
+          "tokens_per_char": 2.340606534123301,
+          "total_chars": 85957,
+          "total_tokens": 200696,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 22.569814271755323,
+          "fertility_ci_high": 22.775394007457695,
+          "fertility_ci_low": 22.364652283793152,
+          "n_lines": 1012,
+          "tokens_per_char": 4.065644764074762,
+          "total_chars": 90371,
+          "total_tokens": 367388,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.186048327157774,
+          "fertility_ci_high": 11.280102274163074,
+          "fertility_ci_low": 11.089239910737616,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6490054407085175,
+          "total_chars": 80288,
+          "total_tokens": 212489,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 25.127005324448138,
+          "fertility_ci_high": 25.340100672896337,
+          "fertility_ci_low": 24.917986495164783,
+          "n_lines": 1012,
+          "tokens_per_char": 4.214785130493206,
+          "total_chars": 99724,
+          "total_tokens": 420194,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.56561213365394,
+          "fertility_ci_high": 20.74508054056328,
+          "fertility_ci_low": 20.38828484659942,
+          "n_lines": 1012,
+          "tokens_per_char": 4.605204272455607,
+          "total_chars": 76567,
+          "total_tokens": 350848,
+          "total_words": 17177
+        }
+      },
+      "micro_aggregate": {
+        "ben": {
+          "fertility": 13.263708771571531,
+          "fertility_ci_high": 13.488845537538223,
+          "fertility_ci_low": 13.278708845783427,
+          "n_lines": 1012,
+          "tokens_per_char": 1.9923384282657546,
+          "total_chars": 130391,
+          "total_tokens": 259783,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.2782064745902013,
+          "fertility_ci_high": 1.2991209657691694,
+          "fertility_ci_low": 1.2759210841353732,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21212878977320088,
+          "total_chars": 131967,
+          "total_tokens": 27994,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.8247105150298255,
+          "fertility_ci_high": 7.923336798541714,
+          "fertility_ci_low": 7.807045770896436,
+          "n_lines": 1012,
+          "tokens_per_char": 1.529928342735173,
+          "total_chars": 131180,
+          "total_tokens": 200696,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 22.297020088608363,
+          "fertility_ci_high": 22.775394007457695,
+          "fertility_ci_low": 22.364652283793152,
+          "n_lines": 1012,
+          "tokens_per_char": 2.661711114492092,
+          "total_chars": 138027,
+          "total_tokens": 367388,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.109374183091964,
+          "fertility_ci_high": 11.280102274163074,
+          "fertility_ci_low": 11.089239910737616,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5970492517906667,
+          "total_chars": 133051,
+          "total_tokens": 212489,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 24.900385185185186,
+          "fertility_ci_high": 25.340100672896337,
+          "fertility_ci_low": 24.917986495164783,
+          "n_lines": 1012,
+          "tokens_per_char": 2.726213415860534,
+          "total_chars": 154131,
+          "total_tokens": 420194,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.42545264015835,
+          "fertility_ci_high": 20.74508054056328,
+          "fertility_ci_low": 20.38828484659942,
+          "n_lines": 1012,
+          "tokens_per_char": 2.64860906654588,
+          "total_chars": 132465,
+          "total_tokens": 350848,
+          "total_words": 17177
+        }
+      },
+      "perturb_global_rng": {
+        "ben": {
+          "fertility": 13.384791161332094,
+          "fertility_ci_high": 13.488845537538223,
+          "fertility_ci_low": 13.278708845783427,
+          "n_lines": 1012,
+          "tokens_per_char": 1.993046922422305,
+          "total_chars": 130391,
+          "total_tokens": 259783,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.2873650861783383,
+          "fertility_ci_high": 1.2991209657691694,
+          "fertility_ci_low": 1.2759210841353732,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21405492896120262,
+          "total_chars": 131967,
+          "total_tokens": 27994,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.865102262246347,
+          "fertility_ci_high": 7.923336798541714,
+          "fertility_ci_low": 7.807045770896436,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5292604763997832,
+          "total_chars": 131180,
+          "total_tokens": 200696,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 22.569814271755323,
+          "fertility_ci_high": 22.775394007457695,
+          "fertility_ci_low": 22.364652283793152,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6598958360992713,
+          "total_chars": 138027,
+          "total_tokens": 367388,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.186048327157774,
+          "fertility_ci_high": 11.280102274163074,
+          "fertility_ci_low": 11.089239910737616,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5962654398817493,
+          "total_chars": 133051,
+          "total_tokens": 212489,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 25.127005324448138,
+          "fertility_ci_high": 25.340100672896337,
+          "fertility_ci_low": 24.917986495164783,
+          "n_lines": 1012,
+          "tokens_per_char": 2.7239409430616996,
+          "total_chars": 154131,
+          "total_tokens": 420194,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.56561213365394,
+          "fertility_ci_high": 20.74508054056328,
+          "fertility_ci_low": 20.38828484659942,
+          "n_lines": 1012,
+          "tokens_per_char": 2.645165064591753,
+          "total_chars": 132465,
+          "total_tokens": 350848,
+          "total_words": 17177
+        }
+      },
+      "preserve_case": {
+        "ben": {
+          "fertility": 13.384069395545342,
+          "fertility_ci_high": 13.488107716239108,
+          "fertility_ci_low": 13.277689857074568,
+          "n_lines": 1012,
+          "tokens_per_char": 1.992938311549727,
+          "total_chars": 130391,
+          "total_tokens": 259769,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.2444278318059752,
+          "fertility_ci_high": 1.2549312054389437,
+          "fertility_ci_low": 1.2342944616984148,
+          "n_lines": 1012,
+          "tokens_per_char": 0.2070019718299403,
+          "total_chars": 131966,
+          "total_tokens": 27044,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.864744848400064,
+          "fertility_ci_high": 7.922927890185197,
+          "fertility_ci_low": 7.806788683633008,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5291895055915448,
+          "total_chars": 131180,
+          "total_tokens": 200688,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 22.56856962694785,
+          "fertility_ci_high": 22.77424955269836,
+          "fertility_ci_low": 22.36350760575428,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6597264671825576,
+          "total_chars": 138027,
+          "total_tokens": 367366,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.185267835327865,
+          "fertility_ci_high": 11.27921887696961,
+          "fertility_ci_low": 11.088497272554175,
+          "n_lines": 1012,
+          "tokens_per_char": 1.59614853634749,
+          "total_chars": 133051,
+          "total_tokens": 212471,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 25.12555461068454,
+          "fertility_ci_high": 25.33879410999956,
+          "fertility_ci_low": 24.91655270934381,
+          "n_lines": 1012,
+          "tokens_per_char": 2.7237683593917676,
+          "total_chars": 154131,
+          "total_tokens": 420171,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.559786102325432,
+          "fertility_ci_high": 20.739797568887024,
+          "fertility_ci_low": 20.382313813598632,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6444435438762204,
+          "total_chars": 132465,
+          "total_tokens": 350748,
+          "total_words": 17177
+        }
+      },
+      "skip_nfc_normalisation": {
+        "ben": {
+          "fertility": 13.384791161332094,
+          "fertility_ci_high": 13.488845537538223,
+          "fertility_ci_low": 13.278708845783427,
+          "n_lines": 1012,
+          "tokens_per_char": 1.993046922422305,
+          "total_chars": 130391,
+          "total_tokens": 259783,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.2873650861783383,
+          "fertility_ci_high": 1.2991209657691694,
+          "fertility_ci_low": 1.2759210841353732,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21405492896120262,
+          "total_chars": 131967,
+          "total_tokens": 27994,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.865102262246347,
+          "fertility_ci_high": 7.923336798541714,
+          "fertility_ci_low": 7.807045770896436,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5292604763997832,
+          "total_chars": 131180,
+          "total_tokens": 200696,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 22.569814271755323,
+          "fertility_ci_high": 22.775394007457695,
+          "fertility_ci_low": 22.364652283793152,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6598958360992713,
+          "total_chars": 138027,
+          "total_tokens": 367388,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.186048327157774,
+          "fertility_ci_high": 11.280102274163074,
+          "fertility_ci_low": 11.089239910737616,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5962654398817493,
+          "total_chars": 133051,
+          "total_tokens": 212489,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 25.127005324448138,
+          "fertility_ci_high": 25.340100672896337,
+          "fertility_ci_low": 24.917986495164783,
+          "n_lines": 1012,
+          "tokens_per_char": 2.7239409430616996,
+          "total_chars": 154131,
+          "total_tokens": 420194,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.56561213365394,
+          "fertility_ci_high": 20.74508054056328,
+          "fertility_ci_low": 20.38828484659942,
+          "n_lines": 1012,
+          "tokens_per_char": 2.645165064591753,
+          "total_chars": 132465,
+          "total_tokens": 350848,
+          "total_words": 17177
+        }
+      },
+      "split_on_unicode_whitespace": {
+        "ben": {
+          "fertility": 13.438288905458423,
+          "fertility_ci_high": 13.54277121614446,
+          "fertility_ci_low": 13.33132915079943,
+          "n_lines": 1012,
+          "tokens_per_char": 1.993046922422305,
+          "total_chars": 130391,
+          "total_tokens": 259783,
+          "total_words": 19506
+        },
+        "eng": {
+          "fertility": 1.2873650861783383,
+          "fertility_ci_high": 1.2991209657691694,
+          "fertility_ci_low": 1.2759210841353732,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21405492896120262,
+          "total_chars": 131967,
+          "total_tokens": 27994,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.866883101778981,
+          "fertility_ci_high": 7.924942199435553,
+          "fertility_ci_low": 7.808801135352467,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5292604763997832,
+          "total_chars": 131180,
+          "total_tokens": 200696,
+          "total_words": 25643
+        },
+        "kan": {
+          "fertility": 23.019266063108827,
+          "fertility_ci_high": 23.210153849538113,
+          "fertility_ci_low": 22.827001293923544,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6598958360992713,
+          "total_chars": 138027,
+          "total_tokens": 367388,
+          "total_words": 16100
+        },
+        "mar": {
+          "fertility": 11.22554703106637,
+          "fertility_ci_high": 11.318801527684686,
+          "fertility_ci_low": 11.130186690737313,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5962654398817493,
+          "total_chars": 133051,
+          "total_tokens": 212489,
+          "total_words": 19046
+        },
+        "tam": {
+          "fertility": 25.252269044440162,
+          "fertility_ci_high": 25.460377257198456,
+          "fertility_ci_low": 25.04868106655293,
+          "n_lines": 1012,
+          "tokens_per_char": 2.7239409430616996,
+          "total_chars": 154131,
+          "total_tokens": 420194,
+          "total_words": 16775
+        },
+        "tel": {
+          "fertility": 20.82984689602659,
+          "fertility_ci_high": 21.00992679373724,
+          "fertility_ci_low": 20.650145541596267,
+          "n_lines": 1012,
+          "tokens_per_char": 2.645165064591753,
+          "total_chars": 132465,
+          "total_tokens": 350848,
+          "total_words": 16938
+        }
+      }
+    },
+    "NFD": {
+      "all_on": {
+        "ben": {
+          "fertility": 13.480159950784374,
+          "fertility_ci_high": 13.708124175635586,
+          "fertility_ci_low": 13.49350752266139,
+          "n_lines": 1012,
+          "tokens_per_char": 3.2186845874187506,
+          "total_chars": 81693,
+          "total_tokens": 262944,
+          "total_words": 19506
+        },
+        "eng": {
+          "fertility": 1.236473220400895,
+          "fertility_ci_high": 1.2565677244983506,
+          "fertility_ci_low": 1.2357956727207078,
+          "n_lines": 1012,
+          "tokens_per_char": 0.2052043708227877,
+          "total_chars": 131966,
+          "total_tokens": 27080,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.826346371329407,
+          "fertility_ci_high": 7.924676391383568,
+          "fertility_ci_low": 7.808492557109816,
+          "n_lines": 1012,
+          "tokens_per_char": 2.33478367090522,
+          "total_chars": 85957,
+          "total_tokens": 200691,
+          "total_words": 25643
+        },
+        "kan": {
+          "fertility": 23.69223602484472,
+          "fertility_ci_high": 24.102853884171665,
+          "fertility_ci_low": 23.700326411447698,
+          "n_lines": 1012,
+          "tokens_per_char": 4.220878379126047,
+          "total_chars": 90371,
+          "total_tokens": 381445,
+          "total_words": 16100
+        },
+        "mar": {
+          "fertility": 11.16743673212223,
+          "fertility_ci_high": 11.329966352240492,
+          "fertility_ci_low": 11.140966087743223,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6491505579912316,
+          "total_chars": 80288,
+          "total_tokens": 212695,
+          "total_words": 19046
+        },
+        "tam": {
+          "fertility": 25.35129657228018,
+          "fertility_ci_high": 25.771053934647078,
+          "fertility_ci_low": 25.352510303405715,
+          "n_lines": 1012,
+          "tokens_per_char": 4.264449881673419,
+          "total_chars": 99724,
+          "total_tokens": 425268,
+          "total_words": 16775
+        },
+        "tel": {
+          "fertility": 20.833333333333332,
+          "fertility_ci_high": 21.133536443452403,
+          "fertility_ci_low": 20.772176043084656,
+          "n_lines": 1012,
+          "tokens_per_char": 4.608708712630768,
+          "total_chars": 76567,
+          "total_tokens": 352875,
+          "total_words": 16938
+        }
+      },
+      "baseline": {
+        "ben": {
+          "fertility": 13.384791161332094,
+          "fertility_ci_high": 13.488845537538223,
+          "fertility_ci_low": 13.278708845783427,
+          "n_lines": 1012,
+          "tokens_per_char": 1.993046922422305,
+          "total_chars": 130391,
+          "total_tokens": 259783,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.2873650861783383,
+          "fertility_ci_high": 1.2991209657691694,
+          "fertility_ci_low": 1.2759210841353732,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21405492896120262,
+          "total_chars": 131967,
+          "total_tokens": 27994,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.865102262246347,
+          "fertility_ci_high": 7.923336798541714,
+          "fertility_ci_low": 7.807045770896436,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5292604763997832,
+          "total_chars": 131180,
+          "total_tokens": 200696,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 22.569814271755323,
+          "fertility_ci_high": 22.775394007457695,
+          "fertility_ci_low": 22.364652283793152,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6598958360992713,
+          "total_chars": 138027,
+          "total_tokens": 367388,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.186048327157774,
+          "fertility_ci_high": 11.280102274163074,
+          "fertility_ci_low": 11.089239910737616,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5962654398817493,
+          "total_chars": 133051,
+          "total_tokens": 212489,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 25.127005324448138,
+          "fertility_ci_high": 25.340100672896337,
+          "fertility_ci_low": 24.917986495164783,
+          "n_lines": 1012,
+          "tokens_per_char": 2.7239409430616996,
+          "total_chars": 154131,
+          "total_tokens": 420194,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.56561213365394,
+          "fertility_ci_high": 20.74508054056328,
+          "fertility_ci_low": 20.38828484659942,
+          "n_lines": 1012,
+          "tokens_per_char": 2.645165064591753,
+          "total_chars": 132465,
+          "total_tokens": 350848,
+          "total_words": 17177
+        }
+      },
+      "grapheme_denominator": {
+        "ben": {
+          "fertility": 13.384791161332094,
+          "fertility_ci_high": 13.488845537538223,
+          "fertility_ci_low": 13.278708845783427,
+          "n_lines": 1012,
+          "tokens_per_char": 3.188668487823144,
+          "total_chars": 81693,
+          "total_tokens": 259783,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.2873650861783383,
+          "fertility_ci_high": 1.2991209657691694,
+          "fertility_ci_low": 1.2759210841353732,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21405652260380997,
+          "total_chars": 131966,
+          "total_tokens": 27994,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.865102262246347,
+          "fertility_ci_high": 7.923336798541714,
+          "fertility_ci_low": 7.807045770896436,
+          "n_lines": 1012,
+          "tokens_per_char": 2.340606534123301,
+          "total_chars": 85957,
+          "total_tokens": 200696,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 22.569814271755323,
+          "fertility_ci_high": 22.775394007457695,
+          "fertility_ci_low": 22.364652283793152,
+          "n_lines": 1012,
+          "tokens_per_char": 4.065644764074762,
+          "total_chars": 90371,
+          "total_tokens": 367388,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.186048327157774,
+          "fertility_ci_high": 11.280102274163074,
+          "fertility_ci_low": 11.089239910737616,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6490054407085175,
+          "total_chars": 80288,
+          "total_tokens": 212489,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 25.127005324448138,
+          "fertility_ci_high": 25.340100672896337,
+          "fertility_ci_low": 24.917986495164783,
+          "n_lines": 1012,
+          "tokens_per_char": 4.214785130493206,
+          "total_chars": 99724,
+          "total_tokens": 420194,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.56561213365394,
+          "fertility_ci_high": 20.74508054056328,
+          "fertility_ci_low": 20.38828484659942,
+          "n_lines": 1012,
+          "tokens_per_char": 4.605204272455607,
+          "total_chars": 76567,
+          "total_tokens": 350848,
+          "total_words": 17177
+        }
+      },
+      "micro_aggregate": {
+        "ben": {
+          "fertility": 13.263708771571531,
+          "fertility_ci_high": 13.488845537538223,
+          "fertility_ci_low": 13.278708845783427,
+          "n_lines": 1012,
+          "tokens_per_char": 1.9923384282657546,
+          "total_chars": 130391,
+          "total_tokens": 259783,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.2782064745902013,
+          "fertility_ci_high": 1.2991209657691694,
+          "fertility_ci_low": 1.2759210841353732,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21212878977320088,
+          "total_chars": 131967,
+          "total_tokens": 27994,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.8247105150298255,
+          "fertility_ci_high": 7.923336798541714,
+          "fertility_ci_low": 7.807045770896436,
+          "n_lines": 1012,
+          "tokens_per_char": 1.529928342735173,
+          "total_chars": 131180,
+          "total_tokens": 200696,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 22.297020088608363,
+          "fertility_ci_high": 22.775394007457695,
+          "fertility_ci_low": 22.364652283793152,
+          "n_lines": 1012,
+          "tokens_per_char": 2.661711114492092,
+          "total_chars": 138027,
+          "total_tokens": 367388,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.109374183091964,
+          "fertility_ci_high": 11.280102274163074,
+          "fertility_ci_low": 11.089239910737616,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5970492517906667,
+          "total_chars": 133051,
+          "total_tokens": 212489,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 24.900385185185186,
+          "fertility_ci_high": 25.340100672896337,
+          "fertility_ci_low": 24.917986495164783,
+          "n_lines": 1012,
+          "tokens_per_char": 2.726213415860534,
+          "total_chars": 154131,
+          "total_tokens": 420194,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.42545264015835,
+          "fertility_ci_high": 20.74508054056328,
+          "fertility_ci_low": 20.38828484659942,
+          "n_lines": 1012,
+          "tokens_per_char": 2.64860906654588,
+          "total_chars": 132465,
+          "total_tokens": 350848,
+          "total_words": 17177
+        }
+      },
+      "perturb_global_rng": {
+        "ben": {
+          "fertility": 13.384791161332094,
+          "fertility_ci_high": 13.488845537538223,
+          "fertility_ci_low": 13.278708845783427,
+          "n_lines": 1012,
+          "tokens_per_char": 1.993046922422305,
+          "total_chars": 130391,
+          "total_tokens": 259783,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.2873650861783383,
+          "fertility_ci_high": 1.2991209657691694,
+          "fertility_ci_low": 1.2759210841353732,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21405492896120262,
+          "total_chars": 131967,
+          "total_tokens": 27994,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.865102262246347,
+          "fertility_ci_high": 7.923336798541714,
+          "fertility_ci_low": 7.807045770896436,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5292604763997832,
+          "total_chars": 131180,
+          "total_tokens": 200696,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 22.569814271755323,
+          "fertility_ci_high": 22.775394007457695,
+          "fertility_ci_low": 22.364652283793152,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6598958360992713,
+          "total_chars": 138027,
+          "total_tokens": 367388,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.186048327157774,
+          "fertility_ci_high": 11.280102274163074,
+          "fertility_ci_low": 11.089239910737616,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5962654398817493,
+          "total_chars": 133051,
+          "total_tokens": 212489,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 25.127005324448138,
+          "fertility_ci_high": 25.340100672896337,
+          "fertility_ci_low": 24.917986495164783,
+          "n_lines": 1012,
+          "tokens_per_char": 2.7239409430616996,
+          "total_chars": 154131,
+          "total_tokens": 420194,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.56561213365394,
+          "fertility_ci_high": 20.74508054056328,
+          "fertility_ci_low": 20.38828484659942,
+          "n_lines": 1012,
+          "tokens_per_char": 2.645165064591753,
+          "total_chars": 132465,
+          "total_tokens": 350848,
+          "total_words": 17177
+        }
+      },
+      "preserve_case": {
+        "ben": {
+          "fertility": 13.384069395545342,
+          "fertility_ci_high": 13.488107716239108,
+          "fertility_ci_low": 13.277689857074568,
+          "n_lines": 1012,
+          "tokens_per_char": 1.992938311549727,
+          "total_chars": 130391,
+          "total_tokens": 259769,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.2444278318059752,
+          "fertility_ci_high": 1.2549312054389437,
+          "fertility_ci_low": 1.2342944616984148,
+          "n_lines": 1012,
+          "tokens_per_char": 0.2070019718299403,
+          "total_chars": 131966,
+          "total_tokens": 27044,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.864744848400064,
+          "fertility_ci_high": 7.922927890185197,
+          "fertility_ci_low": 7.806788683633008,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5291895055915448,
+          "total_chars": 131180,
+          "total_tokens": 200688,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 22.56856962694785,
+          "fertility_ci_high": 22.77424955269836,
+          "fertility_ci_low": 22.36350760575428,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6597264671825576,
+          "total_chars": 138027,
+          "total_tokens": 367366,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.185267835327865,
+          "fertility_ci_high": 11.27921887696961,
+          "fertility_ci_low": 11.088497272554175,
+          "n_lines": 1012,
+          "tokens_per_char": 1.59614853634749,
+          "total_chars": 133051,
+          "total_tokens": 212471,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 25.12555461068454,
+          "fertility_ci_high": 25.33879410999956,
+          "fertility_ci_low": 24.91655270934381,
+          "n_lines": 1012,
+          "tokens_per_char": 2.7237683593917676,
+          "total_chars": 154131,
+          "total_tokens": 420171,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.559786102325432,
+          "fertility_ci_high": 20.739797568887024,
+          "fertility_ci_low": 20.382313813598632,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6444435438762204,
+          "total_chars": 132465,
+          "total_tokens": 350748,
+          "total_words": 17177
+        }
+      },
+      "skip_nfc_normalisation": {
+        "ben": {
+          "fertility": 13.548705664997458,
+          "fertility_ci_high": 13.654615851309782,
+          "fertility_ci_low": 13.440034169550142,
+          "n_lines": 1012,
+          "tokens_per_char": 1.993631922530854,
+          "total_chars": 131935,
+          "total_tokens": 262955,
+          "total_words": 19586
+        },
+        "eng": {
+          "fertility": 1.288775126867499,
+          "fertility_ci_high": 1.30065506129245,
+          "fertility_ci_low": 1.2772202678413414,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21424403578375217,
+          "total_chars": 131989,
+          "total_tokens": 28026,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.865208134634828,
+          "fertility_ci_high": 7.923423624275274,
+          "fertility_ci_low": 7.807112279218231,
+          "n_lines": 1012,
+          "tokens_per_char": 1.529251694914217,
+          "total_chars": 131183,
+          "total_tokens": 200699,
+          "total_words": 25649
+        },
+        "kan": {
+          "fertility": 23.43792959081974,
+          "fertility_ci_high": 23.651064686120762,
+          "fertility_ci_low": 23.226480547417506,
+          "n_lines": 1012,
+          "tokens_per_char": 2.670956751121127,
+          "total_chars": 142720,
+          "total_tokens": 381467,
+          "total_words": 16477
+        },
+        "mar": {
+          "fertility": 11.19791379415882,
+          "fertility_ci_high": 11.292565320437605,
+          "fertility_ci_low": 11.101166143562347,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5965847932243318,
+          "total_chars": 133164,
+          "total_tokens": 212713,
+          "total_words": 19127
+        },
+        "tam": {
+          "fertility": 25.434628791483178,
+          "fertility_ci_high": 25.651435255696857,
+          "fertility_ci_low": 25.224534272699852,
+          "n_lines": 1012,
+          "tokens_per_char": 2.726830879621496,
+          "total_chars": 155832,
+          "total_tokens": 425291,
+          "total_words": 16875
+        },
+        "tel": {
+          "fertility": 20.691371988850538,
+          "fertility_ci_high": 20.872587659137626,
+          "fertility_ci_low": 20.512493181576676,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6469902957682856,
+          "total_chars": 133175,
+          "total_tokens": 352974,
+          "total_words": 17177
+        }
+      },
+      "split_on_unicode_whitespace": {
+        "ben": {
+          "fertility": 13.438288905458423,
+          "fertility_ci_high": 13.54277121614446,
+          "fertility_ci_low": 13.33132915079943,
+          "n_lines": 1012,
+          "tokens_per_char": 1.993046922422305,
+          "total_chars": 130391,
+          "total_tokens": 259783,
+          "total_words": 19506
+        },
+        "eng": {
+          "fertility": 1.2873650861783383,
+          "fertility_ci_high": 1.2991209657691694,
+          "fertility_ci_low": 1.2759210841353732,
+          "n_lines": 1012,
+          "tokens_per_char": 0.21405492896120262,
+          "total_chars": 131967,
+          "total_tokens": 27994,
+          "total_words": 21901
+        },
+        "hin": {
+          "fertility": 7.866883101778981,
+          "fertility_ci_high": 7.924942199435553,
+          "fertility_ci_low": 7.808801135352467,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5292604763997832,
+          "total_chars": 131180,
+          "total_tokens": 200696,
+          "total_words": 25643
+        },
+        "kan": {
+          "fertility": 23.019266063108827,
+          "fertility_ci_high": 23.210153849538113,
+          "fertility_ci_low": 22.827001293923544,
+          "n_lines": 1012,
+          "tokens_per_char": 2.6598958360992713,
+          "total_chars": 138027,
+          "total_tokens": 367388,
+          "total_words": 16100
+        },
+        "mar": {
+          "fertility": 11.22554703106637,
+          "fertility_ci_high": 11.318801527684686,
+          "fertility_ci_low": 11.130186690737313,
+          "n_lines": 1012,
+          "tokens_per_char": 1.5962654398817493,
+          "total_chars": 133051,
+          "total_tokens": 212489,
+          "total_words": 19046
+        },
+        "tam": {
+          "fertility": 25.252269044440162,
+          "fertility_ci_high": 25.460377257198456,
+          "fertility_ci_low": 25.04868106655293,
+          "n_lines": 1012,
+          "tokens_per_char": 2.7239409430616996,
+          "total_chars": 154131,
+          "total_tokens": 420194,
+          "total_words": 16775
+        },
+        "tel": {
+          "fertility": 20.82984689602659,
+          "fertility_ci_high": 21.00992679373724,
+          "fertility_ci_low": 20.650145541596267,
+          "n_lines": 1012,
+          "tokens_per_char": 2.645165064591753,
+          "total_chars": 132465,
+          "total_tokens": 350848,
+          "total_words": 16938
+        }
+      }
+    }
+  },
+  "tokenizer": "gpt2"
+}

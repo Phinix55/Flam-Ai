@@ -32,16 +32,22 @@ IDENTIFIER_WITH_DIGIT = re.compile(r"[A-Za-z_][A-Za-z_-]*\d[\w-]*")
 def _is_identifier_digit(line: str, start: int) -> bool:
     """True when a numeral is part of a name rather than a figure.
 
-    ``B1``, ``gpt2``, ``L4``, ``FLORES-200`` and ``cl100k`` are proper
-    nouns; the digits in them carry no measurement and cannot be traced to
-    a results key because they are not data. A numeral is treated as part
-    of a name only when a letter (or a letter-hyphen) immediately precedes
-    it, which is narrow enough that ``-0.503`` and ``95`` stay in scope.
+    ``B1``, ``gpt2``, ``L4``, ``FLORES-200``, ``cl100k`` and ``A100-80GB``
+    are proper nouns; the digits in them carry no measurement and cannot
+    trace to a results key because they are not data.
+
+    Decided by walking back over the whole ``[alnum-]`` token and asking
+    whether it *starts* with a letter. Checking only the preceding
+    character is not enough: in ``A100-80GB`` the character before ``80``
+    is a hyphen and the one before that is a digit, so a two-character
+    rule reads it as data. Walking the token also keeps ``-0.503`` in
+    scope, because there the run stops at a space and the token begins
+    with the sign.
     """
-    before = line[:start]
-    if before and (before[-1].isalpha() or before[-1] == "_"):
-        return True
-    return len(before) >= 2 and before[-1] == "-" and before[-2].isalpha()
+    index = start
+    while index > 0 and (line[index - 1].isalnum() or line[index - 1] in "-_"):
+        index -= 1
+    return index < start and line[index].isalpha()
 
 
 def data_numerals(line: str) -> list[re.Match[str]]:
@@ -57,6 +63,7 @@ OUTPUTS: dict[str, str] = {
     "partA_analysis.md.j2": "partA/ANALYSIS.md",
     "partA_memo.md.j2": "partA/MEMO.md",
     "partB_answers.md.j2": "partB/ANSWERS.md",
+    "partC_memo.md.j2": "partC/memo.md",
 }
 
 

@@ -50,11 +50,21 @@ wrong. The last section is the point of the document.
 
 ## Where I wrote it myself
 
-- The denominator argument in A3.
-- The B3 diagnosis, hand-derived before any script existed.
-- Part C reasoning and its arithmetic.
+Nothing yet. Every section that would go here is still a
+`TODO(pratik): interpretation` marker in a rendered deliverable:
 
-_(populated in their sessions)_
+- the denominator argument in A3
+- the routing recommendation and its caveat in A4
+- the B3 diagnosis — which column §2 read, and why one misreading carries both
+  of its conclusions
+- B2's mechanism and B4's confirming counter
+- each finding's claim, category and direction, and the rejected-claims section
+- Part C's recommendation, success metric, kill criterion and day-1 experiment
+- the "what this corpus cannot tell you" paragraph
+
+The model produced the evidence these will cite and stopped at every one of
+them. Until they are written, the honest statement is that I wrote none of the
+submission's reasoning.
 
 ### Correction — claim selection was *not* mine
 
@@ -125,9 +135,45 @@ test it was written for.**
   written this control up as the strongest self-check in the list; it was the
   strongest *and* it was overstated, which is a combination worth remembering.
 
+**Session 5 — two template bugs that would have shipped as prose.**
+
+- **Claimed:** implicitly, by writing `{{ partc.items }}` in the Part C
+  template, that Jinja would resolve `.items` to my dictionary key.
+- **Caught by:** `make render` failing with `UntracedNumeralError` on
+  `partC/memo.md`. Jinja had resolved it to Python's `dict.items` **method**
+  and rendered `<built-in method items of dict object at 0x7f…>` into the memo.
+  Only the hex address digits tripped the numeral check.
+- **Lesson:** the rule-3 validator was built to stop fabricated *figures* and
+  it caught a fabricated *sentence* instead. A deliverable can be wrong in ways
+  the author never thought to test for, which is the argument for a check that
+  runs on the rendered artefact rather than on the inputs.
+
+A second, smaller one in the same session: my identifier rule read `A100-80GB`
+as a figure, because it looked two characters back and found a hyphen preceded
+by a digit rather than a letter. Fixed by walking the whole token. Recorded
+because the near-miss direction matters — had the rule been *looser* instead of
+stricter, it would have silently exempted real figures.
+
 _(further entries per session; any entry arising from a measurement will be
 cross-referenced to the rejected-claims section of
 `deliverable/partA/FINDINGS.md`)_
+
+---
+
+**Sessions 3-5 — corpus, ablation, analysis, Part B, rendering**
+
+- `corpus/`, `metrics/`, `ablation/runner.py`, `bench/`, `reporting/`,
+  `partc.py` and their tests: generated, reviewed file by file.
+- Design decisions I made during review and kept: the bootstrap over
+  cross-language ratios is **paired** over sentence indices rather than
+  independent (the corpus is parallel, so independent resampling would discard
+  the covariance and inflate every interval); `correlate_ceiling` is tested for
+  its ability to *reject* a wrong ceiling, not only to accept the right one;
+  and the rule-3 validator formats numbers in Python rather than in templates,
+  which is what makes "every numeral traces to a key" checkable at all.
+- Part C's arithmetic takes two inputs from this repo's own measurements
+  (response length from the A3 grid, second-pass cost from B3) instead of
+  assuming round numbers.
 
 ---
 
@@ -147,6 +193,17 @@ cross-referenced to the rejected-claims section of
   anchor against the parser — but it is not the independent *human* check the
   blueprint intends. The three interpretive B3 sentences are left as
   `TODO(pratik)` and remain genuinely unwritten.
+- **The rule-3 validator proves less than it appears to.** It confirms every
+  numeral in a deliverable matches *a* registered value; it cannot confirm the
+  numeral is in the *right* place. A figure that coincidentally equals an
+  unrelated registered value passes. It rules out fabrication, not mis-keying.
+- **Part C's `sentences_per_response` is a guess.** Four, applied to FLORES
+  sentence lengths, gives 119 tokens per response — plausibly short for real
+  chat replies. The GPU-hours conclusion survives a 100× stretch, but any
+  claim I make about *dataset* size does not inherit that robustness.
+- **Ten interpretive sentences are still unwritten**, across all three parts.
+  They are marked, not hidden, but the submission is not finished until I have
+  written them myself.
 
 **As of Phase 1** — recorded now rather than discovered at the defense:
 

@@ -128,3 +128,33 @@ def test_no_deliverable_asserts_an_interpretation_the_model_wrote(config):
     if not memo.is_file():
         pytest.skip("deliverables not rendered yet; run `make render`")
     assert "TODO(pratik): interpretation" in memo.read_text(encoding="utf-8")
+
+
+def test_hyphenated_product_names_are_not_treated_as_figures():
+    """`A100-80GB` broke a two-character rule: the char before `80` is a
+    hyphen and the one before that is a digit."""
+    assert _texts("A100-80GB and FLORES-200 and cl100k_base") == []
+
+
+def test_a_leading_digit_is_treated_as_data_not_a_name():
+    """The rule looks backwards only, so `1x` reads as a figure. That is
+    the safe direction: an unrecognised numeral has to be declared rather
+    than silently exempted, and `1x NVIDIA L4 (24 GB)` is in fact declared
+    structural as verbatim spec text."""
+    assert _texts("1x A100") == ["1"]
+
+
+def test_a_negative_value_is_still_a_figure():
+    assert _texts("delta -0.503 percent") == ["0.503"]
+
+
+def test_dict_method_shadowing_would_be_caught():
+    """`{{ partc.items }}` resolves to dict.items in Jinja and renders a
+    method repr containing an address. The validator is what catches it."""
+    tracer = Tracer()
+    with pytest.raises(UntracedNumeralError):
+        validate_no_untraced_numerals(
+            "| items | <built-in method items of dict object at 0x7f00> |",
+            tracer,
+            "d.md",
+        )

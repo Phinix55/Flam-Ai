@@ -1,0 +1,366 @@
+{
+  "fixtures": {
+    "combining_marks.txt": {
+      "bytes": 31,
+      "codepoints": 16,
+      "corrected": {
+        "outcome": "ok",
+        "value": {
+          "codepoints": 15,
+          "graphemes": 5,
+          "n_lines": 1,
+          "tokens": 24,
+          "utf8_bytes": 30,
+          "words": 3
+        }
+      },
+      "legacy": {
+        "outcome": "ok",
+        "value": {
+          "fertility": 7.0,
+          "n_lines": 1,
+          "tokens_per_char": 1.6153846153846154
+        }
+      }
+    },
+    "crlf_line_endings.txt": {
+      "bytes": 15,
+      "codepoints": 13,
+      "corrected": {
+        "outcome": "ok",
+        "value": {
+          "codepoints": 11,
+          "graphemes": 11,
+          "n_lines": 2,
+          "tokens": 2,
+          "utf8_bytes": 11,
+          "words": 1
+        }
+      },
+      "legacy": {
+        "outcome": "ok",
+        "value": {
+          "fertility": 1.0,
+          "n_lines": 2,
+          "tokens_per_char": 0.18333333333333335
+        }
+      }
+    },
+    "emoji.txt": {
+      "bytes": 30,
+      "codepoints": 10,
+      "corrected": {
+        "outcome": "ok",
+        "value": {
+          "codepoints": 9,
+          "graphemes": 5,
+          "n_lines": 1,
+          "tokens": 18,
+          "utf8_bytes": 29,
+          "words": 3
+        }
+      },
+      "legacy": {
+        "outcome": "ok",
+        "value": {
+          "fertility": 6.0,
+          "n_lines": 1,
+          "tokens_per_char": 2.0
+        }
+      }
+    },
+    "empty_file.txt": {
+      "bytes": 0,
+      "codepoints": 0,
+      "corrected": {
+        "outcome": "ok",
+        "value": {
+          "codepoints": 0,
+          "graphemes": 0,
+          "n_lines": 0,
+          "tokens": 0,
+          "utf8_bytes": 0,
+          "words": 0
+        }
+      },
+      "legacy": {
+        "exception": "ZeroDivisionError",
+        "message": "division by zero",
+        "outcome": "raised"
+      }
+    },
+    "mixed_script.txt": {
+      "bytes": 69,
+      "codepoints": 47,
+      "corrected": {
+        "outcome": "ok",
+        "value": {
+          "codepoints": 46,
+          "graphemes": 41,
+          "n_lines": 1,
+          "tokens": 36,
+          "utf8_bytes": 68,
+          "words": 10
+        }
+      },
+      "legacy": {
+        "outcome": "ok",
+        "value": {
+          "fertility": 3.7,
+          "n_lines": 1,
+          "tokens_per_char": 0.8043478260869565
+        }
+      }
+    },
+    "no_trailing_newline.txt": {
+      "bytes": 29,
+      "codepoints": 29,
+      "corrected": {
+        "outcome": "ok",
+        "value": {
+          "codepoints": 29,
+          "graphemes": 29,
+          "n_lines": 1,
+          "tokens": 6,
+          "utf8_bytes": 29,
+          "words": 5
+        }
+      },
+      "legacy": {
+        "outcome": "ok",
+        "value": {
+          "fertility": 1.2,
+          "n_lines": 1,
+          "tokens_per_char": 0.20689655172413793
+        }
+      }
+    },
+    "parallel_length_mismatch": {
+      "alignment": {
+        "exception": "AlignmentError",
+        "message": "Parallel corpus misaligned: line counts differ (eng=4, hin=3). Refusing to truncate -- a per-sentence comparison across differently-indexed files would not hold meaning constant.",
+        "outcome": "raised"
+      },
+      "files": [
+        "parallel_eng.txt",
+        "parallel_hin.txt"
+      ]
+    },
+    "pure_punctuation.txt": {
+      "bytes": 29,
+      "codepoints": 23,
+      "corrected": {
+        "outcome": "ok",
+        "value": {
+          "codepoints": 22,
+          "graphemes": 22,
+          "n_lines": 1,
+          "tokens": 14,
+          "utf8_bytes": 28,
+          "words": 6
+        }
+      },
+      "legacy": {
+        "outcome": "ok",
+        "value": {
+          "fertility": 2.3333333333333335,
+          "n_lines": 1,
+          "tokens_per_char": 0.6363636363636364
+        }
+      }
+    },
+    "single_long_word.txt": {
+      "bytes": 4001,
+      "codepoints": 4001,
+      "corrected": {
+        "outcome": "ok",
+        "value": {
+          "codepoints": 4000,
+          "graphemes": 4000,
+          "n_lines": 1,
+          "tokens": 1000,
+          "utf8_bytes": 4000,
+          "words": 1
+        }
+      },
+      "legacy": {
+        "outcome": "ok",
+        "value": {
+          "fertility": 1000.0,
+          "n_lines": 1,
+          "tokens_per_char": 0.25
+        }
+      }
+    },
+    "whitespace_only.txt": {
+      "bytes": 9,
+      "codepoints": 8,
+      "corrected": {
+        "outcome": "ok",
+        "value": {
+          "codepoints": 5,
+          "graphemes": 5,
+          "n_lines": 3,
+          "tokens": 5,
+          "utf8_bytes": 6,
+          "words": 0
+        }
+      },
+      "legacy": {
+        "exception": "ZeroDivisionError",
+        "message": "division by zero",
+        "outcome": "raised"
+      }
+    },
+    "zwj_zwnj.txt": {
+      "bytes": 45,
+      "codepoints": 17,
+      "corrected": {
+        "outcome": "ok",
+        "value": {
+          "codepoints": 16,
+          "graphemes": 7,
+          "n_lines": 1,
+          "tokens": 27,
+          "utf8_bytes": 44,
+          "words": 3
+        }
+      },
+      "legacy": {
+        "outcome": "ok",
+        "value": {
+          "fertility": 9.0,
+          "n_lines": 1,
+          "tokens_per_char": 1.6875
+        }
+      }
+    }
+  },
+  "provenance": {
+    "config": {
+      "bootstrap_confidence": 0.95,
+      "bootstrap_iterations": 10000,
+      "flores_split": "devtest",
+      "languages": [
+        {
+          "code": "eng",
+          "flores_code": "eng_Latn",
+          "name": "English",
+          "script": "Latin"
+        },
+        {
+          "code": "hin",
+          "flores_code": "hin_Deva",
+          "name": "Hindi",
+          "script": "Devanagari"
+        },
+        {
+          "code": "kan",
+          "flores_code": "kan_Knda",
+          "name": "Kannada",
+          "script": "Kannada"
+        },
+        {
+          "code": "tam",
+          "flores_code": "tam_Taml",
+          "name": "Tamil",
+          "script": "Tamil"
+        },
+        {
+          "code": "tel",
+          "flores_code": "tel_Telu",
+          "name": "Telugu",
+          "script": "Telugu"
+        },
+        {
+          "code": "ben",
+          "flores_code": "ben_Beng",
+          "name": "Bengali",
+          "script": "Bengali"
+        },
+        {
+          "code": "mar",
+          "flores_code": "mar_Deva",
+          "name": "Marathi",
+          "script": "Devanagari"
+        }
+      ],
+      "normalisation_forms": [
+        "NFC",
+        "NFD"
+      ],
+      "pivot_language": "eng",
+      "seed": 1337,
+      "tokenizers": [
+        {
+          "family": "western-centric",
+          "key": "gpt2",
+          "kind": "tiktoken",
+          "ref": "gpt2"
+        },
+        {
+          "family": "western-centric",
+          "key": "cl100k",
+          "kind": "tiktoken",
+          "ref": "cl100k_base"
+        },
+        {
+          "family": "multilingual",
+          "key": "xlmr",
+          "kind": "hf",
+          "ref": "xlm-roberta-base"
+        },
+        {
+          "family": "indic-aware",
+          "key": "muril",
+          "kind": "hf",
+          "ref": "google/muril-base-cased"
+        }
+      ]
+    },
+    "config_hash": "db3980b4cec96ce55d630ce534cfc6b56fae57ffdead12da57f63ec4aa573f28",
+    "generated_at_utc": "2026-09-07T03:27:57+00:00",
+    "git_sha": "4260f931772d61db634ce4200543f4e26e29b6b9-dirty",
+    "input_checksums": {
+      "tests/fixtures/adversarial/combining_marks.txt": "e0503280138d779c410a25a6b422e6a08d4b06cfb1236f4d0532a8fcdfe58b9a",
+      "tests/fixtures/adversarial/crlf_line_endings.txt": "f8e0f1568dd9254c3262d199d5dcfc9ff6d4855e18ec53a7176f9eab948ed93e",
+      "tests/fixtures/adversarial/emoji.txt": "5d37777713e220d995b62bd65762aee980594b80f536937aa565f9751c3ead43",
+      "tests/fixtures/adversarial/empty_file.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/fixtures/adversarial/mixed_script.txt": "dd485e1f00c50320b6ebd672689d46891ab691e6a12317a8d5cf9f2dbc39daf8",
+      "tests/fixtures/adversarial/no_trailing_newline.txt": "58b0ab552feec305deea2223a5b9023ad830bedf5993a1f2d472d9608a374d04",
+      "tests/fixtures/adversarial/parallel_eng.txt": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2",
+      "tests/fixtures/adversarial/parallel_hin.txt": "cbdfed7fafa1d5b99801666eb47eca19d1f77e179e22f62ae13d60547db0489f",
+      "tests/fixtures/adversarial/pure_punctuation.txt": "e6ce1b273378681b7a13f75ed92cef0a6e0d78ec3ec1d85f77030fc1aab5afa6",
+      "tests/fixtures/adversarial/single_long_word.txt": "c7dd7fa1466969d5e211e829bcd21773a13e630220d64cf2721b62690cae1900",
+      "tests/fixtures/adversarial/whitespace_only.txt": "0c4abf93be442073bd2d16a2ca0604d5d42735f3e75bf1d0b6ba5a3cf0e00ce1",
+      "tests/fixtures/adversarial/zwj_zwnj.txt": "f1399027f0db944e48ed57a33bec4cb93737ee050b7a1cec1f2b5d14b448e5e0"
+    },
+    "package_versions": {
+      "huggingface-hub": "0.26.5",
+      "jinja2": "3.1.6",
+      "matplotlib": "3.9.4",
+      "numpy": "2.2.6",
+      "regex": "2024.11.6",
+      "sentencepiece": "0.2.0",
+      "tiktoken": "0.8.0",
+      "tokenizers": "0.20.3",
+      "transformers": "4.46.3"
+    },
+    "platform": "Linux-6.19.14-200.fc43.x86_64-x86_64-with-glibc2.42",
+    "python_implementation": "CPython",
+    "python_version": "3.11.16"
+  },
+  "summary": {
+    "both_raised": [],
+    "corrected_raised": [],
+    "legacy_only": [
+      "empty_file.txt",
+      "whitespace_only.txt"
+    ],
+    "legacy_raised": [
+      "empty_file.txt",
+      "whitespace_only.txt"
+    ],
+    "note": "Recorded, not fixed. BLUEPRINT Phase 7: report what breaks; remediation is a later, separately-measured decision."
+  }
+}

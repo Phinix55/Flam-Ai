@@ -23,7 +23,7 @@ RUN     := $(UV) run --frozen
 AUDIT   := $(OFFLINE_ENV) $(PY) -m audit
 
 .PHONY: help setup corpus prepare check lint types test parity ablate analyze \
-	bench render reproduce adversarial clean tree
+	bench partc render reproduce adversarial clean tree
 
 help:  ## List targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
@@ -73,13 +73,16 @@ analyze:  ## Corrected multi-tokenizer analysis -> results/analysis.json
 bench:  ## Spec parse + KV math + log analysis -> results/bench.json
 	$(AUDIT) bench
 
+partc:  ## Part C envelope arithmetic -> results/partc.json
+	$(AUDIT) partc
+
 render:  ## results/*.json + templates -> deliverable/
 	$(AUDIT) render
 
 adversarial:  ## Run tests/fixtures/adversarial/* through the pipeline
 	$(AUDIT) adversarial
 
-reproduce: check prepare ablate analyze bench render  ## Offline end-to-end rebuild
+reproduce: check prepare ablate analyze bench partc adversarial render  ## Offline end-to-end rebuild
 	@echo ""
 	@echo "reproduce: complete. Every file under results/ and deliverable/ was"
 	@echo "regenerated offline from starter_kit/ plus the .cache/ corpus."

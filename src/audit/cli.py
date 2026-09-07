@@ -24,9 +24,10 @@ _STAGE_HELP: dict[str, str] = {
     "ablate": "offline: sweep the ablation flag grid -> results/ablation.json",
     "analyze": "offline: corrected multi-tokenizer analysis -> results/analysis.json",
     "bench": "offline: spec parse + KV math + log analysis -> results/bench.json",
+    "partc": "offline: Part C envelope arithmetic -> results/partc.json",
     "render": "offline: results/*.json + templates -> deliverable/",
     "adversarial": "offline: run adversarial fixtures -> results/adversarial.json",
-    "reproduce": "offline: prepare -> ablate -> analyze -> bench -> render",
+    "reproduce": "offline: every stage but corpus, in dependency order",
 }
 
 
@@ -50,6 +51,10 @@ def _handle_bench(config: AuditConfig, _args: argparse.Namespace) -> object:
     return stages.run_bench(config)
 
 
+def _handle_partc(config: AuditConfig, _args: argparse.Namespace) -> object:
+    return stages.run_partc(config)
+
+
 def _handle_render(config: AuditConfig, _args: argparse.Namespace) -> object:
     return stages.run_render(config)
 
@@ -67,6 +72,8 @@ def _handle_reproduce(config: AuditConfig, args: argparse.Namespace) -> object:
         _handle_ablate(config, args),
         _handle_analyze(config, args),
         _handle_bench(config, args),
+        _handle_partc(config, args),
+        _handle_adversarial(config, args),
         _handle_render(config, args),
     ]
 
@@ -77,6 +84,7 @@ HANDLERS: dict[str, Handler] = {
     "ablate": _handle_ablate,
     "analyze": _handle_analyze,
     "bench": _handle_bench,
+    "partc": _handle_partc,
     "render": _handle_render,
     "adversarial": _handle_adversarial,
     "reproduce": _handle_reproduce,

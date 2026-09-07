@@ -1,0 +1,267 @@
+{
+  "by_normalisation": {
+    "NFC": {
+      "n_records": 1012,
+      "normalisation": "NFC",
+      "per_language": [
+        {
+          "code": "eng",
+          "codepoints": 131966,
+          "graphemes": 131966,
+          "normalisation": "NFC",
+          "script": "Latin",
+          "sentences": 1012,
+          "utf8_bytes": 132096,
+          "whitespace_words": 21901
+        },
+        {
+          "code": "hin",
+          "codepoints": 131201,
+          "graphemes": 85978,
+          "normalisation": "NFC",
+          "script": "Devanagari",
+          "sentences": 1012,
+          "utf8_bytes": 337460,
+          "whitespace_words": 25643
+        },
+        {
+          "code": "kan",
+          "codepoints": 138127,
+          "graphemes": 90471,
+          "normalisation": "NFC",
+          "script": "Kannada",
+          "sentences": 1012,
+          "utf8_bytes": 375441,
+          "whitespace_words": 16100
+        },
+        {
+          "code": "tam",
+          "codepoints": 154131,
+          "graphemes": 99724,
+          "normalisation": "NFC",
+          "script": "Tamil",
+          "sentences": 1012,
+          "utf8_bytes": 421635,
+          "whitespace_words": 16775
+        },
+        {
+          "code": "tel",
+          "codepoints": 132500,
+          "graphemes": 76602,
+          "normalisation": "NFC",
+          "script": "Telugu",
+          "sentences": 1012,
+          "utf8_bytes": 353696,
+          "whitespace_words": 16938
+        },
+        {
+          "code": "ben",
+          "codepoints": 130391,
+          "graphemes": 81693,
+          "normalisation": "NFC",
+          "script": "Bengali",
+          "sentences": 1012,
+          "utf8_bytes": 348729,
+          "whitespace_words": 19506
+        },
+        {
+          "code": "mar",
+          "codepoints": 133252,
+          "graphemes": 80489,
+          "normalisation": "NFC",
+          "script": "Devanagari",
+          "sentences": 1012,
+          "utf8_bytes": 355712,
+          "whitespace_words": 19046
+        }
+      ],
+      "split": "devtest"
+    },
+    "NFD": {
+      "n_records": 1012,
+      "normalisation": "NFD",
+      "per_language": [
+        {
+          "code": "eng",
+          "codepoints": 131989,
+          "graphemes": 131966,
+          "normalisation": "NFD",
+          "script": "Latin",
+          "sentences": 1012,
+          "utf8_bytes": 132119,
+          "whitespace_words": 21901
+        },
+        {
+          "code": "hin",
+          "codepoints": 131204,
+          "graphemes": 85978,
+          "normalisation": "NFD",
+          "script": "Devanagari",
+          "sentences": 1012,
+          "utf8_bytes": 337463,
+          "whitespace_words": 25643
+        },
+        {
+          "code": "kan",
+          "codepoints": 142820,
+          "graphemes": 90471,
+          "normalisation": "NFD",
+          "script": "Kannada",
+          "sentences": 1012,
+          "utf8_bytes": 389520,
+          "whitespace_words": 16100
+        },
+        {
+          "code": "tam",
+          "codepoints": 155832,
+          "graphemes": 99724,
+          "normalisation": "NFD",
+          "script": "Tamil",
+          "sentences": 1012,
+          "utf8_bytes": 426732,
+          "whitespace_words": 16775
+        },
+        {
+          "code": "tel",
+          "codepoints": 133210,
+          "graphemes": 76602,
+          "normalisation": "NFD",
+          "script": "Telugu",
+          "sentences": 1012,
+          "utf8_bytes": 355820,
+          "whitespace_words": 16938
+        },
+        {
+          "code": "ben",
+          "codepoints": 131935,
+          "graphemes": 81693,
+          "normalisation": "NFD",
+          "script": "Bengali",
+          "sentences": 1012,
+          "utf8_bytes": 353345,
+          "whitespace_words": 19506
+        },
+        {
+          "code": "mar",
+          "codepoints": 133365,
+          "graphemes": 80489,
+          "normalisation": "NFD",
+          "script": "Devanagari",
+          "sentences": 1012,
+          "utf8_bytes": 356043,
+          "whitespace_words": 19046
+        }
+      ],
+      "split": "devtest"
+    }
+  },
+  "provenance": {
+    "config": {
+      "bootstrap_confidence": 0.95,
+      "bootstrap_iterations": 10000,
+      "flores_split": "devtest",
+      "languages": [
+        {
+          "code": "eng",
+          "flores_code": "eng_Latn",
+          "name": "English",
+          "script": "Latin"
+        },
+        {
+          "code": "hin",
+          "flores_code": "hin_Deva",
+          "name": "Hindi",
+          "script": "Devanagari"
+        },
+        {
+          "code": "kan",
+          "flores_code": "kan_Knda",
+          "name": "Kannada",
+          "script": "Kannada"
+        },
+        {
+          "code": "tam",
+          "flores_code": "tam_Taml",
+          "name": "Tamil",
+          "script": "Tamil"
+        },
+        {
+          "code": "tel",
+          "flores_code": "tel_Telu",
+          "name": "Telugu",
+          "script": "Telugu"
+        },
+        {
+          "code": "ben",
+          "flores_code": "ben_Beng",
+          "name": "Bengali",
+          "script": "Bengali"
+        },
+        {
+          "code": "mar",
+          "flores_code": "mar_Deva",
+          "name": "Marathi",
+          "script": "Devanagari"
+        }
+      ],
+      "normalisation_forms": [
+        "NFC",
+        "NFD"
+      ],
+      "pivot_language": "eng",
+      "seed": 1337,
+      "tokenizers": [
+        {
+          "family": "western-centric",
+          "key": "gpt2",
+          "kind": "tiktoken",
+          "ref": "gpt2"
+        },
+        {
+          "family": "western-centric",
+          "key": "cl100k",
+          "kind": "tiktoken",
+          "ref": "cl100k_base"
+        },
+        {
+          "family": "multilingual",
+          "key": "xlmr",
+          "kind": "hf",
+          "ref": "xlm-roberta-base"
+        },
+        {
+          "family": "indic-aware",
+          "key": "muril",
+          "kind": "hf",
+          "ref": "google/muril-base-cased"
+        }
+      ]
+    },
+    "config_hash": "db3980b4cec96ce55d630ce534cfc6b56fae57ffdead12da57f63ec4aa573f28",
+    "generated_at_utc": "2026-09-07T03:26:59+00:00",
+    "git_sha": "4260f931772d61db634ce4200543f4e26e29b6b9-dirty",
+    "input_checksums": {
+      ".cache/flores200/flores200_dataset/devtest/ben_Beng.devtest": "6699aa77b4c93d520971868cd5ff06a1e3b5ddfde852da13337f5194bc23086f",
+      ".cache/flores200/flores200_dataset/devtest/eng_Latn.devtest": "612e9fbe87997617c0fa8fa8929654a4f49b728d96738112c2b86ef6a1d78d88",
+      ".cache/flores200/flores200_dataset/devtest/hin_Deva.devtest": "5f5fd39acadca29fb044a0398e81869e48f37de979df086f2fad4a7d1fd2d015",
+      ".cache/flores200/flores200_dataset/devtest/kan_Knda.devtest": "58e8ed5ef79cfd9994e7d4010d22b5ce72c3559f0c8e988fbde11fa58a720cd8",
+      ".cache/flores200/flores200_dataset/devtest/mar_Deva.devtest": "63d0d1bfdcfa7f8a1538c87cab65b0e5e010515529ed286b1f8b2a51cc62b99f",
+      ".cache/flores200/flores200_dataset/devtest/tam_Taml.devtest": "a18b26bf278e458f085c70173d6789d6108cb2e3346c81a1bd0f8aceb4ea30e4",
+      ".cache/flores200/flores200_dataset/devtest/tel_Telu.devtest": "2dc641b4fb69347efe4b0c0f2063372c643f20c664b41a1f4421b69ba2a06420"
+    },
+    "package_versions": {
+      "huggingface-hub": "0.26.5",
+      "jinja2": "3.1.6",
+      "matplotlib": "3.9.4",
+      "numpy": "2.2.6",
+      "regex": "2024.11.6",
+      "sentencepiece": "0.2.0",
+      "tiktoken": "0.8.0",
+      "tokenizers": "0.20.3",
+      "transformers": "4.46.3"
+    },
+    "platform": "Linux-6.19.14-200.fc43.x86_64-x86_64-with-glibc2.42",
+    "python_implementation": "CPython",
+    "python_version": "3.11.16"
+  }
+}

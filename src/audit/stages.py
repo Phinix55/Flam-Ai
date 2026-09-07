@@ -289,6 +289,37 @@ def run_bench(config: AuditConfig) -> Path:
     return path
 
 
+def run_partc(config: AuditConfig) -> Path:
+    """Offline. Part C envelope -> ``results/partc.json``.
+
+    Reads two measured inputs from earlier stages -- tokens per parallel
+    sentence under the Indic-aware tokenizer, and the B3 output goodput --
+    so the envelope inherits this repo's measurements rather than restating
+    round numbers. Chooses no path and ranks nothing.
+    """
+    import json
+
+    from audit.partc import PartCAssumptions, build, sensitivity
+
+    analysis = json.loads(
+        (config.results_dir / "analysis.json").read_text(encoding="utf-8")
+    )
+    bench = json.loads((config.results_dir / "bench.json").read_text(encoding="utf-8"))
+    indic = analysis["grid"]["muril"]["absolute"]["sentences"]
+    tokens_per_sentence = {code: cell["macro"] for code, cell in indic.items()}
+    goodput = bench["b3"]["goodput_derivations"][0]["value_tok_s"]
+    assumptions = PartCAssumptions()
+    payload = build(assumptions, tokens_per_sentence, goodput)
+    payload["sensitivity_gpu_hours_by_pair_count"] = sensitivity(
+        assumptions, tokens_per_sentence
+    )
+    payload["measured_inputs"] = {
+        "tokens_per_sentence_source": "analysis.grid.muril.absolute.sentences.*.macro",
+        "goodput_source": "bench.b3.goodput_derivations.0.value_tok_s",
+    }
+    return write_results(config.results_dir / "partc.json", payload, config, [])
+
+
 def run_render(config: AuditConfig) -> tuple[Path, ...]:
     """Offline. ``results/*.json`` + templates -> ``deliverable/``."""
     from audit.reporting.render import render_all

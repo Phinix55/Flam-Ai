@@ -1185,6 +1185,181 @@ key. No sentence naming the misread column has been authored.
 
 ---
 
+### 2026-09-07 — Block 9: Phase 7 render + adversarial
+
+**Hypothesis:** none under test. Build the rendering path and find out what
+the adversarial fixtures break.
+
+**Ran:** `make render`, `make adversarial`, then `make reproduce` from a
+wiped `results/` and `deliverable/`.
+
+#### Rule 3, made enforceable
+
+Two checks that close the loop:
+
+1. **Templates contain no numeric literal.** Verified before rendering.
+2. **Every numeral in the output traces to a results key.** Verified after,
+   against a `Tracer` that recorded which key formatted it.
+
+Check 1 is what makes check 2 airtight: a template that cannot express a digit
+cannot emit an untraceable one, so every numeral in the output must have
+arrived through `Tracer.fmt`. Numbers are formatted in Python, never in a
+template.
+
+**The validator caught four real leaks during its own bring-up**, which is the
+evidence that it does something:
+
+- `{{ languages | length }}` — a Jinja filter computing `7` inside the
+  template, a numeral the tracer never saw. Counts are now registered in the
+  context.
+- Signed deltas: `+.3f` emits `+0.023`, the validator scans for `0.023`. The
+  tracer now registers the numeral *tokens* inside a formatted string, so both
+  sides agree on what a numeral is.
+- Provenance identifiers — git SHA, config hash, build timestamp, interpreter
+  version — all contain digits but none is a measurement. Declared
+  `structural` with a reason each, and reported.
+- `1× NVIDIA L4 (24 GB)` — verbatim spec text. Also declared structural.
+
+Distinguishing a figure from a name (`B1`, `gpt2`, `FLORES-200`, `cl100k`) is
+done by "a letter, or a letter-hyphen, immediately precedes it" — narrow
+enough that `-0.503` and `95` stay in scope.
+
+**Known limitation, stated rather than hidden.** The check proves every
+numeral has *a* source, not that it has the *right* one: a numeral could
+coincidentally equal an unrelated registered value. It rules out fabricated
+figures, not mis-keyed ones. 509 numerals traced across the five documents,
+against 26 declared structural exemptions.
+
+#### Adversarial fixtures — what breaks
+
+Twelve fixtures through both pipelines. Recorded, **not fixed**.
+
+| fixture | legacy (v0 pipeline) | corrected (`metrics/`) |
+|---|---|---|
+| `empty_file.txt` | **ZeroDivisionError** | ok, n=0 |
+| `whitespace_only.txt` | **ZeroDivisionError** | ok, n=3 |
+| `combining_marks.txt` | ok | ok |
+| `emoji.txt` | ok | ok |
+| `zwj_zwnj.txt` | ok | ok |
+| `mixed_script.txt` | ok | ok |
+| `pure_punctuation.txt` | ok | ok |
+| `crlf_line_endings.txt` | ok, n=2 | ok, n=2 |
+| `no_trailing_newline.txt` | ok, n=1 | ok, n=1 |
+| `single_long_word.txt` | ok | ok |
+| length-mismatched parallel pair | `AlignmentError` (by design) | — |
+
+**Now believe:** only the two degenerate-denominator cases break, and both
+break in the legacy pipeline alone. Every script-complexity fixture — emoji,
+ZWJ/ZWNJ, combining marks, mixed script — is handled by both. That is a
+narrower failure surface than I expected before running it: my Phase 1 note
+folded the division-by-zero concern into H-11 as "unreachable via the file
+path", which was right for a file with content and wrong for an empty one.
+
+The `ZeroDivisionError` is preserved deliberately in `legacy.py` — fidelity
+outranks CLAUDE.md §3's error-message standard there, because the baseline
+must fail the way the original fails or the parity claim is limited to inputs
+that never fail. Fixing it would be an unmeasured ablation.
+
+**Died — `make reproduce` caught an architecture bug that nothing else would
+have.** `results/corpus_stats.json` was produced only by `run_corpus`, the
+network stage. CLAUDE.md rule 4 requires reproduce to regenerate *every*
+artefact offline from the cache alone, so a wiped `results/` could not be
+rebuilt without a network connection. Split into `run_corpus` (fetch only,
+network) and `run_prepare` (validate + emit, offline), with `prepare` added to
+the CLI, the Makefile and the head of `reproduce`. Verified by deleting
+`results/` and `deliverable/` entirely and re-running.
+
+**Suite:** 141 passed, 1 skipped. `STUBS` is now empty — every Makefile stage
+is implemented, and `test_every_stage_is_implemented` is what says so.
+
+---
+
+### 2026-09-07 — Block 10: Part C envelope, final passes
+
+**Constraint conflict, resolved and stated.** BLUEPRINT §4 calls Part C "no
+code, all judgment". CLAUDE.md rule 3 forbids typing any number into a
+`deliverable/**.md`, and Part C's memo must carry arithmetic and a numeric
+success threshold. BLUEPRINT opens by deferring to CLAUDE.md as the
+constitution, so rule 3 wins: the *arithmetic* is computed in
+`src/audit/partc.py` and rendered like every other figure, and the *judgment* —
+which path, the metric, the kill criterion, the day-1 experiment — stays
+reserved. "No code" is read as "this is not an analysis exercise", not as
+licence to hand-type figures.
+
+**Ran:** `make partc`, `make render`, then `make reproduce` from a wiped
+`results/` and `deliverable/`.
+
+**Came back — the envelope, with two inputs measured rather than assumed:**
+
+| quantity | value |
+|---|---|
+| reviewer-hours over the project | 20 |
+| items at ~80/hr | 1,600 |
+| items per covered language | 800 |
+| languages with zero native-speaker coverage | **4 of 6** (ben, mar, tam, tel) |
+| measured tokens per response (Indic mean, MuRIL) | 119.0 |
+| training tokens (15k pairs × 3 epochs) | 5.36 M |
+| GPU-hours needed | **0.25 – 0.50** |
+| GPU-hours available | **336** |
+| utilisation | **0.15 %** |
+| measured output goodput (B3) | 200.92 tok/s |
+| goodput with a rewriter's second pass | 100.46 tok/s |
+
+Sensitivity: 5k pairs → 0.17 h; 15k → 0.50 h; 50k → 1.65 h.
+
+**Now believe:**
+
+- Two inputs are **measured from this repo** rather than assumed: response
+  length in tokens comes from the A3 grid under the Indic-aware tokenizer, and
+  the second-pass serving cost comes from the B3 goodput derivation. The
+  envelope therefore inherits the audit's own numbers instead of restating
+  round ones.
+- My measured 119 tokens/response is well below the blueprint's assumed ~400,
+  because FLORES sentences are short and my four-sentences-per-response
+  assumption may understate real chat replies. The GPU conclusion is robust to
+  it by orders of magnitude: `test_gpu_budget_is_not_the_binding_constraint`
+  runs 10× the pairs *and* 10× the response length and still fits.
+- No path is chosen and none is ranked. `test_envelope_ranks_nothing` greps the
+  emitted structure for recommendation vocabulary.
+
+**Died — two more rule-3 leaks the validator caught, both of which would have
+shipped silently.**
+
+- `{{ partc.items }}` resolved to Python's `dict.items` **method**, rendering
+  `<built-in method items of dict object at 0x…>` into the memo. Only the
+  address digits tripped the check. Renamed the key; a regression test pins the
+  shape.
+- `A100-80GB` was read as a figure. My identifier rule checked two characters
+  back, and before `80` sits a hyphen preceded by a *digit*, not a letter.
+  Replaced with a walk over the whole `[alnum-_]` token, asking whether it
+  starts with a letter. The rule stays backward-only, so `1x` still reads as
+  data — the safe direction, since an unrecognised numeral must then be
+  declared.
+
+**Died — `reproduce` was still not regenerating every artefact.**
+`results/adversarial.json` lives under `results/` but `adversarial` was a
+standalone target per BLUEPRINT §1, so a wiped `results/` came back incomplete.
+Rule 4 says *every* artefact; added to `reproduce`. This is the second time a
+genuine clean rebuild found a gap that no test did — the first was
+`corpus_stats.json` in Phase 7.
+
+**Defense-readiness (BLUEPRINT §6): 9 / 9.** Verified by running the checks,
+not by reading the list.
+
+**Suite:** 154 passed, 1 skipped. `make reproduce` green from an empty
+`results/` and `deliverable/`.
+
+#### What is deliberately still unwritten
+
+Ten `TODO(pratik): interpretation` markers across six deliverables: the corpus
+caveat paragraph; each finding's claim, category and direction; the rejected-
+claims section; the denominator argument; the routing recommendation and its
+caveat; B2's mechanism; B3's misread column; B4's counter; and all five of Part
+C's judgment sections. Every number those sentences will cite already exists
+under a named results key.
+
+---
+
 ## Environment deviations
 
 Deviations from CLAUDE.md §2 forced by the machine, recorded so a grader can

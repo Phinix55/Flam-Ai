@@ -108,6 +108,109 @@ def _headline(results: dict[str, Any], tracer: Tracer) -> list[dict[str, str]]:
     return rows
 
 
+def _partc(results: dict[str, Any], tracer: Tracer) -> dict[str, Any]:
+    """Part C envelope figures. Arithmetic only; no path is ranked."""
+    d = results["partc"]
+    a, r, t, w, s = (
+        d["assumptions"],
+        d["reviewer"],
+        d["training"],
+        d["rewriter"],
+        d["schedule"],
+    )
+
+    def f(value: float | int, key: str, spec: str = "d") -> str:
+        return tracer.fmt(value, f"partc.{key}", spec)
+
+    return {
+        "gpu_count": f(a["gpu_count"], "assumptions.gpu_count"),
+        "project_weeks": f(a["project_weeks"], "assumptions.project_weeks"),
+        "reviewer_count": f(a["reviewer_count"], "assumptions.reviewer_count"),
+        "reviewer_hours_per_week": f(
+            a["reviewer_hours_per_week"], "assumptions.reviewer_hours_per_week"
+        ),
+        "review_launch_weeks": f(
+            a["review_launch_weeks"], "assumptions.review_launch_weeks"
+        ),
+        "items_per_hour": f(
+            a["reviewer_items_per_hour"], "assumptions.reviewer_items_per_hour"
+        ),
+        "sft_pairs": f(a["sft_pairs"], "assumptions.sft_pairs"),
+        "sentences_per_response": f(
+            a["sentences_per_response"], "assumptions.sentences_per_response"
+        ),
+        "epochs": f(a["epochs"], "assumptions.epochs"),
+        "tps_low": f(
+            a["lora_tokens_per_second_low"], "assumptions.lora_tokens_per_second_low"
+        ),
+        "tps_high": f(
+            a["lora_tokens_per_second_high"], "assumptions.lora_tokens_per_second_high"
+        ),
+        "reviewer_hours": f(r["reviewer_hours"], "reviewer.reviewer_hours"),
+        "review_items": f(r["items_at_stated_rate"], "reviewer.items_at_stated_rate"),
+        "items_per_covered": f(
+            r["items_per_covered_language"], "reviewer.items_per_covered_language"
+        ),
+        "items_per_language_even": f(
+            r["items_per_language_if_split_evenly"],
+            "reviewer.items_per_language_if_split_evenly",
+        ),
+        "covered_languages": f(r["covered_languages"], "reviewer.covered_languages"),
+        "target_languages": f(r["target_languages"], "reviewer.target_languages"),
+        "uncovered_count": f(
+            len(r["uncovered_languages"]), "reviewer.uncovered_languages|count"
+        ),
+        "uncovered": r["uncovered_languages"],
+        "tokens_per_response": f(
+            t["mean_tokens_per_response"], "training.mean_tokens_per_response", ".1f"
+        ),
+        "training_tokens": f(t["training_tokens"], "training.training_tokens", ".0f"),
+        "gpu_hours_high": f(
+            t["gpu_hours_at_high_throughput"],
+            "training.gpu_hours_at_high_throughput",
+            ".2f",
+        ),
+        "gpu_hours_low": f(
+            t["gpu_hours_at_low_throughput"],
+            "training.gpu_hours_at_low_throughput",
+            ".2f",
+        ),
+        "gpu_hours_available": f(
+            t["gpu_hours_available"], "training.gpu_hours_available"
+        ),
+        "utilisation": f(
+            t["utilisation_at_low_throughput"],
+            "training.utilisation_at_low_throughput",
+            ".5f",
+        ),
+        "sensitivity": [
+            (f(int(k), f"sensitivity.{k}|pairs"), f(v, f"sensitivity.{k}", ".2f"))
+            for k, v in sorted(
+                d["sensitivity_gpu_hours_by_pair_count"].items(),
+                key=lambda kv: int(kv[0]),
+            )
+        ],
+        "goodput": f(
+            w["measured_output_tok_s"], "rewriter.measured_output_tok_s", ".2f"
+        ),
+        "goodput_halved": f(
+            w["effective_output_tok_s_if_equal_cost"],
+            "rewriter.effective_output_tok_s_if_equal_cost",
+            ".2f",
+        ),
+        "day_one": tracer.structural(s["day_one"], "partc schedule: day one"),
+        "gpu_exhausted": tracer.structural(
+            s["gpu_budget_exhausted"], "partc schedule: gpu budget end"
+        ),
+        "decision_deadline": tracer.structural(
+            s["decision_deadline"], "partc schedule: decision deadline"
+        ),
+        "review_launch": tracer.structural(
+            s["review_launch"], "partc schedule: review launch"
+        ),
+    }
+
+
 def build(results: dict[str, Any], tracer: Tracer) -> dict[str, Any]:
     """The full template namespace."""
     analysis = results["analysis"]
@@ -116,6 +219,7 @@ def build(results: dict[str, Any], tracer: Tracer) -> dict[str, Any]:
     check = bench["b1_check_against_log"]["decimal_GB"]
     return {
         "provenance": _provenance(results, tracer),
+        "partc": _partc(results, tracer),
         "sources": sorted(results),
         "pivot": analysis["pivot"],
         "languages": analysis["languages"],

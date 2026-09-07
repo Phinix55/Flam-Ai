@@ -275,3 +275,35 @@ def find_knee(rows: Sequence[BenchRow]) -> dict[str, Any]:
             "itl_ms_p50": following.itl_ms_p50,
         },
     }
+
+
+def counter_comparison(rows: Sequence[BenchRow], batch_size: int) -> dict[str, Any]:
+    """Both throughput counters at one batch size, across prompt lengths.
+
+    The two prompt lengths are run at the same batch on the same hardware,
+    so the only thing varying is prompt length. That makes the pair the
+    cleanest available test of what each counter is actually reporting.
+    """
+    selected = sorted(
+        (r for r in rows if r.batch_size == batch_size), key=lambda r: r.prompt_len
+    )
+    if len(selected) < 2:
+        msg = f"Need >=2 prompt lengths at batch {batch_size} to compare counters."
+        raise ValueError(msg)
+    return {
+        "batch_size": batch_size,
+        "by_prompt_len": {
+            str(r.prompt_len): {
+                "reported_tok_s": r.reported_tok_s,
+                "output_tok_s": r.output_tokens / r.wall_clock_s,
+                "prompt_share_of_counted_tokens": r.prompt_len / r.context_tokens,
+            }
+            for r in selected
+        },
+        "reported_favours_long_prompts": selected[-1].reported_tok_s
+        > selected[0].reported_tok_s,
+        "output_favours_long_prompts": (
+            selected[-1].output_tokens / selected[-1].wall_clock_s
+        )
+        > (selected[0].output_tokens / selected[0].wall_clock_s),
+    }

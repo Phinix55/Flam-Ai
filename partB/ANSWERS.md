@@ -1,6 +1,6 @@
 # Part B — Capacity reconciliation
 
-*Model `FLM-4B-Instruct (dense)` on `1× NVIDIA L4 (24 GB)`. Commit `f04b85aee0d89cf60f3640561628d24c896959bf-dirty`.
+*Model `FLM-4B-Instruct (dense)` on `1× NVIDIA L4 (24 GB)`. Commit `7b41b1a184acceb2e20bb19a2480a64ef02b24dc-dirty`.
 Every value below is parsed from `bench/model_spec.md`; nothing is hardcoded.*
 
 ## B1 — KV bytes per token

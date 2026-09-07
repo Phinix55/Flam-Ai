@@ -226,6 +226,7 @@ def _bench_payload(config: AuditConfig) -> dict[str, object]:
     )
     from audit.bench.log_analysis import (
         correlate_ceiling,
+        counter_comparison,
         find_knee,
         goodput_derivations,
         parse_log,
@@ -264,6 +265,7 @@ def _bench_payload(config: AuditConfig) -> dict[str, object]:
             "row": asdict(b3),
             "goodput_derivations": [asdict(d) for d in goodput_derivations(b3)],
             "prefill_share": prefill_share(b3),
+            "counter_comparison_batch16": counter_comparison(rows, 16),
             "reported_counter_identity": {
                 f"batch{r.batch_size}_prompt{r.prompt_len}": reconstruct_reported(r)
                 for r in rows

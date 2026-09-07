@@ -309,6 +309,23 @@
     ]
   },
   "b3": {
+    "counter_comparison_batch16": {
+      "batch_size": 16,
+      "by_prompt_len": {
+        "3584": {
+          "output_tok_s": 163.9383630178107,
+          "prompt_share_of_counted_tokens": 0.875,
+          "reported_tok_s": 1311.4
+        },
+        "512": {
+          "output_tok_s": 294.4644140905823,
+          "prompt_share_of_counted_tokens": 0.6666666666666666,
+          "reported_tok_s": 883.2
+        }
+      },
+      "output_favours_long_prompts": false,
+      "reported_favours_long_prompts": true
+    },
     "goodput_derivations": [
       {
         "columns_used": [
@@ -528,8 +545,8 @@
       ]
     },
     "config_hash": "db3980b4cec96ce55d630ce534cfc6b56fae57ffdead12da57f63ec4aa573f28",
-    "generated_at_utc": "2026-09-07T04:41:25+00:00",
-    "git_sha": "f04b85aee0d89cf60f3640561628d24c896959bf-dirty",
+    "generated_at_utc": "2026-09-07T04:50:18+00:00",
+    "git_sha": "7b41b1a184acceb2e20bb19a2480a64ef02b24dc-dirty",
     "input_checksums": {
       "starter_kit/starter_kit/bench/bench_log.csv": "e6081ebfb5898b871929773c24ae1192dcd2e1cc6bf00aea647683ad39e98b89",
       "starter_kit/starter_kit/bench/model_spec.md": "1544a15f1e1fe2d46b78d41efa02963c631cfa2f7d4ac3b044cb2767919b67f2"
